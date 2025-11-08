@@ -1,0 +1,17 @@
+import { MessageCircle } from "lucide-react";
+
+const WhatsAppButton = () => {
+  return (
+    <a
+      href="https://wa.me/919605894644"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="fixed bottom-6 right-6 z-50 bg-accent hover:bg-accent/90 text-accent-foreground p-4 rounded-full shadow-lg transition-all hover:scale-110"
+      aria-label="WhatsApp Enquiry"
+    >
+      <MessageCircle className="h-6 w-6" />
+    </a>
+  );
+};
+
+export default WhatsAppButton;
