@@ -24,7 +24,7 @@ const heroSlides = [
 const infoCards = [
   {
     icon: Hospital,
-    title: "Para medical college",
+    title: "Paramedical college",
     description: "Confidence offers recognized paramedical programs with placement assistance and modern infrastructure.",
     link: "/courses",
   },
@@ -159,7 +159,7 @@ const Hero = () => {
       {/* Info Cards Section */}
       <div className="relative -mt-20 md:-mt-24 lg:-mt-32 z-20">
         <div className="container mx-auto px-4 max-w-[1220px]">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
             {infoCards.map((card, index) => {
               const Icon = card.icon;
               return (
@@ -169,21 +169,21 @@ const Hero = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300"
+                  className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300 h-full flex flex-col"
                 >
-                  <div className="flex flex-col items-start space-y-4">
+                  <div className="flex flex-col items-start space-y-4 flex-1">
                     <div className="p-3 rounded-lg bg-primary/10">
                       <Icon className="h-8 w-8 text-primary" />
                     </div>
                     <h3 className="text-xl font-poppins font-semibold text-secondary">
                       {card.title}
                     </h3>
-                    <p className="text-muted-foreground font-inter">
+                    <p className="text-muted-foreground font-inter flex-1">
                       {card.description}
                     </p>
                     <Link
                       to={card.link}
-                      className="text-primary font-inter font-medium hover:underline inline-flex items-center gap-2 group"
+                      className="text-primary font-inter font-medium hover:underline inline-flex items-center gap-2 group mt-auto"
                     >
                       Learn More
                       <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />

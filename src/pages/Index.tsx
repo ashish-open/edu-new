@@ -2,10 +2,9 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import Hero from "@/components/home/Hero";
-import CourseFilter from "@/components/home/CourseFilter";
+import CourseFinder from "@/components/home/CourseFinder";
 import WhyConfidence from "@/components/home/WhyConfidence";
 import ParamedicalSpotlight from "@/components/home/ParamedicalSpotlight";
-import PopularCourses from "@/components/home/PopularCourses";
 import ConsultancyBanner from "@/components/home/ConsultancyBanner";
 import ContactBlock from "@/components/home/ContactBlock";
 
@@ -15,10 +14,9 @@ const Index = () => {
       <Header />
       <main className="flex-1">
         <Hero />
-        <CourseFilter />
+        <CourseFinder />
         <WhyConfidence />
         <ParamedicalSpotlight />
-        <PopularCourses />
         <ConsultancyBanner />
         <ContactBlock />
       </main>
