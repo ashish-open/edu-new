@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, ChevronLeft, ChevronRight, GraduationCap, Building2, BookOpen } from "lucide-react";
+import { ArrowRight, ChevronLeft, ChevronRight, Hospital, Lightbulb, BookOpen } from "lucide-react";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 
@@ -22,16 +23,16 @@ const heroSlides = [
 
 const infoCards = [
   {
-    icon: GraduationCap,
-    title: "Graduation",
-    description: "Confidence Education was established and is recognized.",
-    link: "/admission",
+    icon: Hospital,
+    title: "Para medical college",
+    description: "Confidence offers recognized paramedical programs with placement assistance and modern infrastructure.",
+    link: "/courses",
   },
   {
-    icon: Building2,
-    title: "University Life",
-    description: "Confidence Education was established and is recognized.",
-    link: "/facilities",
+    icon: Lightbulb,
+    title: "Consultancy services",
+    description: "Expert career counselling, study abroad guidance, and admission assistance for your educational journey.",
+    link: "/consultancy",
   },
   {
     icon: BookOpen,
@@ -81,8 +82,6 @@ const Hero = () => {
                     className="absolute inset-0 bg-cover bg-center bg-no-repeat"
                     style={{ backgroundImage: `url(${slide.image})` }}
                   />
-                  {/* Dark Overlay */}
-                  <div className="absolute inset-0 bg-black/60" />
                   
                   {/* Content */}
                   <div className="relative z-10 h-full flex items-center">
@@ -97,7 +96,7 @@ const Hero = () => {
                           initial={{ opacity: 0, y: -20 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ duration: 0.6, delay: 0.4 }}
-                          className="text-sm md:text-base uppercase tracking-wider text-white/90 font-inter"
+                          className="text-sm md:text-base uppercase tracking-wider text-white drop-shadow-lg font-inter"
                         >
                           {slide.tagline}
                         </motion.p>
@@ -105,7 +104,7 @@ const Hero = () => {
                           initial={{ opacity: 0, y: -20 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ duration: 0.6, delay: 0.6 }}
-                          className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-poppins font-bold text-white leading-tight"
+                          className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-poppins font-bold text-white drop-shadow-lg leading-tight"
                         >
                           {slide.heading}
                         </motion.h1>
@@ -113,7 +112,7 @@ const Hero = () => {
                           initial={{ opacity: 0, y: -20 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ duration: 0.6, delay: 0.8 }}
-                          className="text-lg md:text-xl text-white/90 font-inter max-w-xl"
+                          className="text-lg md:text-xl text-white drop-shadow-lg font-inter max-w-xl"
                         >
                           {slide.description}
                         </motion.p>
@@ -182,13 +181,13 @@ const Hero = () => {
                     <p className="text-muted-foreground font-inter">
                       {card.description}
                     </p>
-                    <a
-                      href={card.link}
+                    <Link
+                      to={card.link}
                       className="text-primary font-inter font-medium hover:underline inline-flex items-center gap-2 group"
                     >
                       Learn More
                       <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                    </a>
+                    </Link>
                   </div>
                 </motion.div>
               );

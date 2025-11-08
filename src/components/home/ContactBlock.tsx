@@ -75,7 +75,7 @@ const ContactBlock = () => {
             </Button>
           </a>
           <a href="https://wa.me/919605894644" target="_blank" rel="noopener noreferrer">
-            <Button size="lg" className="gap-2 bg-accent hover:bg-accent/90">
+            <Button size="lg" className="gap-2 bg-primary hover:bg-primary/90">
               <Mail className="h-5 w-5" />
               WhatsApp Enquiry
             </Button>

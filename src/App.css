@@ -1,21 +1,26 @@
+/* App.css - Using theme variables for consistency */
+/* Note: Most styles should use Tailwind classes with theme variables */
+/* This file is kept minimal to avoid conflicts with the design system */
+
 #root {
-  max-width: 1280px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
 }
 
+/* Use theme colors instead of hardcoded values */
 .logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em hsl(var(--primary) / 0.7));
 }
+
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  filter: drop-shadow(0 0 2em hsl(var(--primary) / 0.7));
 }
 
 @keyframes logo-spin {
@@ -38,5 +43,5 @@
 }
 
 .read-the-docs {
-  color: #888;
+  color: hsl(var(--muted-foreground));
 }

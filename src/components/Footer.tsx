@@ -63,11 +63,8 @@ const Footer = () => {
           <div className="flex flex-wrap gap-4 justify-center text-sm font-inter mb-6">
             <Link to="/" className="hover:text-primary transition-colors">Home</Link>
             <Link to="/courses" className="hover:text-primary transition-colors">Courses</Link>
-            <Link to="/paramedical" className="hover:text-primary transition-colors">Paramedical</Link>
             <Link to="/consultancy" className="hover:text-primary transition-colors">Consultancy</Link>
             <Link to="/why-confidence" className="hover:text-primary transition-colors">Why Confidence</Link>
-            <Link to="/admission" className="hover:text-primary transition-colors">Admission</Link>
-            <Link to="/facilities" className="hover:text-primary transition-colors">Facilities</Link>
             <Link to="/contact" className="hover:text-primary transition-colors">Contact</Link>
           </div>
           <p className="text-center text-xs text-secondary-foreground/60">

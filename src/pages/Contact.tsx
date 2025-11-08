@@ -147,7 +147,7 @@ const Contact = () => {
                     Quick enquiry via WhatsApp
                   </p>
                   <a href="https://wa.me/919605894644" target="_blank" rel="noopener noreferrer">
-                    <Button size="sm" className="bg-accent hover:bg-accent/90">
+                    <Button size="sm" className="bg-primary hover:bg-primary/90">
                       Message Us
                     </Button>
                   </a>

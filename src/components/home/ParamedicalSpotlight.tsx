@@ -28,7 +28,7 @@ const ParamedicalSpotlight = () => {
                 <p className="font-inter text-lg">Recognized Programs with Placement Support</p>
               </div>
             </div>
-            <Link to="/paramedical">
+            <Link to="/courses">
               <Button size="lg" variant="secondary" className="mt-4">
                 Explore Paramedical Courses
               </Button>

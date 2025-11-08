@@ -198,7 +198,7 @@ const Consultancy = () => {
                 </Button>
               </a>
               <a href="https://wa.me/919605894644" target="_blank" rel="noopener noreferrer">
-                <Button size="lg" variant="secondary" className="bg-accent hover:bg-accent/90">
+                <Button size="lg" className="bg-primary hover:bg-primary/90">
                   WhatsApp Now
                 </Button>
               </a>

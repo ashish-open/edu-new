@@ -35,7 +35,7 @@ const Header = () => {
         {/* CTA Button */}
         <div className="hidden md:flex items-center">
           <a href="https://wa.me/919605894644" target="_blank" rel="noopener noreferrer">
-            <Button size="sm" className="bg-accent hover:bg-accent/90">
+            <Button size="sm" className="bg-primary hover:bg-primary/90">
               Enquire Now
             </Button>
           </a>
@@ -69,7 +69,7 @@ const Header = () => {
             </Link>
             <div className="flex flex-col gap-2 pt-2 border-t">
               <a href="https://wa.me/919605894644" target="_blank" rel="noopener noreferrer">
-                <Button size="sm" className="w-full bg-accent hover:bg-accent/90">
+                <Button size="sm" className="w-full bg-primary hover:bg-primary/90">
                   Enquire Now
                 </Button>
               </a>
