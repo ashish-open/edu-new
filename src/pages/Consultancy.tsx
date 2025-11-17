@@ -4,6 +4,8 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Globe, Users, Award, TrendingUp, Lightbulb } from "lucide-react";
+import heroImage from "@/assets/red-consultancy.png";
+import "./Consultancy.css";
 
 const services = [
   {
@@ -44,10 +46,13 @@ const Consultancy = () => {
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-orange to-orange/80 text-orange-foreground py-16">
+        <section 
+          className="consultancy-hero text-white py-16 md:py-24"
+          style={{ backgroundImage: `url(${heroImage})` }}
+        >
           <div className="container mx-auto px-4 max-w-[1220px]">
             <div className="max-w-3xl">
-              <div className="inline-block bg-orange-foreground/10 px-4 py-2 rounded-full mb-4">
+              <div className="inline-block bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-4">
                 <span className="text-sm font-inter font-semibold">CONFIDENCE EDUCATIONAL CONSULTANCY</span>
               </div>
               <h1 className="text-4xl md:text-5xl font-poppins font-semibold mb-4">
@@ -78,8 +83,8 @@ const Consultancy = () => {
                 return (
                   <Card key={service.title} className="hover:shadow-lg transition-shadow">
                     <CardContent className="p-6">
-                      <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-orange/10 mb-4">
-                        <Icon className="h-6 w-6 text-orange" />
+                      <div className="inline-flex items-center justify-center w-12 h-12 rounded-full consultancy-icon-bg mb-4">
+                        <Icon className="h-6 w-6 consultancy-icon" />
                       </div>
                       <h3 className="text-lg font-poppins font-semibold mb-2 text-secondary">
                         {service.title}
@@ -104,7 +109,7 @@ const Consultancy = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               <div className="space-y-4">
                 <div className="flex gap-3">
-                  <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="h-5 w-5 consultancy-check-icon flex-shrink-0 mt-0.5" />
                   <div>
                     <h3 className="font-poppins font-semibold mb-1">Experienced Counsellors</h3>
                     <p className="text-sm text-muted-foreground font-inter">
@@ -113,7 +118,7 @@ const Consultancy = () => {
                   </div>
                 </div>
                 <div className="flex gap-3">
-                  <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="h-5 w-5 consultancy-check-icon flex-shrink-0 mt-0.5" />
                   <div>
                     <h3 className="font-poppins font-semibold mb-1">Personalized Approach</h3>
                     <p className="text-sm text-muted-foreground font-inter">
@@ -122,7 +127,7 @@ const Consultancy = () => {
                   </div>
                 </div>
                 <div className="flex gap-3">
-                  <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="h-5 w-5 consultancy-check-icon flex-shrink-0 mt-0.5" />
                   <div>
                     <h3 className="font-poppins font-semibold mb-1">Transparent Process</h3>
                     <p className="text-sm text-muted-foreground font-inter">
@@ -133,7 +138,7 @@ const Consultancy = () => {
               </div>
               <div className="space-y-4">
                 <div className="flex gap-3">
-                  <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="h-5 w-5 consultancy-check-icon flex-shrink-0 mt-0.5" />
                   <div>
                     <h3 className="font-poppins font-semibold mb-1">Wide Network</h3>
                     <p className="text-sm text-muted-foreground font-inter">
@@ -142,7 +147,7 @@ const Consultancy = () => {
                   </div>
                 </div>
                 <div className="flex gap-3">
-                  <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="h-5 w-5 consultancy-check-icon flex-shrink-0 mt-0.5" />
                   <div>
                     <h3 className="font-poppins font-semibold mb-1">Post-Admission Support</h3>
                     <p className="text-sm text-muted-foreground font-inter">
@@ -151,7 +156,7 @@ const Consultancy = () => {
                   </div>
                 </div>
                 <div className="flex gap-3">
-                  <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="h-5 w-5 consultancy-check-icon flex-shrink-0 mt-0.5" />
                   <div>
                     <h3 className="font-poppins font-semibold mb-1">Success Track Record</h3>
                     <p className="text-sm text-muted-foreground font-inter">
@@ -183,7 +188,7 @@ const Consultancy = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 bg-primary text-primary-foreground">
+        <section className="py-16 consultancy-cta text-white">
           <div className="container mx-auto px-4 max-w-[1220px] text-center">
             <h2 className="text-3xl md:text-4xl font-poppins font-semibold mb-4">
               Book Your Free Counselling Session
@@ -198,7 +203,7 @@ const Consultancy = () => {
                 </Button>
               </a>
               <a href="https://wa.me/919605894644" target="_blank" rel="noopener noreferrer">
-                <Button size="lg" className="bg-primary hover:bg-primary/90">
+                <Button size="lg" className="consultancy-cta-button">
                   WhatsApp Now
                 </Button>
               </a>

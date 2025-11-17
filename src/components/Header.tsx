@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
 import { useState } from "react";
+import logo from "@/assets/logo_in red.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,11 +10,12 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 w-full bg-background border-b shadow-sm">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between max-w-[1220px]">
-        <Link to="/" className="flex flex-col">
-          <h1 className="text-xl md:text-2xl font-poppins font-semibold text-secondary">
-            CONFIDENCE
-          </h1>
-          <p className="text-xs text-muted-foreground">GROUP OF INSTITUTIONS</p>
+        <Link to="/" className="flex items-center">
+          <img 
+            src={logo} 
+            alt="Confidence Group of Institutions" 
+            className="h-10 md:h-12 w-auto"
+          />
         </Link>
 
         {/* Desktop Navigation */}

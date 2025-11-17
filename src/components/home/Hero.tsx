@@ -5,16 +5,17 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
+import heroImage from "@/assets/New Project.jpg";
 
 const heroSlides = [
   {
-    image: "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1920&q=80",
+    image: heroImage,
     tagline: "CONFIDENCE EDUCATION",
     heading: "Together We'll Explore New Things",
     description: "We believe everyone should have the opportunity to create progress through education.",
   },
   {
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1920&q=80",
+    image: heroImage,
     tagline: "CONFIDENCE EDUCATION",
     heading: "Choose the Right Course with Confidence",
     description: "Expert counselling. Recognized programs. Placement assistance.",
@@ -82,6 +83,9 @@ const Hero = () => {
                     className="absolute inset-0 bg-cover bg-center bg-no-repeat"
                     style={{ backgroundImage: `url(${slide.image})` }}
                   />
+                  
+                  {/* Overlay for better text readability */}
+                  <div className="absolute inset-0 bg-black/20 z-[1]" />
                   
                   {/* Content */}
                   <div className="relative z-10 h-full flex items-center">

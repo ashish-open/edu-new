@@ -1,5 +1,6 @@
 import { MapPin, Phone, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
+import logo from "@/assets/logo_in red.png";
 
 const Footer = () => {
   return (
@@ -8,9 +9,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand */}
           <div>
-            <h3 className="text-lg font-poppins font-semibold mb-4">
-              CONFIDENCE GROUP OF INSTITUTIONS
-            </h3>
+            <Link to="/" className="inline-block mb-4">
+              <img 
+                src={logo} 
+                alt="Confidence Group of Institutions" 
+                className="h-12 md:h-14 w-auto"
+              />
+            </Link>
             <p className="text-sm text-secondary-foreground/80 font-inter">
               Expert counselling, recognized programs, and placement assistance.
             </p>

@@ -1,0 +1,72 @@
+/* Consultancy Page - Red Theme */
+
+/* Hero section with red-consultancy image background */
+.consultancy-hero {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/* Overlay for better text readability */
+.consultancy-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 0;
+}
+
+.consultancy-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* CTA section with red gradient */
+.consultancy-cta {
+  background: linear-gradient(
+    to right,
+    hsl(340, 75%, 12%),  /* Very dark burgundy/maroon */
+    hsl(0, 100%, 50%),   /* Vibrant red */
+    hsl(340, 85%, 55%)   /* Magenta/purplish-red */
+  );
+}
+
+/* Icon backgrounds with red tint */
+.consultancy-icon-bg {
+  background: hsl(0, 100%, 50% / 0.1);
+}
+
+/* Icon colors - vibrant red */
+.consultancy-icon {
+  color: hsl(0, 100%, 50%);
+}
+
+/* Check icon colors - vibrant red */
+.consultancy-check-icon {
+  color: hsl(0, 100%, 50%);
+}
+
+/* CTA button with red gradient */
+.consultancy-cta-button {
+  background: linear-gradient(
+    to right,
+    hsl(0, 100%, 50%),
+    hsl(340, 80%, 50%)
+  );
+  color: white;
+  border: none;
+}
+
+.consultancy-cta-button:hover {
+  background: linear-gradient(
+    to right,
+    hsl(0, 100%, 45%),
+    hsl(340, 80%, 45%)
+  );
+  opacity: 0.9;
+}
+
