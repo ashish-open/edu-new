@@ -72,8 +72,19 @@ const Footer = () => {
             <Link to="/why-confidence" className="hover:text-primary transition-colors">Why Confidence</Link>
             <Link to="/contact" className="hover:text-primary transition-colors">Contact</Link>
           </div>
-          <p className="text-center text-xs text-secondary-foreground/60">
+          <p className="text-center text-xs text-secondary-foreground/60 mb-2">
             © {new Date().getFullYear()} Confidence Group of Institutions. All rights reserved.
+          </p>
+          <p className="text-center text-xs text-secondary-foreground/60">
+            Design by{" "}
+            <a 
+              href="https://octopusmedia.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-primary transition-colors underline"
+            >
+              Octopus Media
+            </a>
           </p>
         </div>
       </div>
