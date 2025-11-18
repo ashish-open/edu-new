@@ -1,11 +1,10 @@
-import { CheckCircle, Users, Building2, TrendingUp } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
+import { Users, Building2, TrendingUp, Wifi, Camera, Home } from "lucide-react";
 
 const features = [
   {
-    icon: CheckCircle,
-    title: "100% Placement Assistance",
-    description: "We ensure every student gets the right opportunity to kickstart their career."
+    icon: TrendingUp,
+    title: "Personality Development Training",
+    description: "Build soft skills and confidence to excel in your professional journey."
   },
   {
     icon: Users,
@@ -13,49 +12,67 @@ const features = [
     description: "Prepare with confidence through our comprehensive interview preparation program."
   },
   {
+    icon: Camera,
+    title: "CCTV Surveillance",
+    description: "24/7 security monitoring ensuring a safe and secure learning environment."
+  },
+  {
+    icon: Wifi,
+    title: "Wi-Fi Facility",
+    description: "High-speed internet connectivity across campus for seamless learning."
+  },
+  {
     icon: Building2,
-    title: "Adequate Classrooms & Labs",
+    title: "Adequate Classrooms",
     description: "State-of-the-art infrastructure for hands-on learning experience."
   },
   {
-    icon: TrendingUp,
-    title: "Personality Development Support",
-    description: "Build soft skills and confidence to excel in your professional journey."
+    icon: Home,
+    title: "Separate Hostel Facility for Boys & Girls",
+    description: "Safe and comfortable accommodation with modern amenities."
   }
 ];
 
 const WhyConfidence = () => {
   return (
-    <section className="py-16 bg-muted">
-      <div className="container mx-auto px-4 max-w-[1220px]">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-poppins font-semibold text-secondary mb-4">
-            Why Choose Confidence
+    <section className="relative overflow-hidden bg-white">
+      {/* Header Section */}
+      <div className="bg-white py-6">
+        <div className="container mx-auto px-4 max-w-[1220px]">
+          <h2 className="text-2xl md:text-3xl font-poppins font-bold text-center uppercase tracking-wide text-secondary">
+            Our Specialities
           </h2>
-          <p className="text-lg text-muted-foreground font-inter">
-            Your success is our commitment
-          </p>
         </div>
+      </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {features.map((feature) => {
-            const Icon = feature.icon;
-            return (
-              <Card key={feature.title} className="border-none shadow-md hover:shadow-lg transition-shadow">
-                <CardContent className="p-6 text-center">
-                  <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-primary/10 mb-4">
-                    <Icon className="h-7 w-7 text-primary" />
+      {/* Content Section */}
+      <div className="bg-white py-12 md:py-16">
+        <div className="container mx-auto px-4 max-w-[1220px]">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            {features.map((feature, index) => {
+              const Icon = feature.icon;
+              return (
+                <div
+                  key={feature.title}
+                  className="flex items-start gap-4 p-4 rounded-lg bg-white border border-gray-200 hover:border-primary hover:shadow-md transition-all duration-300"
+                >
+                  <div className="flex-shrink-0 mt-1">
+                    <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                      <Icon className="h-5 w-5 text-primary" />
+                    </div>
                   </div>
-                  <h3 className="text-lg font-poppins font-semibold mb-2 text-secondary">
-                    {feature.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground font-inter">
-                    {feature.description}
-                  </p>
-                </CardContent>
-              </Card>
-            );
-          })}
+                  <div className="flex-1">
+                    <h3 className="text-base md:text-lg font-poppins font-semibold mb-2 text-secondary">
+                      {feature.title}
+                    </h3>
+                    <p className="text-sm md:text-base text-muted-foreground font-inter leading-relaxed">
+                      {feature.description}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>

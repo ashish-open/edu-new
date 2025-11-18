@@ -8,9 +8,6 @@ const ParamedicalSpotlight = () => {
       <div className="container mx-auto px-4 max-w-[1220px]">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div className="space-y-6 text-accent-foreground">
-            <div className="inline-block bg-accent-foreground/10 px-4 py-2 rounded-full">
-              <span className="text-sm font-inter font-semibold">PARAMEDICAL COLLEGE</span>
-            </div>
             <h2 className="text-3xl md:text-4xl font-poppins font-semibold">
               Start Your Healthcare Career
             </h2>

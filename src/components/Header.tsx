@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu } from "lucide-react";
+import { Menu, Phone } from "lucide-react";
 import { useState } from "react";
 import logo from "@/assets/logo_in red.png";
 
@@ -36,9 +36,10 @@ const Header = () => {
 
         {/* CTA Button */}
         <div className="hidden md:flex items-center">
-          <a href="https://wa.me/919605894644" target="_blank" rel="noopener noreferrer">
+          <a href="tel:9694002002">
             <Button size="sm" className="bg-primary hover:bg-primary/90">
-              Enquire Now
+              <Phone className="h-4 w-4 mr-2" />
+              9694002002
             </Button>
           </a>
         </div>
@@ -70,9 +71,10 @@ const Header = () => {
               Contact
             </Link>
             <div className="flex flex-col gap-2 pt-2 border-t">
-              <a href="https://wa.me/919605894644" target="_blank" rel="noopener noreferrer">
+              <a href="tel:9694002002">
                 <Button size="sm" className="w-full bg-primary hover:bg-primary/90">
-                  Enquire Now
+                  <Phone className="h-4 w-4 mr-2" />
+                  9694002002
                 </Button>
               </a>
             </div>

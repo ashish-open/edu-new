@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, ChevronLeft, ChevronRight, Hospital, Lightbulb, BookOpen } from "lucide-react";
+import { ArrowRight, ChevronLeft, ChevronRight, Hospital, Lightbulb } from "lucide-react";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
@@ -25,21 +25,15 @@ const heroSlides = [
 const infoCards = [
   {
     icon: Hospital,
-    title: "Paramedical college",
+    title: "Confidence Group of Institutions",
     description: "Confidence offers recognized paramedical programs with placement assistance and modern infrastructure.",
     link: "/courses",
   },
   {
     icon: Lightbulb,
-    title: "Consultancy services",
+    title: "Confidence Educational Consultancy",
     description: "Expert career counselling, study abroad guidance, and admission assistance for your educational journey.",
     link: "/consultancy",
-  },
-  {
-    icon: BookOpen,
-    title: "Education Services",
-    description: "Confidence Education was established and is recognized.",
-    link: "/courses",
   },
 ];
 
@@ -163,7 +157,7 @@ const Hero = () => {
       {/* Info Cards Section */}
       <div className="relative -mt-20 md:-mt-24 lg:-mt-32 z-20">
         <div className="container mx-auto px-4 max-w-[1220px]">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
             {infoCards.map((card, index) => {
               const Icon = card.icon;
               return (

@@ -47,27 +47,46 @@ const CourseFinder = () => {
   const currentImage = categoryImages[selectedCategory as keyof typeof categoryImages] || categoryImages.Medical;
 
   return (
-    <section className="py-16 lg:py-24 bg-background overflow-hidden">
-      <div className="container mx-auto px-4 lg:px-6">
+    <section className="pt-0 pb-16 lg:pb-24 overflow-hidden relative -mt-8 md:-mt-12 lg:-mt-16">
+      {/* Subtle Gradient Background - Smooth transition from hero, extends upward */}
+      <div className="absolute inset-0 -top-16 md:-top-20 lg:-top-24 bg-gradient-to-br from-secondary/5 via-primary/8 to-secondary/10 pointer-events-none" />
+      
+      {/* Additional depth with blurred orbs - extends upward */}
+      <div className="absolute inset-0 -top-16 md:-top-20 lg:-top-24 opacity-30 pointer-events-none">
+        <div className="absolute top-1/4 left-0 w-96 h-96 bg-primary rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-secondary rounded-full blur-3xl" />
+      </div>
+      
+      {/* Content Container with proper z-index and top padding to account for overlap */}
+      <div className="container mx-auto px-4 lg:px-6 relative z-10 pt-20 md:pt-24 lg:pt-32">
         {/* Main Content: Image Left, Content Right - Full Width */}
-        <div className="grid grid-cols-1 lg:grid-cols-[500px_1fr] gap-0 items-center min-h-[600px] lg:min-h-[800px] w-full">
-          {/* Left Side - Portrait Image, Properly Aligned */}
-          <div className="relative w-full h-full lg:h-[800px] order-2 lg:order-1 overflow-hidden">
+        <div className="grid grid-cols-1 lg:grid-cols-[500px_1fr] gap-8 lg:gap-12 items-center min-h-[600px] lg:min-h-[800px] w-full">
+          {/* Left Side - Portrait Image with Enhanced Styling */}
+          <div className="relative w-full h-full lg:h-[800px] order-2 lg:order-1 flex items-center justify-center lg:justify-start px-4 lg:px-0">
             <AnimatePresence mode="wait">
               <motion.div
                 key={selectedCategory}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 20 }}
-                transition={{ duration: 0.4, ease: "easeOut" }}
-                className="relative w-full h-full"
+                initial={{ opacity: 0, scale: 0.95, x: -20 }}
+                animate={{ opacity: 1, scale: 1, x: 0 }}
+                exit={{ opacity: 0, scale: 0.95, x: 20 }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+                className="relative w-full max-w-md lg:max-w-full h-[500px] lg:h-[700px]"
               >
-                <div className="absolute inset-0 flex items-center justify-start">
+                {/* Image Container with Rounded Corners and Shadow */}
+                <div className="relative w-full h-full rounded-2xl lg:rounded-3xl overflow-hidden shadow-2xl group">
+                  {/* Gradient Overlay for Depth */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/10 z-10 pointer-events-none" />
+                  
+                  {/* Image */}
                   <img
                     src={currentImage}
                     alt={`${selectedCategory} courses`}
-                    className="w-full h-full object-contain object-left lg:object-cover lg:object-left-top"
+                    className="w-full h-full object-cover object-center lg:object-left-top transition-transform duration-700 group-hover:scale-105"
                   />
+                  
+                  {/* Decorative Corner Accent */}
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-bl-full -z-10 blur-2xl" />
+                  <div className="absolute bottom-0 left-0 w-40 h-40 bg-secondary/10 rounded-tr-full -z-10 blur-3xl" />
                 </div>
               </motion.div>
             </AnimatePresence>
