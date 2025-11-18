@@ -47,18 +47,18 @@ const CourseFinder = () => {
   const currentImage = categoryImages[selectedCategory as keyof typeof categoryImages] || categoryImages.Medical;
 
   return (
-    <section className="pt-0 pb-16 lg:pb-24 overflow-hidden relative -mt-8 md:-mt-12 lg:-mt-16">
-      {/* Subtle Gradient Background - Smooth transition from hero, extends upward */}
-      <div className="absolute inset-0 -top-16 md:-top-20 lg:-top-24 bg-gradient-to-br from-secondary/5 via-primary/8 to-secondary/10 pointer-events-none" />
+    <section className="pt-0 pb-16 lg:pb-24 overflow-hidden relative -mt-12 md:-mt-20 lg:-mt-28">
+      {/* Subtle Gradient Background - Smooth transition from hero, extends upward to cover gap, full width */}
+      <div className="absolute -top-24 md:-top-32 lg:-top-40 left-0 right-0 bottom-0 w-full bg-gradient-to-br from-secondary/5 via-primary/8 to-secondary/10 pointer-events-none" />
       
-      {/* Additional depth with blurred orbs - extends upward */}
-      <div className="absolute inset-0 -top-16 md:-top-20 lg:-top-24 opacity-30 pointer-events-none">
+      {/* Additional depth with blurred orbs - extends upward, full width */}
+      <div className="absolute -top-24 md:-top-32 lg:-top-40 left-0 right-0 bottom-0 w-full opacity-30 pointer-events-none">
         <div className="absolute top-1/4 left-0 w-96 h-96 bg-primary rounded-full blur-3xl" />
         <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-secondary rounded-full blur-3xl" />
       </div>
       
       {/* Content Container with proper z-index and top padding to account for overlap */}
-      <div className="container mx-auto px-4 lg:px-6 relative z-10 pt-20 md:pt-24 lg:pt-32">
+      <div className="container mx-auto px-4 lg:px-6 relative z-10 pt-24 md:pt-28 lg:pt-36">
         {/* Main Content: Image Left, Content Right - Full Width */}
         <div className="grid grid-cols-1 lg:grid-cols-[500px_1fr] gap-8 lg:gap-12 items-center min-h-[600px] lg:min-h-[800px] w-full">
           {/* Left Side - Portrait Image with Enhanced Styling */}

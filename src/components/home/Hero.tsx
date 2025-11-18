@@ -1,25 +1,58 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ChevronLeft, ChevronRight, Hospital, Lightbulb } from "lucide-react";
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import heroImage from "@/assets/New Project.jpg";
+import consultancyImage from "@/assets/red-consultancy.png";
+import doctorImage from "@/assets/doctor.png";
 
-const heroSlides = [
+// Carousel slides for Confidence Group of Institutions
+const institutionsSlides = [
   {
     image: heroImage,
-    tagline: "CONFIDENCE EDUCATION",
+    tagline: "CONFIDENCE GROUP OF INSTITUTIONS",
     heading: "Together We'll Explore New Things",
     description: "We believe everyone should have the opportunity to create progress through education.",
+    ctaText: "Find Courses",
+    ctaLink: "https://wa.me/919605894644",
   },
   {
     image: heroImage,
-    tagline: "CONFIDENCE EDUCATION",
+    tagline: "CONFIDENCE GROUP OF INSTITUTIONS",
     heading: "Choose the Right Course with Confidence",
     description: "Expert counselling. Recognized programs. Placement assistance.",
+    ctaText: "Find Courses",
+    ctaLink: "https://wa.me/919605894644",
   },
+];
+
+// Carousel slides for Educational Consultancy
+const consultancySlides = [
+  {
+    image: consultancyImage,
+    tagline: "CONFIDENCE EDUCATIONAL CONSULTANCY",
+    heading: "Your Path to Success Starts Here",
+    description: "Expert career counselling, study abroad guidance, and admission assistance for your educational journey.",
+    ctaText: "Get Counselling",
+    ctaLink: "/consultancy",
+  },
+  {
+    image: doctorImage,
+    tagline: "CONFIDENCE EDUCATIONAL CONSULTANCY",
+    heading: "Expert Guidance for Your Future",
+    description: "Comprehensive support for MBBS, BDS, and other programs in top international universities with affordable fees.",
+    ctaText: "Explore Consultancy",
+    ctaLink: "/consultancy",
+  },
+];
+
+// Combined slides array
+const heroSlides = [
+  ...institutionsSlides,
+  ...consultancySlides,
 ];
 
 const infoCards = [
@@ -46,92 +79,89 @@ const Hero = () => {
   const [prevBtnDisabled, setPrevBtnDisabled] = useState(true);
   const [nextBtnDisabled, setNextBtnDisabled] = useState(true);
 
-  const scrollPrev = () => emblaApi?.scrollPrev();
-  const scrollNext = () => emblaApi?.scrollNext();
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
 
-  const onSelect = () => {
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
+
+  const onSelect = useCallback(() => {
     if (!emblaApi) return;
     setSelectedIndex(emblaApi.selectedScrollSnap());
     setPrevBtnDisabled(!emblaApi.canScrollPrev());
     setNextBtnDisabled(!emblaApi.canScrollNext());
-  };
+  }, [emblaApi]);
 
   useEffect(() => {
     if (!emblaApi) return;
+    
     onSelect();
     emblaApi.on("select", onSelect);
     emblaApi.on("reInit", onSelect);
-  }, [emblaApi]);
+    
+    return () => {
+      emblaApi.off("select", onSelect);
+      emblaApi.off("reInit", onSelect);
+    };
+  }, [emblaApi, onSelect]);
 
   return (
     <section className="relative">
       {/* Hero Carousel */}
       <div className="relative h-[600px] md:h-[700px] lg:h-[800px] overflow-hidden">
-        <div className="embla" ref={emblaRef}>
-          <div className="embla__viewport">
-            <div className="embla__container">
-              {heroSlides.map((slide, index) => (
-                <div key={index} className="embla__slide relative min-w-0 flex-shrink-0 w-full h-full">
-                  {/* Background Image */}
-                  <div
-                    className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                    style={{ backgroundImage: `url(${slide.image})` }}
-                  />
-                  
-                  {/* Overlay for better text readability */}
-                  <div className="absolute inset-0 bg-black/20 z-[1]" />
-                  
-                  {/* Content */}
-                  <div className="relative z-10 h-full flex items-center">
-                    <div className="container mx-auto px-4 max-w-[1220px]">
-                      <motion.div
-                        initial={{ opacity: 0, x: -50 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.8, delay: 0.2 }}
-                        className="max-w-2xl space-y-6"
-                      >
-                        <motion.p
-                          initial={{ opacity: 0, y: -20 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{ duration: 0.6, delay: 0.4 }}
-                          className="text-sm md:text-base uppercase tracking-wider text-white drop-shadow-lg font-inter"
-                        >
-                          {slide.tagline}
-                        </motion.p>
-                        <motion.h1
-                          initial={{ opacity: 0, y: -20 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{ duration: 0.6, delay: 0.6 }}
-                          className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-poppins font-bold text-white drop-shadow-lg leading-tight"
-                        >
-                          {slide.heading}
-                        </motion.h1>
-                        <motion.p
-                          initial={{ opacity: 0, y: -20 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{ duration: 0.6, delay: 0.8 }}
-                          className="text-lg md:text-xl text-white drop-shadow-lg font-inter max-w-xl"
-                        >
-                          {slide.description}
-                        </motion.p>
-                        <motion.div
-                          initial={{ opacity: 0, y: -20 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{ duration: 0.6, delay: 1 }}
-                        >
-                          <a href="https://wa.me/919605894644" target="_blank" rel="noopener noreferrer">
+        <div ref={emblaRef} className="overflow-hidden h-full w-full">
+          <div className="flex h-full">
+            {heroSlides.map((slide, index) => (
+              <div
+                key={index}
+                className="relative flex-[0_0_100%] min-w-0 h-full"
+              >
+                {/* Background Image */}
+                <div
+                  className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                  style={{ backgroundImage: `url(${slide.image})` }}
+                />
+                
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-black/20 z-[1]" />
+                
+                {/* Content */}
+                <div className="relative z-10 h-full flex items-center">
+                  <div className="container mx-auto px-4 max-w-[1220px] w-full">
+                    <div className="max-w-2xl space-y-6">
+                      <p className="text-sm md:text-base uppercase tracking-wider text-white drop-shadow-lg font-inter">
+                        {slide.tagline}
+                      </p>
+                      <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-poppins font-bold text-white drop-shadow-lg leading-tight">
+                        {slide.heading}
+                      </h1>
+                      <p className="text-lg md:text-xl text-white drop-shadow-lg font-inter max-w-xl">
+                        {slide.description}
+                      </p>
+                      <div>
+                        {slide.ctaLink.startsWith('http') ? (
+                          <a href={slide.ctaLink} target="_blank" rel="noopener noreferrer">
                             <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg font-inter">
-                              Find Courses
+                              {slide.ctaText}
                               <ArrowRight className="ml-2 h-5 w-5" />
                             </Button>
                           </a>
-                        </motion.div>
-                      </motion.div>
+                        ) : (
+                          <Link to={slide.ctaLink}>
+                            <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg font-inter">
+                              {slide.ctaText}
+                              <ArrowRight className="ml-2 h-5 w-5" />
+                            </Button>
+                          </Link>
+                        )}
+                      </div>
                     </div>
                   </div>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
 
@@ -193,27 +223,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-
-      <style>{`
-        .embla {
-          overflow: hidden;
-          width: 100%;
-          height: 100%;
-        }
-        .embla__viewport {
-          overflow: hidden;
-          width: 100%;
-          height: 100%;
-        }
-        .embla__container {
-          display: flex;
-          height: 100%;
-        }
-        .embla__slide {
-          flex: 0 0 100%;
-          min-width: 0;
-        }
-      `}</style>
     </section>
   );
 };
