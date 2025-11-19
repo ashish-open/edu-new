@@ -57,8 +57,11 @@ For hero sections, use these patterns:
 
 ### Font Families
 
-- **Poppins**: Used for headings (`font-poppins`)
-- **Inter**: Used for body text (`font-inter`)
+- **ZonaPro**: Primary font family used across the website (`font-zonapro`)
+  - Default sans-serif font (applied to body)
+  - Available weights: Regular (400), Medium (500), SemiBold (600), Bold (700)
+- **Poppins**: Fallback for headings (`font-poppins`)
+- **Inter**: Fallback for body text (`font-inter`)
 
 ### Font Sizes
 

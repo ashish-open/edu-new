@@ -3,9 +3,13 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import Hero from "@/components/home/Hero";
 import CourseFinder from "@/components/home/CourseFinder";
+import Statistics from "@/components/home/Statistics";
 import WhyConfidence from "@/components/home/WhyConfidence";
+import FeatureCards from "@/components/home/FeatureCards";
 import ParamedicalSpotlight from "@/components/home/ParamedicalSpotlight";
+import StudentTestimonials from "@/components/home/StudentTestimonials";
 import ConsultancyBanner from "@/components/home/ConsultancyBanner";
+import FAQ from "@/components/home/FAQ";
 import ContactBlock from "@/components/home/ContactBlock";
 
 const Index = () => {
@@ -15,9 +19,13 @@ const Index = () => {
       <main className="flex-1">
         <Hero />
         <CourseFinder />
+        <Statistics />
         <WhyConfidence />
+        <FeatureCards />
         <ParamedicalSpotlight />
+        <StudentTestimonials />
         <ConsultancyBanner />
+        <FAQ />
         <ContactBlock />
       </main>
       <Footer />

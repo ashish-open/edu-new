@@ -6,6 +6,47 @@
 All colors MUST be HSL.
 */
 
+/* ZonaPro Font Family */
+@font-face {
+  font-family: 'ZonaPro';
+  src: url('/fonts/ZonaPro-Regular.woff2') format('woff2'),
+       url('/fonts/ZonaPro-Regular.woff') format('woff'),
+       url('/fonts/ZonaPro-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ZonaPro';
+  src: url('/fonts/ZonaPro-Medium.woff2') format('woff2'),
+       url('/fonts/ZonaPro-Medium.woff') format('woff'),
+       url('/fonts/ZonaPro-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ZonaPro';
+  src: url('/fonts/ZonaPro-SemiBold.woff2') format('woff2'),
+       url('/fonts/ZonaPro-SemiBold.woff') format('woff'),
+       url('/fonts/ZonaPro-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ZonaPro';
+  src: url('/fonts/ZonaPro-Bold.woff2') format('woff2'),
+       url('/fonts/ZonaPro-Bold.woff') format('woff'),
+       url('/fonts/ZonaPro-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -121,7 +162,7 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-zonapro;
   }
 }
 

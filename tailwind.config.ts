@@ -14,8 +14,10 @@ export default {
     },
     extend: {
       fontFamily: {
+        'zonapro': ['ZonaPro', 'sans-serif'],
         'poppins': ['Poppins', 'sans-serif'],
         'inter': ['Inter', 'sans-serif'],
+        'sans': ['ZonaPro', 'Poppins', 'Inter', 'sans-serif'], // ZonaPro as default sans-serif
       },
       colors: {
         border: "hsl(var(--border))",
