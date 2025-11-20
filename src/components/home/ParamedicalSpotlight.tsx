@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { GraduationCap, Calendar, Award, ArrowRight } from "lucide-react";
+import heroImage from "@/assets/Assets-01.png";
 
 const diplomaCourses = [
   {
@@ -34,8 +35,18 @@ const diplomaCourses = [
 
 const ParamedicalSpotlight = () => {
   return (
-    <section className="py-16 bg-secondary relative overflow-hidden">
-      <div className="container mx-auto px-4 max-w-[1220px]">
+    <section 
+      className="py-16 relative overflow-hidden"
+      style={{
+        backgroundImage: `url(${heroImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }}
+    >
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/20 z-0" />
+      <div className="container mx-auto px-4 max-w-[1220px] relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-8 relative z-10">

@@ -12,7 +12,6 @@ import {
   Target,
   Heart
 } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 const whyUsFeatures = [
   {
@@ -200,29 +199,6 @@ const WhyUs = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-accent to-accent/80 text-accent-foreground">
-        <div className="container mx-auto px-4 max-w-[1220px] text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
-            <h2 className="text-3xl md:text-4xl font-zonapro font-hairline mb-4">
-              Join Hundreds of Successful Alumni
-            </h2>
-            <p className="text-lg font-zonapro mb-8 opacity-95 max-w-2xl mx-auto">
-              Our students are working in leading hospitals, labs, and healthcare institutions across India and abroad.
-            </p>
-            <a href="https://wa.me/919605894644" target="_blank" rel="noopener noreferrer">
-              <Button size="lg" variant="secondary" className="font-zonapro">
-                Start Your Journey Today
-              </Button>
-            </a>
-          </motion.div>
-        </div>
-      </section>
     </>
   );
 };
