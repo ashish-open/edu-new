@@ -5,7 +5,7 @@ import { useState, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
-import heroImage from "@/assets/New Project.jpg";
+import heroImage from "@/assets/Assets-01.png";
 import consultancyImage from "@/assets/red-consultancy.png";
 import assets02Image from "@/assets/Assets-02.png";
 import doctorImage from "@/assets/doctor.png";
