@@ -4,8 +4,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import Hero from "@/components/home/Hero";
 import CampusGallery from "@/components/home/CampusGallery";
 import Statistics from "@/components/home/Statistics";
-import WhyConfidence from "@/components/home/WhyConfidence";
-import FeatureCards from "@/components/home/FeatureCards";
+import WhyUs from "@/components/home/WhyUs";
 import ParamedicalSpotlight from "@/components/home/ParamedicalSpotlight";
 import StudentTestimonials from "@/components/home/StudentTestimonials";
 import ConsultancyBanner from "@/components/home/ConsultancyBanner";
@@ -20,8 +19,7 @@ const Index = () => {
         <Hero />
         <CampusGallery />
         <Statistics />
-        <WhyConfidence />
-        <FeatureCards />
+        <WhyUs />
         <ParamedicalSpotlight />
         <StudentTestimonials />
         <ConsultancyBanner />

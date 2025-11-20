@@ -68,7 +68,6 @@ const Footer = () => {
           <div className="flex flex-wrap gap-4 justify-center text-sm font-zonapro mb-6">
             <Link to="/" className="text-white/80 hover:text-primary transition-colors">Home</Link>
             <Link to="/consultancy" className="text-white/80 hover:text-primary transition-colors">Consultancy</Link>
-            <Link to="/why-confidence" className="text-white/80 hover:text-primary transition-colors">Why Confidence</Link>
             <Link to="/contact" className="text-white/80 hover:text-primary transition-colors">Contact</Link>
           </div>
           <p className="text-center text-xs text-white/60 mb-2 font-zonapro">

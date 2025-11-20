@@ -26,9 +26,6 @@ const Header = () => {
           <Link to="/consultancy" className="text-sm font-inter hover:text-primary transition-colors">
             Consultancy
           </Link>
-          <Link to="/why-confidence" className="text-sm font-inter hover:text-primary transition-colors">
-            Why Confidence
-          </Link>
           <Link to="/contact" className="text-sm font-inter hover:text-primary transition-colors">
             Contact
           </Link>
@@ -63,9 +60,6 @@ const Header = () => {
             </Link>
             <Link to="/consultancy" className="text-sm font-inter py-2 hover:text-primary">
               Consultancy
-            </Link>
-            <Link to="/why-confidence" className="text-sm font-inter py-2 hover:text-primary">
-              Why Confidence
             </Link>
             <Link to="/contact" className="text-sm font-inter py-2 hover:text-primary">
               Contact

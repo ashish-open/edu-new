@@ -6,7 +6,6 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import ScrollToTop from "@/components/ScrollToTop";
 import Index from "./pages/Index";
 import Consultancy from "./pages/Consultancy";
-import WhyConfidencePage from "./pages/WhyConfidence";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
@@ -23,7 +22,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/courses" element={<Navigate to="/consultancy" replace />} />
           <Route path="/consultancy" element={<Consultancy />} />
-          <Route path="/why-confidence" element={<WhyConfidencePage />} />
+          <Route path="/why-confidence" element={<Navigate to="/#why-us" replace />} />
           <Route path="/contact" element={<Contact />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

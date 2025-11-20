@@ -7,6 +7,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import heroImage from "@/assets/New Project.jpg";
 import consultancyImage from "@/assets/red-consultancy.png";
+import assets02Image from "@/assets/Assets-02.png";
 import doctorImage from "@/assets/doctor.png";
 
 // Carousel slides for Confidence Group of Institutions
@@ -32,12 +33,13 @@ const institutionsSlides = [
 // Carousel slides for Educational Consultancy
 const consultancySlides = [
   {
-    image: consultancyImage,
+    image: assets02Image,
     tagline: "CONFIDENCE EDUCATIONAL CONSULTANCY",
     heading: "Your Path to Success Starts Here",
     description: "Expert career counselling, study abroad guidance, and admission assistance for your educational journey.",
     ctaText: "Get Counselling",
     ctaLink: "/consultancy",
+    alignRight: true, // Align content to right since person is on left
   },
   {
     image: doctorImage,
@@ -123,7 +125,7 @@ const Hero = () => {
                   className="absolute inset-0"
                   style={{ 
                     backgroundImage: `url(${slide.image})`,
-                    backgroundSize: index === 2 ? '120%' : 'cover', // Scale up to crop white borders
+                    backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     backgroundRepeat: 'no-repeat',
                     width: '100%',
@@ -140,24 +142,24 @@ const Hero = () => {
                 <div 
                   className="absolute inset-0 z-[1]"
                   style={{
-                    backgroundColor: index === 2 ? 'rgba(0, 0, 0, 0.15)' : 'rgba(0, 0, 0, 0.2)'
+                    backgroundColor: index === 2 ? 'rgba(0, 0, 0, 0.1)' : 'rgba(0, 0, 0, 0.2)'
                   }}
                 />
                 
                 {/* Content */}
                 <div className="relative z-10 h-full flex items-center">
                   <div className="container mx-auto px-4 max-w-[1220px] w-full">
-                    <div className="max-w-2xl space-y-6">
-                      <p className="text-sm md:text-base uppercase tracking-wider text-white drop-shadow-lg font-inter">
+                    <div className={`space-y-6 ${index === 2 ? 'ml-auto text-right max-w-2xl' : 'max-w-2xl'}`}>
+                      <p className="text-sm md:text-base uppercase tracking-wider text-white drop-shadow-lg font-zonapro">
                         {slide.tagline}
                       </p>
-                      <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-poppins font-bold text-white drop-shadow-lg leading-tight">
+                      <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-zonapro font-bold text-white drop-shadow-lg leading-tight">
                         {slide.heading}
                       </h1>
-                      <p className="text-lg md:text-xl text-white drop-shadow-lg font-inter max-w-xl">
+                      <p className={`text-lg md:text-xl text-white drop-shadow-lg font-zonapro ${index === 2 ? 'ml-auto max-w-xl' : 'max-w-xl'}`}>
                         {slide.description}
                       </p>
-                      <div>
+                      <div className={index === 2 ? 'flex justify-end' : ''}>
                         {slide.ctaLink.startsWith('http') ? (
                           <a href={slide.ctaLink} target="_blank" rel="noopener noreferrer">
                             <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg font-inter">

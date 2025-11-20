@@ -5,7 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { CheckCircle, Globe, Users, Award, TrendingUp, Lightbulb, ArrowRight } from "lucide-react";
-import heroImage from "@/assets/red-consultancy.png";
+import heroImage from "@/assets/Assets-02.png";
 import "./Consultancy.css";
 
 const services = [
