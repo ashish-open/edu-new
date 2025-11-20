@@ -3,6 +3,28 @@ import { motion, AnimatePresence } from "framer-motion";
 import { GraduationCap, Building2, Users, Microscope, Award, BookOpen, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
+// Import local images
+import img1 from "@/assets/IMG-20251118-WA0036.jpg";
+import img2 from "@/assets/IMG-20251118-WA0032.jpg";
+import img3 from "@/assets/IMG-20251118-WA0034.jpg";
+import img4 from "@/assets/IMG-20251118-WA0030.jpg";
+import img5 from "@/assets/IMG-20240205-WA0011.jpg";
+import img6 from "@/assets/IMG-20240221-WA0021.jpg";
+import img7 from "@/assets/IMG-20240205-WA0014.jpg";
+import img8 from "@/assets/IMG-20250305-WA0033.jpg";
+import img9 from "@/assets/IMG-20241221-WA0044.jpg";
+import img10 from "@/assets/IMG-20241221-WA0051.jpg";
+import img11 from "@/assets/IMG-20241221-WA0048.jpg";
+import img12 from "@/assets/IMG-20250423-nfWA0051.jpg";
+import img13 from "@/assets/djkfhj.jpg";
+import img14 from "@/assets/kkdj.jpg";
+import img15 from "@/assets/dd.jpg";
+import img16 from "@/assets/ff.jpg";
+import img17 from "@/assets/coll.jpg";
+import img18 from "@/assets/cok.jpg";
+import img19 from "@/assets/com.jpg";
+import img20 from "@/assets/meeting room.jpg";
+
 type GalleryCategory = "All" | "Campus Life" | "Programs" | "Facilities" | "Events";
 
 interface GalleryItem {
@@ -17,90 +39,139 @@ const galleryItems: GalleryItem[] = [
   // Campus Life
   {
     id: 1,
-    image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=800&q=80",
-    title: "Students in Classroom",
+    image: img1,
+    title: "Campus Activities",
     category: "Campus Life",
-    description: "Interactive learning sessions"
+    description: "Vibrant student life and activities"
   },
   {
     id: 2,
-    image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80",
-    title: "Study Groups",
+    image: img2,
+    title: "Student Community",
     category: "Campus Life",
-    description: "Collaborative learning environment"
+    description: "Building connections and friendships"
   },
   {
     id: 3,
-    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80",
+    image: img3,
     title: "Campus Events",
     category: "Campus Life",
-    description: "Annual cultural fest"
+    description: "Celebrating together"
   },
-  // Programs
   {
     id: 4,
-    image: "https://images.unsplash.com/photo-1551190822-a9333d879b1f?auto=format&fit=crop&w=800&q=80",
-    title: "Medical Lab Technology",
-    category: "Programs",
-    description: "Hands-on practical training"
+    image: img4,
+    title: "Student Life",
+    category: "Campus Life",
+    description: "Memorable moments on campus"
   },
   {
     id: 5,
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80",
-    title: "Nursing Program",
-    category: "Programs",
-    description: "Clinical practice sessions"
+    image: img17,
+    title: "College Campus",
+    category: "Campus Life",
+    description: "Our beautiful campus grounds"
   },
   {
     id: 6,
-    image: "https://images.unsplash.com/photo-1581056771107-24ca5f033842?auto=format&fit=crop&w=800&q=80",
-    title: "Physiotherapy Training",
-    category: "Programs",
-    description: "Practical skill development"
+    image: img18,
+    title: "Campus Environment",
+    category: "Campus Life",
+    description: "Aspiring learning atmosphere"
   },
-  // Facilities
   {
     id: 7,
-    image: "https://images.unsplash.com/photo-1551601651-2a8555f1a136?auto=format&fit=crop&w=800&q=80",
-    title: "Modern Laboratories",
-    category: "Facilities",
-    description: "State-of-the-art equipment"
+    image: img19,
+    title: "Institution Life",
+    category: "Campus Life",
+    description: "Experience excellence"
   },
+  // Programs
   {
     id: 8,
-    image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=800&q=80",
-    title: "Library",
-    category: "Facilities",
-    description: "Extensive collection of resources"
-  },
-  {
-    id: 9,
-    image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=800&q=80",
-    title: "Smart Classrooms",
-    category: "Facilities",
-    description: "Technology-enabled learning"
-  },
-  // Events
-  {
-    id: 10,
-    image: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80",
-    title: "Graduation Ceremony",
-    category: "Events",
-    description: "Celebrating achievements"
+    image: img5,
+    title: "Practical Training",
+    category: "Programs",
+    description: "Hands-on learning experience"
   },
   {
     id: 11,
-    image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80",
-    title: "Workshop Sessions",
-    category: "Events",
-    description: "Industry expert interactions"
+    image: img6,
+    title: "Program Sessions",
+    category: "Programs",
+    description: "Interactive learning"
   },
   {
     id: 12,
-    image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=800&q=80",
-    title: "Placement Drive",
+    image: img13,
+    title: "Academic Excellence",
+    category: "Programs",
+    description: "Quality education programs"
+  },
+  // Facilities
+  {
+    id: 14,
+    image: img20,
+    title: "Meeting Room",
+    category: "Facilities",
+    description: "Modern conference facilities"
+  },
+  {
+    id: 15,
+    image: img7,
+    title: "Campus Facilities",
+    category: "Facilities",
+    description: "Well-equipped infrastructure"
+  },
+  {
+    id: 16,
+    image: img8,
+    title: "Institutional Facilities",
+    category: "Facilities",
+    description: "State-of-the-art amenities"
+  },
+  {
+    id: 17,
+    image: img15,
+    title: "Modern Infrastructure",
+    category: "Facilities",
+    description: "Advanced facilities for learning"
+  },
+  {
+    id: 18,
+    image: img16,
+    title: "Campus Infrastructure",
+    category: "Facilities",
+    description: "Supporting your success"
+  },
+  // Events
+  {
+    id: 19,
+    image: img9,
+    title: "Institutional Events",
     category: "Events",
-    description: "Career opportunities"
+    description: "Memorable celebrations"
+  },
+  {
+    id: 22,
+    image: img10,
+    title: "Special Events",
+    category: "Events",
+    description: "Creating lasting memories"
+  },
+  {
+    id: 23,
+    image: img11,
+    title: "Campus Celebrations",
+    category: "Events",
+    description: "Joyful moments together"
+  },
+  {
+    id: 24,
+    image: img12,
+    title: "Annual Events",
+    category: "Events",
+    description: "Year-round activities"
   },
 ];
 
@@ -116,9 +187,20 @@ const CampusGallery = () => {
   const [selectedCategory, setSelectedCategory] = useState<GalleryCategory>("All");
   const [hoveredItem, setHoveredItem] = useState<number | null>(null);
 
-  const filteredItems = selectedCategory === "All" 
-    ? galleryItems 
-    : galleryItems.filter(item => item.category === selectedCategory);
+  // Limit "All" view to 6 best images (2 from each main category)
+  const getFilteredItems = () => {
+    if (selectedCategory === "All") {
+      // Show a curated selection: 2 from Campus Life, 2 from Programs, 2 from Facilities/Events
+      const campusLife = galleryItems.filter(item => item.category === "Campus Life").slice(0, 2);
+      const programs = galleryItems.filter(item => item.category === "Programs").slice(0, 2);
+      const facilities = galleryItems.filter(item => item.category === "Facilities").slice(0, 1);
+      const events = galleryItems.filter(item => item.category === "Events").slice(0, 1);
+      return [...campusLife, ...programs, ...facilities, ...events];
+    }
+    return galleryItems.filter(item => item.category === selectedCategory);
+  };
+
+  const filteredItems = getFilteredItems();
 
   return (
     <section className="py-16 md:py-24 bg-gradient-to-b from-background via-muted/30 to-background relative overflow-hidden">
@@ -181,7 +263,7 @@ const CampusGallery = () => {
                 )}
               >
                 <Icon className={cn(
-                  "h-4 w-4 transition-transform duration-300",
+                  "h-4 w-4 transition-transform duration-300 relative z-10",
                   isActive ? "text-white" : "text-secondary group-hover:scale-110"
                 )} />
                 <span className="relative z-10">{category}</span>
@@ -216,7 +298,7 @@ const CampusGallery = () => {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -30 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  transition={{ duration: 0.5, delay: index * 0.05 }}
                   onMouseEnter={() => setHoveredItem(item.id)}
                   onMouseLeave={() => setHoveredItem(null)}
                   className={cn(
