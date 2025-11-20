@@ -14,10 +14,10 @@ export default {
     },
     extend: {
       fontFamily: {
-        'zonapro': ['ZonaPro', 'sans-serif'],
-        'poppins': ['Poppins', 'sans-serif'],
-        'inter': ['Inter', 'sans-serif'],
-        'sans': ['ZonaPro', 'sans-serif'], // ZonaPro as default sans-serif
+        'zonapro': ['ZonaPro', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
+        'poppins': ['ZonaPro', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
+        'inter': ['ZonaPro', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
+        'sans': ['ZonaPro', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'], // ZonaPro as default sans-serif
       },
       fontWeight: {
         'hairline': '100',

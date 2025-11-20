@@ -4,7 +4,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { CheckCircle, Globe, Users, Award, TrendingUp, Lightbulb, ArrowRight } from "lucide-react";
+import { CheckCircle, Globe, Users, Award, TrendingUp, Lightbulb, ArrowRight, Phone, MessageCircle } from "lucide-react";
 import heroImage from "@/assets/Assets-02.png";
 import "./Consultancy.css";
 
@@ -192,12 +192,12 @@ const Consultancy = () => {
                     rel="noopener noreferrer"
                     className="block"
                   >
-                    <div className="bg-gradient-to-br from-red-600 via-red-500 to-red-800 text-white p-4 rounded-lg hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02] cursor-pointer h-full flex flex-col justify-center min-h-[120px] shadow-md">
-                      <h3 className="font-zonapro font-hairline text-sm md:text-base uppercase tracking-wide leading-tight mb-1">
+                    <div className="bg-white text-secondary border-2 border-gray-200 p-4 rounded-lg hover:shadow-2xl hover:border-primary hover:-translate-y-1 transition-all duration-300 cursor-pointer h-full flex flex-col justify-center min-h-[120px] shadow-sm">
+                      <h3 className="font-zonapro font-bold text-sm md:text-base uppercase tracking-wide leading-tight mb-1">
                         {course.name}
                       </h3>
                       {course.subtext && (
-                        <p className="font-zonapro text-xs opacity-90 mt-1">
+                        <p className="font-zonapro font-semibold text-xs text-muted-foreground mt-1">
                           {course.subtext}
                         </p>
                       )}
@@ -221,8 +221,8 @@ const Consultancy = () => {
                 rel="noopener noreferrer"
                 className="block"
               >
-                <div className="bg-gradient-to-br from-red-600 via-red-500 to-red-800 text-white p-6 rounded-lg hover:shadow-xl transition-all duration-300 transform hover:scale-[1.01] cursor-pointer shadow-md">
-                  <h3 className="font-zonapro font-hairline text-lg md:text-xl uppercase tracking-wide text-center">
+                <div className="bg-white text-secondary border-2 border-gray-200 p-6 rounded-lg hover:shadow-2xl hover:border-primary hover:-translate-y-1 transition-all duration-300 cursor-pointer shadow-sm">
+                  <h3 className="font-zonapro font-bold text-lg md:text-xl uppercase tracking-wide text-center">
                     ALL OTHER UG, PG, DIPLOMA COURSES
                   </h3>
                 </div>
@@ -329,13 +329,15 @@ const Consultancy = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="tel:+919605894644">
-                <Button size="lg" className="bg-white hover:bg-gray-50 text-secondary border-2 border-white/20">
-                  Call +91 9605894644
+                <Button size="lg" className="bg-white hover:bg-gray-50 text-secondary border-2 border-white/20 w-full sm:w-auto min-w-[200px] flex items-center justify-center gap-2">
+                  <Phone className="h-5 w-5" />
+                  <span>+91 9605894644</span>
                 </Button>
               </a>
               <a href="https://wa.me/919605894644" target="_blank" rel="noopener noreferrer">
-                <Button size="lg" className="bg-green-500 hover:bg-green-600 text-white border-none">
-                  WhatsApp Now
+                <Button size="lg" className="bg-green-500 hover:bg-green-600 text-white border-none w-full sm:w-auto min-w-[200px] flex items-center justify-center gap-2">
+                  <MessageCircle className="h-5 w-5" />
+                  <span>WhatsApp Now</span>
                 </Button>
               </a>
             </div>

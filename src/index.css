@@ -182,16 +182,22 @@ All colors MUST be HSL.
 @layer base {
   * {
     @apply border-border;
-    font-family: 'ZonaPro', sans-serif;
+    font-family: 'ZonaPro', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
   }
 
   body {
-    @apply bg-background text-foreground font-zonapro;
+    @apply bg-background text-foreground;
+    font-family: 'ZonaPro', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+    font-weight: 400;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'ZonaPro', sans-serif;
+    font-family: 'ZonaPro', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
     font-weight: 100; /* Hairline weight for all headings */
+  }
+  
+  p, span, div, a, button, input, textarea, select, label, li, td, th {
+    font-family: 'ZonaPro', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
   }
 }
 
