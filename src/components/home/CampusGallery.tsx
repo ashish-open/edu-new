@@ -404,7 +404,7 @@ const CampusGallery = () => {
             href="https://wa.me/919605894644"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 px-8 py-4 bg-primary hover:bg-primary/90 text-white rounded-xl font-zonapro font-semibold shadow-lg hover:shadow-xl transition-all duration-300 group"
+            className="inline-flex items-center gap-3 px-8 py-4 bg-green-500 hover:bg-green-600 text-white rounded-xl font-zonapro font-semibold shadow-lg hover:shadow-xl transition-all duration-300 group"
           >
             <Microscope className="h-5 w-5 group-hover:rotate-12 transition-transform" />
             <span>View More Photos</span>

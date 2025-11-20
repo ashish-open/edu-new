@@ -130,7 +130,7 @@ const Contact = () => {
                     Speak directly with our team
                   </p>
                   <a href="tel:+919605894644">
-                    <Button variant="outline" size="sm">
+                    <Button size="sm" className="bg-white hover:bg-gray-50 text-secondary border-2 border-gray-200">
                       +91 9605894644
                     </Button>
                   </a>
@@ -139,15 +139,15 @@ const Contact = () => {
 
               <Card className="text-center">
                 <CardContent className="p-6">
-                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-accent/10 mb-4">
-                    <MessageCircle className="h-6 w-6 text-accent" />
+                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-green-500/10 mb-4">
+                    <MessageCircle className="h-6 w-6 text-green-500" />
                   </div>
                   <h3 className="font-zonapro font-hairline mb-2">WhatsApp</h3>
                   <p className="text-sm text-muted-foreground font-zonapro mb-4">
                     Quick enquiry via WhatsApp
                   </p>
                   <a href="https://wa.me/919605894644" target="_blank" rel="noopener noreferrer">
-                    <Button size="sm" className="bg-primary hover:bg-primary/90">
+                    <Button size="sm" className="bg-green-500 hover:bg-green-600 text-white border-none">
                       Message Us
                     </Button>
                   </a>
@@ -185,10 +185,12 @@ const Contact = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="tel:+919605894644">
-                <Button size="lg">Schedule a Visit</Button>
+                <Button size="lg" className="bg-white hover:bg-gray-50 text-secondary border-2 border-gray-200">
+                  Schedule a Visit
+                </Button>
               </a>
               <a href="https://wa.me/919605894644" target="_blank" rel="noopener noreferrer">
-                <Button size="lg" variant="outline">
+                <Button size="lg" className="bg-green-500 hover:bg-green-600 text-white border-none">
                   Book Campus Tour
                 </Button>
               </a>

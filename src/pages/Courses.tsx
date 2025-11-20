@@ -381,12 +381,12 @@ const Courses = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="tel:+919605894644">
-                <Button size="lg" variant="secondary">
+                <Button size="lg" className="bg-white hover:bg-gray-50 text-secondary border-2 border-white/20">
                   Call +91 9605894644
                 </Button>
               </a>
               <a href="https://wa.me/919605894644" target="_blank" rel="noopener noreferrer">
-                <Button size="lg" className="bg-primary hover:bg-primary/90">
+                <Button size="lg" className="bg-green-500 hover:bg-green-600 text-white border-none">
                   WhatsApp Enquiry
                 </Button>
               </a>

@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { MapPin, Phone, Mail } from "lucide-react";
+import { MapPin, Phone, Mail, MessageCircle } from "lucide-react";
 
 const ContactBlock = () => {
   return (
@@ -69,14 +69,14 @@ const ContactBlock = () => {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a href="tel:+919605894644">
-            <Button size="lg" variant="outline" className="gap-2">
+            <Button size="lg" className="gap-2 bg-white hover:bg-gray-50 text-secondary border-2 border-gray-200">
               <Phone className="h-5 w-5" />
               Call for Enquiry
             </Button>
           </a>
           <a href="https://wa.me/919605894644" target="_blank" rel="noopener noreferrer">
-            <Button size="lg" className="gap-2 bg-primary hover:bg-primary/90">
-              <Mail className="h-5 w-5" />
+            <Button size="lg" className="gap-2 bg-green-500 hover:bg-green-600 text-white border-none">
+              <MessageCircle className="h-5 w-5" />
               WhatsApp Enquiry
             </Button>
           </a>
