@@ -229,7 +229,7 @@ const CampusGallery = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-zonapro font-bold text-secondary mb-6"
+            className="text-4xl md:text-5xl lg:text-6xl font-zonapro font-hairline text-secondary mb-6"
           >
             Experience Campus Life
           </motion.h2>
@@ -353,7 +353,7 @@ const CampusGallery = () => {
                         }}
                         transition={{ duration: 0.3 }}
                       >
-                        <h3 className="font-zonapro font-bold text-2xl md:text-3xl text-white mb-2">
+                        <h3 className="font-zonapro font-hairline text-2xl md:text-3xl text-white mb-2">
                           {item.title}
                         </h3>
                         {item.description && (

@@ -13,10 +13,10 @@ const Contact = () => {
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-primary to-primary/80 text-primary-foreground py-16">
           <div className="container mx-auto px-4 max-w-[1220px]">
-            <h1 className="text-4xl md:text-5xl font-poppins font-semibold mb-4">
+            <h1 className="text-4xl md:text-5xl font-zonapro font-hairline mb-4">
               Contact Us
             </h1>
-            <p className="text-lg md:text-xl opacity-95 font-inter max-w-3xl">
+            <p className="text-lg md:text-xl opacity-95 font-zonapro max-w-3xl">
               Get in touch with us for admissions, counselling, or any queries. We're here to help!
             </p>
           </div>
@@ -29,14 +29,14 @@ const Contact = () => {
               {/* Campus 1 - Nedumkandam */}
               <Card>
                 <CardContent className="p-8">
-                  <h2 className="text-2xl font-poppins font-semibold text-secondary mb-6">
+                  <h2 className="text-2xl font-zonapro font-hairline text-secondary mb-6">
                     Nedumkandam Campus
                   </h2>
                   <div className="space-y-4">
                     <div className="flex items-start gap-3">
                       <MapPin className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
                       <div>
-                        <p className="font-inter text-muted-foreground">
+                        <p className="font-zonapro text-muted-foreground">
                           Confidence Group of Institutions<br />
                           Nedumkandam<br />
                           Idukki District<br />
@@ -46,19 +46,19 @@ const Contact = () => {
                     </div>
                     <div className="flex items-center gap-3">
                       <Phone className="h-5 w-5 text-primary flex-shrink-0" />
-                      <a href="tel:+919605894644" className="font-inter text-primary hover:underline">
+                      <a href="tel:+919605894644" className="font-zonapro text-primary hover:underline">
                         +91 9605894644
                       </a>
                     </div>
                     <div className="flex items-center gap-3">
                       <Mail className="h-5 w-5 text-primary flex-shrink-0" />
-                      <a href="mailto:info@confidenceinstitutions.com" className="font-inter text-primary hover:underline">
+                      <a href="mailto:info@confidenceinstitutions.com" className="font-zonapro text-primary hover:underline">
                         info@confidenceinstitutions.com
                       </a>
                     </div>
                     <div className="flex items-start gap-3">
                       <Clock className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                      <div className="font-inter text-muted-foreground">
+                      <div className="font-zonapro text-muted-foreground">
                         <p className="font-semibold">Office Hours:</p>
                         <p>Monday - Saturday: 9:00 AM - 5:00 PM</p>
                         <p>Sunday: Closed</p>
@@ -71,14 +71,14 @@ const Contact = () => {
               {/* Campus 2 - Rajakkad */}
               <Card>
                 <CardContent className="p-8">
-                  <h2 className="text-2xl font-poppins font-semibold text-secondary mb-6">
+                  <h2 className="text-2xl font-zonapro font-hairline text-secondary mb-6">
                     Rajakkad Campus (Paramedical College)
                   </h2>
                   <div className="space-y-4">
                     <div className="flex items-start gap-3">
                       <MapPin className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
                       <div>
-                        <p className="font-inter text-muted-foreground">
+                        <p className="font-zonapro text-muted-foreground">
                           Confidence Paramedical College<br />
                           Rajakkad<br />
                           Idukki District<br />
@@ -88,19 +88,19 @@ const Contact = () => {
                     </div>
                     <div className="flex items-center gap-3">
                       <Phone className="h-5 w-5 text-primary flex-shrink-0" />
-                      <a href="tel:+919605894644" className="font-inter text-primary hover:underline">
+                      <a href="tel:+919605894644" className="font-zonapro text-primary hover:underline">
                         +91 9605894644
                       </a>
                     </div>
                     <div className="flex items-center gap-3">
                       <Mail className="h-5 w-5 text-primary flex-shrink-0" />
-                      <a href="mailto:info@confidenceinstitutions.com" className="font-inter text-primary hover:underline">
+                      <a href="mailto:info@confidenceinstitutions.com" className="font-zonapro text-primary hover:underline">
                         info@confidenceinstitutions.com
                       </a>
                     </div>
                     <div className="flex items-start gap-3">
                       <Clock className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                      <div className="font-inter text-muted-foreground">
+                      <div className="font-zonapro text-muted-foreground">
                         <p className="font-semibold">Office Hours:</p>
                         <p>Monday - Saturday: 9:00 AM - 5:00 PM</p>
                         <p>Sunday: Closed</p>
@@ -116,7 +116,7 @@ const Contact = () => {
         {/* Quick Contact Options */}
         <section className="py-16 bg-muted">
           <div className="container mx-auto px-4 max-w-[1220px]">
-            <h2 className="text-3xl md:text-4xl font-poppins font-semibold text-secondary mb-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-zonapro font-hairline text-secondary mb-8 text-center">
               Get In Touch
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
@@ -125,8 +125,8 @@ const Contact = () => {
                   <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 mb-4">
                     <Phone className="h-6 w-6 text-primary" />
                   </div>
-                  <h3 className="font-poppins font-semibold mb-2">Call Us</h3>
-                  <p className="text-sm text-muted-foreground font-inter mb-4">
+                  <h3 className="font-zonapro font-hairline mb-2">Call Us</h3>
+                  <p className="text-sm text-muted-foreground font-zonapro mb-4">
                     Speak directly with our team
                   </p>
                   <a href="tel:+919605894644">
@@ -142,8 +142,8 @@ const Contact = () => {
                   <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-accent/10 mb-4">
                     <MessageCircle className="h-6 w-6 text-accent" />
                   </div>
-                  <h3 className="font-poppins font-semibold mb-2">WhatsApp</h3>
-                  <p className="text-sm text-muted-foreground font-inter mb-4">
+                  <h3 className="font-zonapro font-hairline mb-2">WhatsApp</h3>
+                  <p className="text-sm text-muted-foreground font-zonapro mb-4">
                     Quick enquiry via WhatsApp
                   </p>
                   <a href="https://wa.me/919605894644" target="_blank" rel="noopener noreferrer">
@@ -159,8 +159,8 @@ const Contact = () => {
                   <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-orange/10 mb-4">
                     <Mail className="h-6 w-6 text-orange" />
                   </div>
-                  <h3 className="font-poppins font-semibold mb-2">Email</h3>
-                  <p className="text-sm text-muted-foreground font-inter mb-4">
+                  <h3 className="font-zonapro font-hairline mb-2">Email</h3>
+                  <p className="text-sm text-muted-foreground font-zonapro mb-4">
                     Send us your queries
                   </p>
                   <a href="mailto:info@confidenceinstitutions.com">
@@ -177,10 +177,10 @@ const Contact = () => {
         {/* Visit Us */}
         <section className="py-16 bg-background">
           <div className="container mx-auto px-4 max-w-[1220px] text-center">
-            <h2 className="text-3xl md:text-4xl font-poppins font-semibold text-secondary mb-4">
+            <h2 className="text-3xl md:text-4xl font-zonapro font-hairline text-secondary mb-4">
               Visit Our Campuses
             </h2>
-            <p className="text-lg text-muted-foreground font-inter mb-8 max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground font-zonapro mb-8 max-w-2xl mx-auto">
               We welcome you to visit our campuses, meet our faculty, and experience our world-class facilities firsthand.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

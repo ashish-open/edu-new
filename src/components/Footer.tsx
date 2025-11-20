@@ -1,6 +1,6 @@
 import { MapPin, Phone, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
-import logo from "@/assets/Assets-03.png";
+import logo from "@/assets/Assets-06.png";
 
 const Footer = () => {
   return (
@@ -23,7 +23,7 @@ const Footer = () => {
 
           {/* Campus 1 - Nedumkandam */}
           <div>
-            <h4 className="text-base font-zonapro font-semibold mb-3 text-white">Nedumkandam Campus</h4>
+            <h4 className="text-base font-zonapro font-hairline mb-3 text-white">Nedumkandam Campus</h4>
             <div className="space-y-2 text-sm font-zonapro">
               <div className="flex gap-2">
                 <MapPin className="h-4 w-4 flex-shrink-0 mt-0.5 text-white/70" />
@@ -36,7 +36,7 @@ const Footer = () => {
 
           {/* Campus 2 - Rajakkad */}
           <div>
-            <h4 className="text-base font-zonapro font-semibold mb-3 text-white">Rajakkad Campus</h4>
+            <h4 className="text-base font-zonapro font-hairline mb-3 text-white">Rajakkad Campus</h4>
             <div className="space-y-2 text-sm font-zonapro">
               <div className="flex gap-2">
                 <MapPin className="h-4 w-4 flex-shrink-0 mt-0.5 text-white/70" />
@@ -49,7 +49,7 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h4 className="text-base font-zonapro font-semibold mb-3 text-white">Contact Us</h4>
+            <h4 className="text-base font-zonapro font-hairline mb-3 text-white">Contact Us</h4>
             <div className="space-y-3 text-sm font-zonapro">
               <a href="tel:+919605894644" className="flex items-center gap-2 hover:text-primary transition-colors">
                 <Phone className="h-4 w-4" />

@@ -39,7 +39,7 @@ const WhyConfidence = () => {
       {/* Header Section */}
       <div className="bg-white py-6">
         <div className="container mx-auto px-4 max-w-[1220px]">
-          <h2 className="text-2xl md:text-3xl font-poppins font-bold text-center uppercase tracking-wide text-secondary">
+          <h2 className="text-2xl md:text-3xl font-zonapro font-hairline text-center uppercase tracking-wide text-secondary">
             Our Specialities
           </h2>
         </div>
@@ -62,10 +62,10 @@ const WhyConfidence = () => {
                     </div>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-base md:text-lg font-poppins font-semibold mb-2 text-secondary">
+                    <h3 className="text-base md:text-lg font-zonapro font-hairline mb-2 text-secondary">
                       {feature.title}
                     </h3>
-                    <p className="text-sm md:text-base text-muted-foreground font-inter leading-relaxed">
+                    <p className="text-sm md:text-base text-muted-foreground font-zonapro leading-relaxed">
                       {feature.description}
                     </p>
                   </div>

@@ -1,9 +1,12 @@
 import * as React from "react";
 import { motion } from "framer-motion";
-import { Star } from "lucide-react";
+import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Card, CardContent } from "@/components/ui/card";
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
+import { useCallback, useEffect, useState } from "react";
 
 export interface StudentTestimonial {
   id: string | number;
@@ -21,16 +24,10 @@ interface TestimonialCardProps {
 
 const TestimonialCard = ({ testimonial, className }: TestimonialCardProps) => {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-100px" }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
-    >
+    <div className={cn("flex-[0_0_100%] md:flex-[0_0_calc(50%-0.75rem)] lg:flex-[0_0_calc(33.333%-1rem)] min-w-0 px-3", className)}>
       <Card
         className={cn(
-          "overflow-hidden bg-white border-border shadow-lg hover:shadow-xl transition-shadow duration-300 h-full flex flex-col",
-          className
+          "overflow-hidden bg-white border-border shadow-lg hover:shadow-xl transition-shadow duration-300 h-full flex flex-col"
         )}
       >
         <CardContent className="p-6 flex-1 flex flex-col">
@@ -40,7 +37,7 @@ const TestimonialCard = ({ testimonial, className }: TestimonialCardProps) => {
               {testimonial.photo ? (
                 <AvatarImage src={testimonial.photo} alt={testimonial.name} />
               ) : null}
-              <AvatarFallback className="bg-primary/10 text-primary font-semibold font-poppins">
+              <AvatarFallback className="bg-primary/10 text-primary font-semibold font-zonapro">
                 {testimonial.name
                   .split(" ")
                   .map((n) => n[0])
@@ -49,10 +46,10 @@ const TestimonialCard = ({ testimonial, className }: TestimonialCardProps) => {
               </AvatarFallback>
             </Avatar>
             <div className="flex-1">
-              <h3 className="font-semibold text-lg text-secondary leading-tight font-poppins">
+              <h3 className="font-hairline text-lg text-secondary leading-tight font-zonapro">
                 {testimonial.name}
               </h3>
-              <p className="text-sm text-muted-foreground mt-0.5 font-inter">
+              <p className="text-sm text-muted-foreground mt-0.5 font-zonapro">
                 {testimonial.courseName}
               </p>
             </div>
@@ -73,18 +70,18 @@ const TestimonialCard = ({ testimonial, className }: TestimonialCardProps) => {
                 />
               ))}
             </div>
-            <span className="text-sm font-medium text-secondary font-inter">
+            <span className="text-sm font-medium text-secondary font-zonapro">
               {testimonial.rating.toFixed(1)}
             </span>
           </div>
 
           {/* Testimonial Text */}
-          <blockquote className="text-base text-muted-foreground leading-relaxed font-inter flex-1">
+          <blockquote className="text-base text-muted-foreground leading-relaxed font-zonapro flex-1">
             "{testimonial.testimonial}"
           </blockquote>
         </CardContent>
       </Card>
-    </motion.div>
+    </div>
   );
 };
 
@@ -101,6 +98,49 @@ export const StudentTestimonialsGrid = ({
   subtitle = "Hear from students who have transformed their careers through our courses",
   className,
 }: StudentTestimonialsGridProps) => {
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    { 
+      loop: true,
+      align: 'start',
+      slidesToScroll: 1,
+      breakpoints: {
+        '(min-width: 768px)': { slidesToScroll: 1 },
+        '(min-width: 1024px)': { slidesToScroll: 1 },
+      },
+    },
+    [Autoplay({ delay: 5000, stopOnInteraction: false })]
+  );
+
+  const [prevBtnDisabled, setPrevBtnDisabled] = useState(true);
+  const [nextBtnDisabled, setNextBtnDisabled] = useState(true);
+
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
+
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
+    setPrevBtnDisabled(!emblaApi.canScrollPrev());
+    setNextBtnDisabled(!emblaApi.canScrollNext());
+  }, [emblaApi]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    
+    onSelect();
+    emblaApi.on("select", onSelect);
+    emblaApi.on("reInit", onSelect);
+    
+    return () => {
+      emblaApi.off("select", onSelect);
+      emblaApi.off("reInit", onSelect);
+    };
+  }, [emblaApi, onSelect]);
+
   return (
     <section className={cn("w-full bg-background py-16", className)}>
       <div className="container mx-auto px-4 max-w-[1220px]">
@@ -111,7 +151,7 @@ export const StudentTestimonialsGrid = ({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-3xl md:text-4xl font-poppins font-semibold text-secondary mb-4"
+            className="text-3xl md:text-4xl font-zonapro font-hairline text-secondary mb-4"
           >
             {title}
           </motion.h2>
@@ -120,20 +160,42 @@ export const StudentTestimonialsGrid = ({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="mx-auto max-w-2xl text-lg text-muted-foreground font-inter"
+            className="mx-auto max-w-2xl text-lg text-muted-foreground font-zonapro"
           >
             {subtitle}
           </motion.p>
         </div>
 
-        {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {testimonials.map((testimonial) => (
-            <TestimonialCard
-              key={testimonial.id}
-              testimonial={testimonial}
-            />
-          ))}
+        {/* Carousel Container */}
+        <div className="relative">
+          <div ref={emblaRef} className="overflow-hidden">
+            <div className="flex -ml-3">
+              {testimonials.map((testimonial) => (
+                <TestimonialCard
+                  key={testimonial.id}
+                  testimonial={testimonial}
+                />
+              ))}
+            </div>
+          </div>
+
+          {/* Navigation Arrows */}
+          <button
+            onClick={scrollPrev}
+            disabled={prevBtnDisabled}
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 w-10 h-10 rounded-full bg-white shadow-lg hover:bg-primary hover:text-white flex items-center justify-center transition-all disabled:opacity-50 disabled:cursor-not-allowed border border-border"
+            aria-label="Previous testimonial"
+          >
+            <ChevronLeft className="h-5 w-5" />
+          </button>
+          <button
+            onClick={scrollNext}
+            disabled={nextBtnDisabled}
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 w-10 h-10 rounded-full bg-white shadow-lg hover:bg-primary hover:text-white flex items-center justify-center transition-all disabled:opacity-50 disabled:cursor-not-allowed border border-border"
+            aria-label="Next testimonial"
+          >
+            <ChevronRight className="h-5 w-5" />
+          </button>
         </div>
       </div>
     </section>
@@ -197,4 +259,3 @@ const StudentTestimonials = () => {
 };
 
 export default StudentTestimonials;
-

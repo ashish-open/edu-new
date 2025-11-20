@@ -46,7 +46,7 @@ const ParamedicalSpotlight = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <h2 className="text-5xl md:text-6xl lg:text-7xl font-zonapro font-bold text-yellow leading-tight mb-8">
+              <h2 className="text-5xl md:text-6xl lg:text-7xl font-zonapro font-hairline text-yellow leading-tight mb-8">
                 DIPLOMA IN
               </h2>
             </motion.div>
@@ -68,7 +68,7 @@ const ParamedicalSpotlight = () => {
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-3">
                           <span className="text-2xl font-bold">•</span>
-                          <h3 className="text-lg md:text-xl font-zonapro font-bold uppercase tracking-wide">
+                          <h3 className="text-lg md:text-xl font-zonapro font-hairline uppercase tracking-wide">
                             {course.name}
                           </h3>
                         </div>

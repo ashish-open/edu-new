@@ -146,10 +146,10 @@ const Courses = () => {
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-primary to-primary/80 text-primary-foreground py-16">
           <div className="container mx-auto px-4 max-w-[1220px]">
-            <h1 className="text-4xl md:text-5xl font-poppins font-semibold mb-4">
+            <h1 className="text-4xl md:text-5xl font-zonapro font-hairline mb-4">
               Our Courses
             </h1>
-            <p className="text-lg md:text-xl opacity-95 font-inter max-w-2xl">
+            <p className="text-lg md:text-xl opacity-95 font-zonapro max-w-2xl">
               Explore our comprehensive range of programs designed to shape your future in healthcare, management, and beyond.
             </p>
           </div>
@@ -159,36 +159,36 @@ const Courses = () => {
         {courses.map((category) => (
           <section key={category.category} className="py-12 odd:bg-background even:bg-muted">
             <div className="container mx-auto px-4 max-w-[1220px]">
-              <h2 className="text-3xl font-poppins font-semibold text-secondary mb-8">
+              <h2 className="text-3xl font-zonapro font-hairline text-secondary mb-8">
                 {category.category}
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {category.programs.map((course) => (
                   <Card key={course.name} className="hover:shadow-lg transition-shadow">
                     <CardHeader>
-                      <h3 className="text-xl font-poppins font-semibold text-secondary">
+                      <h3 className="text-xl font-zonapro font-hairline text-secondary">
                         {course.name}
                       </h3>
-                      <p className="text-sm text-muted-foreground font-inter">
+                      <p className="text-sm text-muted-foreground font-zonapro">
                         {course.description}
                       </p>
                     </CardHeader>
                     <CardContent className="space-y-3">
                       <div className="flex items-start gap-2">
                         <GraduationCap className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                        <p className="text-sm font-inter">
+                        <p className="text-sm font-zonapro">
                           <span className="font-semibold">Eligibility:</span> {course.eligibility}
                         </p>
                       </div>
                       <div className="flex items-center gap-2">
                         <Clock className="h-4 w-4 text-primary flex-shrink-0" />
-                        <p className="text-sm font-inter">
+                        <p className="text-sm font-zonapro">
                           <span className="font-semibold">Duration:</span> {course.duration}
                         </p>
                       </div>
                       <div className="flex items-center gap-2">
                         <MapPin className="h-4 w-4 text-primary flex-shrink-0" />
-                        <p className="text-sm font-inter">
+                        <p className="text-sm font-zonapro">
                           <span className="font-semibold">Campus:</span> {course.campus}
                         </p>
                       </div>
@@ -211,12 +211,12 @@ const Courses = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               <div>
                 <div className="inline-block bg-accent px-4 py-2 rounded-full mb-4">
-                  <span className="text-sm font-inter font-semibold text-accent-foreground">CONFIDENCE PARAMEDICAL COLLEGE</span>
+                  <span className="text-sm font-zonapro font-semibold text-accent-foreground">CONFIDENCE PARAMEDICAL COLLEGE</span>
                 </div>
-                <h2 className="text-3xl md:text-4xl font-poppins font-semibold mb-4 text-secondary">
+                <h2 className="text-3xl md:text-4xl font-zonapro font-hairline mb-4 text-secondary">
                   Start Your Healthcare Career Today
                 </h2>
-                <p className="text-lg md:text-xl text-muted-foreground font-inter mb-6">
+                <p className="text-lg md:text-xl text-muted-foreground font-zonapro mb-6">
                   No age limit. Flexible eligibility. Professional training with guaranteed placement support.
                 </p>
                 <div className="space-y-3">
@@ -228,7 +228,7 @@ const Courses = () => {
                     "Modern labs & practical training",
                     "Industry-expert faculty"
                   ].map((highlight) => (
-                    <div key={highlight} className="flex items-start gap-2 font-inter">
+                    <div key={highlight} className="flex items-start gap-2 font-zonapro">
                       <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
                       <span className="text-muted-foreground">{highlight}</span>
                     </div>
@@ -244,8 +244,8 @@ const Courses = () => {
                 ].map((item) => (
                   <Card key={item.title}>
                     <CardContent className="p-6">
-                      <h3 className="text-lg font-poppins font-semibold mb-2 text-secondary">{item.title}</h3>
-                      <p className="text-sm font-inter text-muted-foreground">{item.desc}</p>
+                      <h3 className="text-lg font-zonapro font-hairline mb-2 text-secondary">{item.title}</h3>
+                      <p className="text-sm font-zonapro text-muted-foreground">{item.desc}</p>
                     </CardContent>
                   </Card>
                 ))}
@@ -257,10 +257,10 @@ const Courses = () => {
         {/* Facilities Section */}
         <section className="py-16 bg-background">
           <div className="container mx-auto px-4 max-w-[1220px]">
-            <h2 className="text-3xl md:text-4xl font-poppins font-semibold text-secondary mb-4 text-center">
+            <h2 className="text-3xl md:text-4xl font-zonapro font-hairline text-secondary mb-4 text-center">
               Our Facilities
             </h2>
-            <p className="text-lg text-muted-foreground font-inter mb-12 text-center max-w-3xl mx-auto">
+            <p className="text-lg text-muted-foreground font-zonapro mb-12 text-center max-w-3xl mx-auto">
               World-class infrastructure and resources to support your academic and professional growth.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
@@ -281,8 +281,8 @@ const Courses = () => {
                       <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-accent/10 mb-4">
                         <Icon className="h-7 w-7 text-accent" />
                       </div>
-                      <h3 className="text-lg font-poppins font-semibold mb-2 text-secondary">{facility.title}</h3>
-                      <p className="text-sm text-muted-foreground font-inter">{facility.desc}</p>
+                      <h3 className="text-lg font-zonapro font-hairline mb-2 text-secondary">{facility.title}</h3>
+                      <p className="text-sm text-muted-foreground font-zonapro">{facility.desc}</p>
                     </CardContent>
                   </Card>
                 );
@@ -294,10 +294,10 @@ const Courses = () => {
         {/* Admission Process Section */}
         <section className="py-16 bg-muted">
           <div className="container mx-auto px-4 max-w-[1220px]">
-            <h2 className="text-3xl md:text-4xl font-poppins font-semibold text-secondary mb-4 text-center">
+            <h2 className="text-3xl md:text-4xl font-zonapro font-hairline text-secondary mb-4 text-center">
               Admission Process
             </h2>
-            <p className="text-lg text-muted-foreground font-inter mb-12 text-center max-w-3xl mx-auto">
+            <p className="text-lg text-muted-foreground font-zonapro mb-12 text-center max-w-3xl mx-auto">
               Simple, transparent, and student-friendly admission process. We guide you at every step.
             </p>
             <div className="space-y-6 mb-12">
@@ -312,7 +312,7 @@ const Courses = () => {
                 return (
                   <div key={step.number} className="flex gap-6 items-start">
                     <div className="flex-shrink-0">
-                      <div className="w-16 h-16 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-poppins font-bold text-xl">
+                      <div className="w-16 h-16 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-zonapro font-bold text-xl">
                         {step.number}
                       </div>
                     </div>
@@ -323,8 +323,8 @@ const Courses = () => {
                             <Icon className="h-6 w-6 text-primary" />
                           </div>
                           <div className="flex-1">
-                            <h3 className="text-xl font-poppins font-semibold mb-2 text-secondary">{step.title}</h3>
-                            <p className="text-muted-foreground font-inter">{step.desc}</p>
+                            <h3 className="text-xl font-zonapro font-hairline mb-2 text-secondary">{step.title}</h3>
+                            <p className="text-muted-foreground font-zonapro">{step.desc}</p>
                           </div>
                         </div>
                       </CardContent>
@@ -336,8 +336,8 @@ const Courses = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
               <Card>
                 <CardContent className="p-6">
-                  <h3 className="text-lg font-poppins font-semibold mb-3 text-secondary">Required Documents</h3>
-                  <ul className="space-y-2 text-sm font-inter text-muted-foreground">
+                  <h3 className="text-lg font-zonapro font-hairline mb-3 text-secondary">Required Documents</h3>
+                  <ul className="space-y-2 text-sm font-zonapro text-muted-foreground">
                     {["10th Mark Sheet", "12th Mark Sheet (if applicable)", "Transfer Certificate", "Conduct Certificate", "Aadhaar Card Copy", "Passport Size Photographs (6 copies)"].map((doc) => (
                       <li key={doc} className="flex items-center gap-2">
                         <CheckCircle className="h-4 w-4 text-accent flex-shrink-0" />
@@ -349,8 +349,8 @@ const Courses = () => {
               </Card>
               <Card>
                 <CardContent className="p-6">
-                  <h3 className="text-lg font-poppins font-semibold mb-3 text-secondary">Important Information</h3>
-                  <div className="space-y-3 text-sm font-inter text-muted-foreground">
+                  <h3 className="text-lg font-zonapro font-hairline mb-3 text-secondary">Important Information</h3>
+                  <div className="space-y-3 text-sm font-zonapro text-muted-foreground">
                     <div>
                       <strong>Admission Timings:</strong> Open throughout the year for most courses
                     </div>
@@ -373,10 +373,10 @@ const Courses = () => {
         {/* CTA Section */}
         <section className="py-16 bg-primary text-primary-foreground">
           <div className="container mx-auto px-4 max-w-[1220px] text-center">
-            <h2 className="text-3xl md:text-4xl font-poppins font-semibold mb-4">
+            <h2 className="text-3xl md:text-4xl font-zonapro font-hairline mb-4">
               Ready to Start Your Journey?
             </h2>
-            <p className="text-lg font-inter mb-8 opacity-95">
+            <p className="text-lg font-zonapro mb-8 opacity-95">
               Contact us today for personalized guidance
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -57,13 +57,13 @@ const StatisticCard = ({ statistic, index, className }: StatisticCardProps) => {
           </div>
         </div>
         <div className="mb-2">
-          <span className="text-4xl md:text-5xl font-bold text-secondary font-poppins">
+          <span className="text-4xl md:text-5xl font-bold text-secondary font-zonapro">
             {statistic.prefix}
             {displayValue.toLocaleString()}
             {statistic.suffix}
           </span>
         </div>
-        <p className="text-lg text-muted-foreground font-inter">
+        <p className="text-lg text-muted-foreground font-zonapro">
           {statistic.label}
         </p>
       </div>
@@ -94,7 +94,7 @@ export const StatisticsGrid = ({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-3xl md:text-4xl font-poppins font-semibold text-secondary mb-4"
+            className="text-3xl md:text-4xl font-zonapro font-semibold text-secondary mb-4"
           >
             {title}
           </motion.h2>
@@ -103,7 +103,7 @@ export const StatisticsGrid = ({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="mx-auto max-w-2xl text-lg text-muted-foreground font-inter"
+            className="mx-auto max-w-2xl text-lg text-muted-foreground font-zonapro"
           >
             {subtitle}
           </motion.p>

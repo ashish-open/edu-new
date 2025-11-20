@@ -96,10 +96,10 @@ const CourseFinder = () => {
           <div className="flex flex-col justify-center h-full px-6 lg:px-12 xl:px-16 py-8 lg:py-12 order-1 lg:order-2">
             {/* Heading and Description */}
             <div className="mb-8 lg:mb-10">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-poppins font-semibold text-secondary mb-4 lg:mb-6 leading-tight">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-zonapro font-hairline text-secondary mb-4 lg:mb-6 leading-tight">
                 Popular Programs
               </h2>
-              <p className="text-base md:text-lg lg:text-xl text-muted-foreground font-inter max-w-2xl leading-relaxed">
+              <p className="text-base md:text-lg lg:text-xl text-muted-foreground font-zonapro max-w-2xl leading-relaxed">
                 Explore our wide range of programs. From idea to career, our integrated approach powers growth at every phase—medical, paramedical, nursing, and management—so you get expert guidance, recognized programs, and placement assistance.
               </p>
             </div>
@@ -110,7 +110,7 @@ const CourseFinder = () => {
                 <button
                   key={category}
                   onClick={() => setSelectedCategory(category)}
-                  className={`px-6 py-2.5 rounded-full font-inter text-sm font-medium transition-all duration-200 ${
+                  className={`px-6 py-2.5 rounded-full font-zonapro text-sm font-medium transition-all duration-200 ${
                     selectedCategory === category
                       ? "bg-secondary text-white shadow-md border-2 border-secondary scale-105"
                       : "bg-transparent text-secondary border-2 border-secondary/30 hover:border-secondary/50 hover:bg-secondary/5"
@@ -139,7 +139,7 @@ const CourseFinder = () => {
                         to="/consultancy" 
                         className="block py-3.5 border-b border-secondary/20 hover:text-primary hover:border-secondary/40 transition-all duration-200 group"
                       >
-                        <span className="text-base font-inter text-secondary group-hover:translate-x-1 inline-block transition-transform duration-200">
+                        <span className="text-base font-zonapro text-secondary group-hover:translate-x-1 inline-block transition-transform duration-200">
                           {course.name}
                         </span>
                       </Link>
@@ -155,7 +155,7 @@ const CourseFinder = () => {
                         to="/consultancy" 
                         className="block py-3.5 border-b border-secondary/20 hover:text-primary hover:border-secondary/40 transition-all duration-200 group"
                       >
-                        <span className="text-base font-inter text-secondary group-hover:translate-x-1 inline-block transition-transform duration-200">
+                        <span className="text-base font-zonapro text-secondary group-hover:translate-x-1 inline-block transition-transform duration-200">
                           {course.name}
                         </span>
                       </Link>
@@ -171,7 +171,7 @@ const CourseFinder = () => {
                 to="/consultancy" 
                 className="inline-flex items-center gap-4 group text-primary hover:text-primary/80 transition-colors"
               >
-                <span className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-poppins font-semibold">
+                <span className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-zonapro font-semibold">
                   Explore All Programs
                 </span>
                 <ArrowUpRight className="h-6 w-6 md:h-8 md:w-8 lg:h-10 lg:w-10 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />

@@ -8,7 +8,6 @@ import Autoplay from "embla-carousel-autoplay";
 import heroImage from "@/assets/Assets-01.png";
 import consultancyImage from "@/assets/red-consultancy.png";
 import assets02Image from "@/assets/Assets-02.png";
-import doctorImage from "@/assets/doctor.png";
 
 // Carousel slides for Confidence Group of Institutions
 const institutionsSlides = [
@@ -40,14 +39,6 @@ const consultancySlides = [
     ctaText: "Get Counselling",
     ctaLink: "/consultancy",
     alignRight: true, // Align content to right since person is on left
-  },
-  {
-    image: doctorImage,
-    tagline: "CONFIDENCE EDUCATIONAL CONSULTANCY",
-    heading: "Expert Guidance for Your Future",
-    description: "Comprehensive support for MBBS, BDS, and other programs in top international universities with affordable fees.",
-    ctaText: "Explore Consultancy",
-    ctaLink: "/consultancy",
   },
 ];
 
@@ -153,7 +144,7 @@ const Hero = () => {
                       <p className="text-sm md:text-base uppercase tracking-wider text-white drop-shadow-lg font-zonapro">
                         {slide.tagline}
                       </p>
-                      <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-zonapro font-bold text-white drop-shadow-lg leading-tight">
+                      <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-zonapro font-hairline text-white drop-shadow-lg leading-tight">
                         {slide.heading}
                       </h1>
                       <p className={`text-lg md:text-xl text-white drop-shadow-lg font-zonapro ${index === 2 ? 'ml-auto max-w-xl' : 'max-w-xl'}`}>
@@ -162,14 +153,14 @@ const Hero = () => {
                       <div className={index === 2 ? 'flex justify-end' : ''}>
                         {slide.ctaLink.startsWith('http') ? (
                           <a href={slide.ctaLink} target="_blank" rel="noopener noreferrer">
-                            <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg font-inter">
+                            <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg font-zonapro">
                               {slide.ctaText}
                               <ArrowRight className="ml-2 h-5 w-5" />
                             </Button>
                           </a>
                         ) : (
                           <Link to={slide.ctaLink}>
-                            <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg font-inter">
+                            <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg font-zonapro">
                               {slide.ctaText}
                               <ArrowRight className="ml-2 h-5 w-5" />
                             </Button>
@@ -222,15 +213,15 @@ const Hero = () => {
                     <div className="p-3 rounded-lg bg-primary/10">
                       <Icon className="h-8 w-8 text-primary" />
                     </div>
-                    <h3 className="text-xl font-poppins font-semibold text-secondary">
+                    <h3 className="text-xl font-zonapro font-hairline text-secondary">
                       {card.title}
                     </h3>
-                    <p className="text-muted-foreground font-inter flex-1">
+                    <p className="text-muted-foreground font-zonapro flex-1">
                       {card.description}
                     </p>
                     <Link
                       to={card.link}
-                      className="text-primary font-inter font-medium hover:underline inline-flex items-center gap-2 group mt-auto"
+                      className="text-primary font-zonapro font-medium hover:underline inline-flex items-center gap-2 group mt-auto"
                     >
                       Learn More
                       <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />

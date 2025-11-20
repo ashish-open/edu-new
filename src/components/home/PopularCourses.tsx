@@ -47,10 +47,10 @@ const PopularCourses = () => {
     <section className="py-16 bg-background">
       <div className="container mx-auto px-4 max-w-[1220px]">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-poppins font-semibold text-secondary mb-4">
+          <h2 className="text-3xl md:text-4xl font-zonapro font-hairline text-secondary mb-4">
             Popular Programs
           </h2>
-          <p className="text-lg text-muted-foreground font-inter">
+          <p className="text-lg text-muted-foreground font-zonapro">
             Explore our most sought-after programs
           </p>
         </div>
@@ -59,23 +59,23 @@ const PopularCourses = () => {
           {popularCourses.map((course) => (
             <Card key={course.name} className="hover:shadow-lg transition-shadow">
               <CardHeader>
-                <h3 className="text-xl font-poppins font-semibold text-secondary">
+                <h3 className="text-xl font-zonapro font-hairline text-secondary">
                   {course.name}
                 </h3>
-                <p className="text-sm text-muted-foreground font-inter">
+                <p className="text-sm text-muted-foreground font-zonapro">
                   {course.description}
                 </p>
               </CardHeader>
               <CardContent className="space-y-3">
                 <div className="flex items-start gap-2">
                   <GraduationCap className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                  <p className="text-sm font-inter">
+                  <p className="text-sm font-zonapro">
                     <span className="font-semibold">Eligibility:</span> {course.eligibility}
                   </p>
                 </div>
                 <div className="flex items-center gap-2">
                   <Clock className="h-4 w-4 text-primary flex-shrink-0" />
-                  <p className="text-sm font-inter">
+                  <p className="text-sm font-zonapro">
                     <span className="font-semibold">Duration:</span> {course.duration}
                   </p>
                 </div>

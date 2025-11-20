@@ -20,13 +20,13 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-6">
-          <Link to="/" className="text-sm font-inter hover:text-primary transition-colors">
+          <Link to="/" className="text-sm font-zonapro hover:text-primary transition-colors">
             Home
           </Link>
-          <Link to="/consultancy" className="text-sm font-inter hover:text-primary transition-colors">
+          <Link to="/consultancy" className="text-sm font-zonapro hover:text-primary transition-colors">
             Consultancy
           </Link>
-          <Link to="/contact" className="text-sm font-inter hover:text-primary transition-colors">
+          <Link to="/contact" className="text-sm font-zonapro hover:text-primary transition-colors">
             Contact
           </Link>
         </nav>
@@ -55,13 +55,13 @@ const Header = () => {
       {isMenuOpen && (
         <div className="lg:hidden bg-background border-t">
           <nav className="container mx-auto px-4 py-4 flex flex-col gap-3">
-            <Link to="/" className="text-sm font-inter py-2 hover:text-primary">
+            <Link to="/" className="text-sm font-zonapro py-2 hover:text-primary">
               Home
             </Link>
-            <Link to="/consultancy" className="text-sm font-inter py-2 hover:text-primary">
+            <Link to="/consultancy" className="text-sm font-zonapro py-2 hover:text-primary">
               Consultancy
             </Link>
-            <Link to="/contact" className="text-sm font-inter py-2 hover:text-primary">
+            <Link to="/contact" className="text-sm font-zonapro py-2 hover:text-primary">
               Contact
             </Link>
             <div className="flex flex-col gap-2 pt-2 border-t">

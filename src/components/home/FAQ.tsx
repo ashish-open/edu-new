@@ -37,7 +37,7 @@ export const FAQSection = ({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-3xl md:text-4xl font-poppins font-semibold text-secondary mb-4"
+            className="text-3xl md:text-4xl font-zonapro font-semibold text-secondary mb-4"
           >
             {title}
           </motion.h2>
@@ -46,7 +46,7 @@ export const FAQSection = ({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="mx-auto max-w-2xl text-lg text-muted-foreground font-inter"
+            className="mx-auto max-w-2xl text-lg text-muted-foreground font-zonapro"
           >
             {subtitle}
           </motion.p>
@@ -67,10 +67,10 @@ export const FAQSection = ({
                   value={`item-${faq.id}`}
                   className="bg-white rounded-xl border shadow-sm hover:shadow-md transition-shadow px-6"
                 >
-                  <AccordionTrigger className="text-left font-poppins font-semibold text-secondary hover:no-underline py-4">
+                  <AccordionTrigger className="text-left font-zonapro font-semibold text-secondary hover:no-underline py-4">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground font-inter pb-4">
+                  <AccordionContent className="text-muted-foreground font-zonapro pb-4">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>

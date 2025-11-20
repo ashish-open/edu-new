@@ -106,7 +106,7 @@ const WhyUs = () => {
             transition={{ duration: 0.5 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-zonapro font-bold mb-6">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-zonapro font-hairline mb-6">
               Why Choose Confidence Group of Institutions
             </h2>
             <p className="text-lg md:text-xl opacity-95 font-zonapro max-w-3xl mx-auto leading-relaxed">
@@ -135,7 +135,7 @@ const WhyUs = () => {
                       <div className={`inline-flex items-center justify-center w-14 h-14 rounded-full ${colorMap[feature.color as keyof typeof colorMap]} mb-4`}>
                         <Icon className="h-7 w-7" />
                       </div>
-                      <h3 className="text-lg font-zonapro font-semibold mb-2 text-secondary">
+                      <h3 className="text-lg font-zonapro font-hairline mb-2 text-secondary">
                         {feature.title}
                       </h3>
                       <p className="text-sm text-muted-foreground font-zonapro leading-relaxed">
@@ -160,7 +160,7 @@ const WhyUs = () => {
             transition={{ duration: 0.5 }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-zonapro font-semibold text-secondary mb-4">
+            <h2 className="text-3xl md:text-4xl font-zonapro font-hairline text-secondary mb-4">
               Our Approach to Student Success
             </h2>
             <p className="text-lg text-muted-foreground font-zonapro max-w-2xl mx-auto">
@@ -186,7 +186,7 @@ const WhyUs = () => {
                     }`}>
                       {step.number}
                     </div>
-                    <h3 className="text-xl font-zonapro font-semibold mb-2 text-secondary">
+                    <h3 className="text-xl font-zonapro font-hairline mb-2 text-secondary">
                       {step.title}
                     </h3>
                     <p className="text-sm font-zonapro text-muted-foreground leading-relaxed">
@@ -209,7 +209,7 @@ const WhyUs = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-3xl md:text-4xl font-zonapro font-semibold mb-4">
+            <h2 className="text-3xl md:text-4xl font-zonapro font-hairline mb-4">
               Join Hundreds of Successful Alumni
             </h2>
             <p className="text-lg font-zonapro mb-8 opacity-95 max-w-2xl mx-auto">

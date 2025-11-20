@@ -9,6 +9,16 @@ All colors MUST be HSL.
 /* ZonaPro Font Family */
 @font-face {
   font-family: 'ZonaPro';
+  src: url('/fonts/ZonaPro-Hairline.woff2') format('woff2'),
+       url('/fonts/ZonaPro-Hairline.woff') format('woff'),
+       url('/fonts/ZonaPro-Hairline.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ZonaPro';
   src: url('/fonts/ZonaPro-Regular.woff2') format('woff2'),
        url('/fonts/ZonaPro-Regular.woff') format('woff'),
        url('/fonts/ZonaPro-Regular.ttf') format('truetype');
@@ -48,6 +58,15 @@ All colors MUST be HSL.
 }
 
 @layer base {
+  * {
+    font-family: 'ZonaPro', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'ZonaPro', sans-serif;
+    font-weight: 100; /* Hairline weight for headings */
+  }
+  
   :root {
     --background: 0 0% 100%;
     --foreground: 240 65% 28%;
@@ -163,10 +182,16 @@ All colors MUST be HSL.
 @layer base {
   * {
     @apply border-border;
+    font-family: 'ZonaPro', sans-serif;
   }
 
   body {
     @apply bg-background text-foreground font-zonapro;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'ZonaPro', sans-serif;
+    font-weight: 100; /* Hairline weight for all headings */
   }
 }
 

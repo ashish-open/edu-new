@@ -62,7 +62,7 @@ export const CourseCard = ({
 
         <CardHeader className={cn(isCompact && "pb-3")}>
           <div className="flex items-start justify-between gap-2">
-            <h3 className="text-xl font-poppins font-semibold text-secondary flex-1">
+            <h3 className="text-xl font-zonapro font-hairline text-secondary flex-1">
               {course.name}
             </h3>
             {course.category && isCompact && (
@@ -72,7 +72,7 @@ export const CourseCard = ({
             )}
           </div>
           {!isCompact && (
-            <p className="text-sm text-muted-foreground font-inter mt-1">
+            <p className="text-sm text-muted-foreground font-zonapro mt-1">
               {course.description}
             </p>
           )}
@@ -81,20 +81,20 @@ export const CourseCard = ({
         <CardContent className={cn("space-y-3 flex-1", isCompact && "py-0")}>
           <div className="flex items-start gap-2">
             <GraduationCap className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-            <p className="text-sm font-inter">
+            <p className="text-sm font-zonapro">
               <span className="font-semibold text-secondary">Eligibility:</span>{" "}
               <span className="text-muted-foreground">{course.eligibility}</span>
             </p>
           </div>
           <div className="flex items-center gap-2">
             <Clock className="h-4 w-4 text-primary flex-shrink-0" />
-            <p className="text-sm font-inter">
+            <p className="text-sm font-zonapro">
               <span className="font-semibold text-secondary">Duration:</span>{" "}
               <span className="text-muted-foreground">{course.duration}</span>
             </p>
           </div>
           {isCompact && (
-            <p className="text-sm text-muted-foreground font-inter line-clamp-2">
+            <p className="text-sm text-muted-foreground font-zonapro line-clamp-2">
               {course.description}
             </p>
           )}
@@ -149,7 +149,7 @@ export const CourseCardsGrid = ({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-3xl md:text-4xl font-poppins font-semibold text-secondary mb-4"
+            className="text-3xl md:text-4xl font-zonapro font-semibold text-secondary mb-4"
           >
             {title}
           </motion.h2>
@@ -159,7 +159,7 @@ export const CourseCardsGrid = ({
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="mx-auto max-w-2xl text-lg text-muted-foreground font-inter"
+              className="mx-auto max-w-2xl text-lg text-muted-foreground font-zonapro"
             >
               {subtitle}
             </motion.p>

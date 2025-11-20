@@ -119,7 +119,7 @@ const Consultancy = () => {
               <div className="inline-block bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-4">
                 <span className="text-sm font-zonapro font-semibold">CONFIDENCE EDUCATIONAL CONSULTANCY</span>
               </div>
-              <h1 className="text-4xl md:text-5xl font-zonapro font-semibold mb-4">
+              <h1 className="text-4xl md:text-5xl font-zonapro font-hairline mb-4">
                 Expert Career Counselling & Admission Guidance
               </h1>
               <p className="text-lg md:text-xl opacity-95 font-zonapro">
@@ -133,7 +133,7 @@ const Consultancy = () => {
         <section className="py-16 bg-background">
           <div className="container mx-auto px-4 max-w-[1220px]">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-zonapro font-semibold text-secondary mb-4">
+              <h2 className="text-3xl md:text-4xl font-zonapro font-hairline text-secondary mb-4">
                 Our Consultancy Services
               </h2>
               <p className="text-lg text-muted-foreground font-zonapro">
@@ -150,7 +150,7 @@ const Consultancy = () => {
                       <div className="inline-flex items-center justify-center w-12 h-12 rounded-full consultancy-icon-bg mb-4">
                         <Icon className="h-6 w-6 consultancy-icon" />
                       </div>
-                      <h3 className="text-lg font-zonapro font-semibold mb-2 text-secondary">
+                      <h3 className="text-lg font-zonapro font-hairline mb-2 text-secondary">
                         {service.title}
                       </h3>
                       <p className="text-sm text-muted-foreground font-zonapro">
@@ -168,7 +168,7 @@ const Consultancy = () => {
         <section className="py-16 bg-muted">
           <div className="container mx-auto px-4 max-w-[1220px]">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-zonapro font-semibold text-secondary mb-4">
+              <h2 className="text-3xl md:text-4xl font-zonapro font-hairline text-secondary mb-4">
                 Available Courses
               </h2>
               <p className="text-lg text-muted-foreground font-zonapro">
@@ -192,8 +192,8 @@ const Consultancy = () => {
                     rel="noopener noreferrer"
                     className="block"
                   >
-                    <div className="bg-orange text-white p-4 rounded-lg hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02] cursor-pointer h-full flex flex-col justify-center min-h-[120px]">
-                      <h3 className="font-zonapro font-bold text-sm md:text-base uppercase tracking-wide leading-tight mb-1">
+                    <div className="bg-gradient-to-br from-red-600 via-red-500 to-red-800 text-white p-4 rounded-lg hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02] cursor-pointer h-full flex flex-col justify-center min-h-[120px] shadow-md">
+                      <h3 className="font-zonapro font-hairline text-sm md:text-base uppercase tracking-wide leading-tight mb-1">
                         {course.name}
                       </h3>
                       {course.subtext && (
@@ -221,8 +221,8 @@ const Consultancy = () => {
                 rel="noopener noreferrer"
                 className="block"
               >
-                <div className="bg-orange text-white p-6 rounded-lg hover:shadow-xl transition-all duration-300 transform hover:scale-[1.01] cursor-pointer">
-                  <h3 className="font-zonapro font-bold text-lg md:text-xl uppercase tracking-wide text-center">
+                <div className="bg-gradient-to-br from-red-600 via-red-500 to-red-800 text-white p-6 rounded-lg hover:shadow-xl transition-all duration-300 transform hover:scale-[1.01] cursor-pointer shadow-md">
+                  <h3 className="font-zonapro font-hairline text-lg md:text-xl uppercase tracking-wide text-center">
                     ALL OTHER UG, PG, DIPLOMA COURSES
                   </h3>
                 </div>
@@ -234,7 +234,7 @@ const Consultancy = () => {
         {/* Why Choose Our Consultancy */}
         <section className="py-16 bg-background">
           <div className="container mx-auto px-4 max-w-[1220px]">
-            <h2 className="text-3xl md:text-4xl font-zonapro font-semibold text-secondary mb-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-zonapro font-hairline text-secondary mb-8 text-center">
               Why Choose Confidence Consultancy?
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -242,7 +242,7 @@ const Consultancy = () => {
                 <div className="flex gap-3">
                   <CheckCircle className="h-5 w-5 consultancy-check-icon flex-shrink-0 mt-0.5" />
                   <div>
-                    <h3 className="font-zonapro font-semibold mb-1">Experienced Counsellors</h3>
+                    <h3 className="font-zonapro font-hairline mb-1">Experienced Counsellors</h3>
                     <p className="text-sm text-muted-foreground font-zonapro">
                       Our team has years of experience in educational counselling and admission guidance.
                     </p>
@@ -251,7 +251,7 @@ const Consultancy = () => {
                 <div className="flex gap-3">
                   <CheckCircle className="h-5 w-5 consultancy-check-icon flex-shrink-0 mt-0.5" />
                   <div>
-                    <h3 className="font-zonapro font-semibold mb-1">Personalized Approach</h3>
+                    <h3 className="font-zonapro font-hairline mb-1">Personalized Approach</h3>
                     <p className="text-sm text-muted-foreground font-zonapro">
                       Every student receives customized guidance based on their unique goals and circumstances.
                     </p>
@@ -260,7 +260,7 @@ const Consultancy = () => {
                 <div className="flex gap-3">
                   <CheckCircle className="h-5 w-5 consultancy-check-icon flex-shrink-0 mt-0.5" />
                   <div>
-                    <h3 className="font-zonapro font-semibold mb-1">Transparent Process</h3>
+                    <h3 className="font-zonapro font-hairline mb-1">Transparent Process</h3>
                     <p className="text-sm text-muted-foreground font-zonapro">
                       Complete transparency in fees, procedures, and recommendations.
                     </p>
@@ -271,7 +271,7 @@ const Consultancy = () => {
                 <div className="flex gap-3">
                   <CheckCircle className="h-5 w-5 consultancy-check-icon flex-shrink-0 mt-0.5" />
                   <div>
-                    <h3 className="font-zonapro font-semibold mb-1">Wide Network</h3>
+                    <h3 className="font-zonapro font-hairline mb-1">Wide Network</h3>
                     <p className="text-sm text-muted-foreground font-zonapro">
                       Connections with top colleges and universities in India and abroad.
                     </p>
@@ -280,7 +280,7 @@ const Consultancy = () => {
                 <div className="flex gap-3">
                   <CheckCircle className="h-5 w-5 consultancy-check-icon flex-shrink-0 mt-0.5" />
                   <div>
-                    <h3 className="font-zonapro font-semibold mb-1">Post-Admission Support</h3>
+                    <h3 className="font-zonapro font-hairline mb-1">Post-Admission Support</h3>
                     <p className="text-sm text-muted-foreground font-zonapro">
                       We stay with you even after admission to ensure smooth transition.
                     </p>
@@ -289,7 +289,7 @@ const Consultancy = () => {
                 <div className="flex gap-3">
                   <CheckCircle className="h-5 w-5 consultancy-check-icon flex-shrink-0 mt-0.5" />
                   <div>
-                    <h3 className="font-zonapro font-semibold mb-1">Success Track Record</h3>
+                    <h3 className="font-zonapro font-hairline mb-1">Success Track Record</h3>
                     <p className="text-sm text-muted-foreground font-zonapro">
                       Hundreds of students successfully placed in top institutions.
                     </p>
@@ -303,7 +303,7 @@ const Consultancy = () => {
         {/* Popular Destinations */}
         <section className="py-16 bg-muted">
           <div className="container mx-auto px-4 max-w-[1220px]">
-            <h2 className="text-3xl md:text-4xl font-zonapro font-semibold text-secondary mb-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-zonapro font-hairline text-secondary mb-8 text-center">
               Popular Study Destinations
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -321,7 +321,7 @@ const Consultancy = () => {
         {/* CTA Section */}
         <section className="py-16 consultancy-cta text-white">
           <div className="container mx-auto px-4 max-w-[1220px] text-center">
-            <h2 className="text-3xl md:text-4xl font-zonapro font-semibold mb-4">
+            <h2 className="text-3xl md:text-4xl font-zonapro font-hairline mb-4">
               Book Your Free Counselling Session
             </h2>
             <p className="text-lg font-zonapro mb-8 opacity-95 max-w-2xl mx-auto">

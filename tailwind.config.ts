@@ -17,7 +17,19 @@ export default {
         'zonapro': ['ZonaPro', 'sans-serif'],
         'poppins': ['Poppins', 'sans-serif'],
         'inter': ['Inter', 'sans-serif'],
-        'sans': ['ZonaPro', 'Poppins', 'Inter', 'sans-serif'], // ZonaPro as default sans-serif
+        'sans': ['ZonaPro', 'sans-serif'], // ZonaPro as default sans-serif
+      },
+      fontWeight: {
+        'hairline': '100',
+        'thin': '100',
+        'extralight': '200',
+        'light': '300',
+        'normal': '400',
+        'medium': '500',
+        'semibold': '600',
+        'bold': '700',
+        'extrabold': '800',
+        'black': '900',
       },
       colors: {
         border: "hsl(var(--border))",

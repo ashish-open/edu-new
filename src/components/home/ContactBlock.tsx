@@ -7,10 +7,10 @@ const ContactBlock = () => {
     <section className="py-16 bg-muted">
       <div className="container mx-auto px-4 max-w-[1220px]">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-poppins font-semibold text-secondary mb-4">
+          <h2 className="text-3xl md:text-4xl font-zonapro font-hairline text-secondary mb-4">
             Visit Our Campuses
           </h2>
-          <p className="text-lg text-muted-foreground font-inter">
+          <p className="text-lg text-muted-foreground font-zonapro">
             We're here to help you choose the right path
           </p>
         </div>
@@ -19,13 +19,13 @@ const ContactBlock = () => {
           {/* Nedumkandam Campus */}
           <Card>
             <CardContent className="p-6 space-y-4">
-              <h3 className="text-xl font-poppins font-semibold text-secondary">
+              <h3 className="text-xl font-zonapro font-hairline text-secondary">
                 Nedumkandam Campus
               </h3>
               <div className="space-y-3">
                 <div className="flex items-start gap-3">
                   <MapPin className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                  <p className="text-sm font-inter text-muted-foreground">
+                  <p className="text-sm font-zonapro text-muted-foreground">
                     Confidence Group of Institutions<br />
                     Nedumkandam, Idukki District<br />
                     Kerala, India
@@ -33,7 +33,7 @@ const ContactBlock = () => {
                 </div>
                 <div className="flex items-center gap-3">
                   <Phone className="h-5 w-5 text-primary flex-shrink-0" />
-                  <a href="tel:+919605894644" className="text-sm font-inter text-primary hover:underline">
+                  <a href="tel:+919605894644" className="text-sm font-zonapro text-primary hover:underline">
                     +91 9605894644
                   </a>
                 </div>
@@ -44,13 +44,13 @@ const ContactBlock = () => {
           {/* Rajakkad Campus */}
           <Card>
             <CardContent className="p-6 space-y-4">
-              <h3 className="text-xl font-poppins font-semibold text-secondary">
+              <h3 className="text-xl font-zonapro font-hairline text-secondary">
                 Rajakkad Campus (Paramedical)
               </h3>
               <div className="space-y-3">
                 <div className="flex items-start gap-3">
                   <MapPin className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                  <p className="text-sm font-inter text-muted-foreground">
+                  <p className="text-sm font-zonapro text-muted-foreground">
                     Confidence Paramedical College<br />
                     Rajakkad, Idukki District<br />
                     Kerala, India
@@ -58,7 +58,7 @@ const ContactBlock = () => {
                 </div>
                 <div className="flex items-center gap-3">
                   <Phone className="h-5 w-5 text-primary flex-shrink-0" />
-                  <a href="tel:+919605894644" className="text-sm font-inter text-primary hover:underline">
+                  <a href="tel:+919605894644" className="text-sm font-zonapro text-primary hover:underline">
                     +91 9605894644
                   </a>
                 </div>
