@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import Hero from "@/components/home/Hero";
-import CourseFinder from "@/components/home/CourseFinder";
+import CampusGallery from "@/components/home/CampusGallery";
 import Statistics from "@/components/home/Statistics";
 import WhyConfidence from "@/components/home/WhyConfidence";
 import FeatureCards from "@/components/home/FeatureCards";
@@ -18,7 +18,7 @@ const Index = () => {
       <Header />
       <main className="flex-1">
         <Hero />
-        <CourseFinder />
+        <CampusGallery />
         <Statistics />
         <WhyConfidence />
         <FeatureCards />

@@ -16,7 +16,7 @@ const institutionsSlides = [
     tagline: "CONFIDENCE GROUP OF INSTITUTIONS",
     heading: "Together We'll Explore New Things",
     description: "We believe everyone should have the opportunity to create progress through education.",
-    ctaText: "Find Courses",
+    ctaText: "Get Counselling",
     ctaLink: "https://wa.me/919605894644",
   },
   {
@@ -24,7 +24,7 @@ const institutionsSlides = [
     tagline: "CONFIDENCE GROUP OF INSTITUTIONS",
     heading: "Choose the Right Course with Confidence",
     description: "Expert counselling. Recognized programs. Placement assistance.",
-    ctaText: "Find Courses",
+    ctaText: "Get Counselling",
     ctaLink: "https://wa.me/919605894644",
   },
 ];
@@ -60,7 +60,7 @@ const infoCards = [
     icon: Hospital,
     title: "Confidence Group of Institutions",
     description: "Confidence offers recognized paramedical programs with placement assistance and modern infrastructure.",
-    link: "/courses",
+    link: "/consultancy",
   },
   {
     icon: Lightbulb,

@@ -20,8 +20,8 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-6">
-          <Link to="/courses" className="text-sm font-inter hover:text-primary transition-colors">
-            Courses
+          <Link to="/" className="text-sm font-inter hover:text-primary transition-colors">
+            Home
           </Link>
           <Link to="/consultancy" className="text-sm font-inter hover:text-primary transition-colors">
             Consultancy
@@ -58,8 +58,8 @@ const Header = () => {
       {isMenuOpen && (
         <div className="lg:hidden bg-background border-t">
           <nav className="container mx-auto px-4 py-4 flex flex-col gap-3">
-            <Link to="/courses" className="text-sm font-inter py-2 hover:text-primary">
-              Courses
+            <Link to="/" className="text-sm font-inter py-2 hover:text-primary">
+              Home
             </Link>
             <Link to="/consultancy" className="text-sm font-inter py-2 hover:text-primary">
               Consultancy

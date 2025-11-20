@@ -22,7 +22,7 @@ const CourseFilter = () => {
 
         <div className="flex flex-wrap gap-3 justify-center">
           {courses.map((course) => (
-            <Link key={course} to="/courses">
+            <Link key={course} to="/consultancy">
               <Button 
                 variant="outline" 
                 className="font-inter hover:bg-primary hover:text-primary-foreground transition-all"

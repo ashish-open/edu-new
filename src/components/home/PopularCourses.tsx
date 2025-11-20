@@ -48,7 +48,7 @@ const PopularCourses = () => {
       <div className="container mx-auto px-4 max-w-[1220px]">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-poppins font-semibold text-secondary mb-4">
-            Popular Courses
+            Popular Programs
           </h2>
           <p className="text-lg text-muted-foreground font-inter">
             Explore our most sought-after programs
@@ -81,7 +81,7 @@ const PopularCourses = () => {
                 </div>
               </CardContent>
               <CardFooter>
-                <Link to="/courses" className="w-full">
+                <Link to="/consultancy" className="w-full">
                   <Button variant="outline" className="w-full">
                     View Details
                   </Button>
@@ -92,9 +92,9 @@ const PopularCourses = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Link to="/courses">
+          <Link to="/consultancy">
             <Button size="lg">
-              View All Courses
+              Explore All Programs
             </Button>
           </Link>
         </div>

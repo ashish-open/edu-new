@@ -132,11 +132,11 @@ interface CourseCardsGridProps {
 
 export const CourseCardsGrid = ({
   courses,
-  title = "Our Courses",
+  title = "Our Programs",
   subtitle = "Explore our comprehensive range of programs",
   variant = "default",
   showViewAll = true,
-  viewAllLink = "/courses",
+  viewAllLink = "/consultancy",
   className,
 }: CourseCardsGridProps) => {
   return (
@@ -183,7 +183,7 @@ export const CourseCardsGrid = ({
           <div className="text-center mt-12">
             <Link to={viewAllLink}>
               <Button size="lg" className="bg-primary hover:bg-primary/90">
-                View All Courses
+                Explore All Programs
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
