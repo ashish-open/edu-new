@@ -112,20 +112,37 @@ const Hero = () => {
       {/* Hero Carousel */}
       <div className="relative h-[600px] md:h-[700px] lg:h-[800px] overflow-hidden">
         <div ref={emblaRef} className="overflow-hidden h-full w-full">
-          <div className="flex h-full">
+          <div className="flex h-full" style={{ margin: 0, padding: 0 }}>
             {heroSlides.map((slide, index) => (
               <div
                 key={index}
-                className="relative flex-[0_0_100%] min-w-0 h-full"
+                className="relative flex-[0_0_100%] min-w-0 h-full overflow-hidden"
               >
-                {/* Background Image */}
+                {/* Background Image - No borders, full coverage */}
                 <div
-                  className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                  style={{ backgroundImage: `url(${slide.image})` }}
+                  className="absolute inset-0"
+                  style={{ 
+                    backgroundImage: `url(${slide.image})`,
+                    backgroundSize: index === 2 ? '120%' : 'cover', // Scale up to crop white borders
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat',
+                    width: '100%',
+                    height: '100%',
+                    margin: 0,
+                    padding: 0,
+                    border: 'none',
+                    outline: 'none',
+                    boxSizing: 'border-box'
+                  }}
                 />
                 
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-black/20 z-[1]" />
+                {/* Overlay - lighter for red consultancy image */}
+                <div 
+                  className="absolute inset-0 z-[1]"
+                  style={{
+                    backgroundColor: index === 2 ? 'rgba(0, 0, 0, 0.15)' : 'rgba(0, 0, 0, 0.2)'
+                  }}
+                />
                 
                 {/* Content */}
                 <div className="relative z-10 h-full flex items-center">
