@@ -8,6 +8,7 @@ import Autoplay from "embla-carousel-autoplay";
 import heroImage from "@/assets/Assets-01.png";
 import consultancyImage from "@/assets/red-consultancy.png";
 import assets02Image from "@/assets/Assets-02.png";
+import Silk from "@/components/Silk";
 
 // Carousel slides for Confidence Group of Institutions
 const institutionsSlides = [
@@ -111,31 +112,48 @@ const Hero = () => {
                 key={index}
                 className="relative flex-[0_0_100%] min-w-0 h-full overflow-hidden"
               >
-                {/* Background Image - No borders, full coverage */}
-                <div
-                  className="absolute inset-0"
-                  style={{ 
-                    backgroundImage: `url(${slide.image})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    backgroundRepeat: 'no-repeat',
-                    width: '100%',
-                    height: '100%',
-                    margin: 0,
-                    padding: 0,
-                    border: 'none',
-                    outline: 'none',
-                    boxSizing: 'border-box'
-                  }}
-                />
+                {/* Silk Background for first carousel slide */}
+                {index === 0 && (
+                  <div className="absolute inset-0 z-0 w-full h-full">
+                    <Silk
+                      speed={1}
+                      scale={1}
+                      color="#15325C"
+                      noiseIntensity={1.5}
+                      rotation={0}
+                    />
+                  </div>
+                )}
                 
-                {/* Overlay - lighter for red consultancy image */}
-                <div 
-                  className="absolute inset-0 z-[1]"
-                  style={{
-                    backgroundColor: index === 2 ? 'rgba(0, 0, 0, 0.1)' : 'rgba(0, 0, 0, 0.2)'
-                  }}
-                />
+                {/* Background Image - No borders, full coverage - Hidden for first slide */}
+                {index !== 0 && (
+                  <div
+                    className="absolute inset-0"
+                    style={{ 
+                      backgroundImage: `url(${slide.image})`,
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center',
+                      backgroundRepeat: 'no-repeat',
+                      width: '100%',
+                      height: '100%',
+                      margin: 0,
+                      padding: 0,
+                      border: 'none',
+                      outline: 'none',
+                      boxSizing: 'border-box'
+                    }}
+                  />
+                )}
+                
+                {/* Overlay - lighter for red consultancy image - Hidden for first slide */}
+                {index !== 0 && (
+                  <div 
+                    className="absolute inset-0 z-[1]"
+                    style={{
+                      backgroundColor: index === 2 ? 'rgba(0, 0, 0, 0.1)' : 'rgba(0, 0, 0, 0.2)'
+                    }}
+                  />
+                )}
                 
                 {/* Content */}
                 <div className="relative z-10 h-full flex items-center">
