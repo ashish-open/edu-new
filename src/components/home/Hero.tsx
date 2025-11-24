@@ -125,8 +125,21 @@ const Hero = () => {
                   </div>
                 )}
                 
-                {/* Background Image - No borders, full coverage - Hidden for first slide */}
-                {index !== 0 && (
+                {/* Silk Background for third carousel slide (red) */}
+                {index === 2 && (
+                  <div className="absolute inset-0 z-0 w-full h-full">
+                    <Silk
+                      speed={0.5}
+                      scale={1}
+                      color="#9E2023"
+                      noiseIntensity={1.5}
+                      rotation={0}
+                    />
+                  </div>
+                )}
+                
+                {/* Background Image - No borders, full coverage - Hidden for first and third slides */}
+                {index !== 0 && index !== 2 && (
                   <div
                     className="absolute inset-0"
                     style={{ 
@@ -145,12 +158,12 @@ const Hero = () => {
                   />
                 )}
                 
-                {/* Overlay - lighter for red consultancy image - Hidden for first slide */}
-                {index !== 0 && (
+                {/* Overlay - Hidden for first and third slides */}
+                {index !== 0 && index !== 2 && (
                   <div 
                     className="absolute inset-0 z-[1]"
                     style={{
-                      backgroundColor: index === 2 ? 'rgba(0, 0, 0, 0.1)' : 'rgba(0, 0, 0, 0.2)'
+                      backgroundColor: 'rgba(0, 0, 0, 0.2)'
                     }}
                   />
                 )}
