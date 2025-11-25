@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { GraduationCap, Building2, Users, Microscope, Award, BookOpen, ChevronRight } from "lucide-react";
+import { GraduationCap, Building2, Users, Award, BookOpen, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 // Import local images
@@ -392,25 +392,6 @@ const CampusGallery = () => {
           </motion.div>
         </AnimatePresence>
 
-        {/* View More CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="text-center mt-16"
-        >
-          <a
-            href="https://wa.me/919605894644"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 px-8 py-4 bg-green-500 hover:bg-green-600 text-white rounded-xl font-zonapro font-semibold shadow-lg hover:shadow-xl transition-all duration-300 group"
-          >
-            <Microscope className="h-5 w-5 group-hover:rotate-12 transition-transform" />
-            <span>View More Photos</span>
-            <ChevronRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
-          </a>
-        </motion.div>
       </div>
     </section>
   );
