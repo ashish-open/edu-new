@@ -8,6 +8,7 @@ import Autoplay from "embla-carousel-autoplay";
 import heroImage from "@/assets/Assets-01.png";
 import consultancyImage from "@/assets/red-consultancy.png";
 import assets02Image from "@/assets/Assets-02.png";
+import studImage from "@/assets/stud.png";
 import Silk from "@/components/Silk";
 
 // Carousel slides for Confidence Group of Institutions
@@ -129,7 +130,7 @@ const Hero = () => {
                 {index === 2 && (
                   <div className="absolute inset-0 z-0 w-full h-full">
                     <Silk
-                      speed={0.5}
+                      speed={1}
                       scale={1}
                       color="#9E2023"
                       noiseIntensity={1.5}
@@ -166,6 +167,23 @@ const Hero = () => {
                       backgroundColor: 'rgba(0, 0, 0, 0.2)'
                     }}
                   />
+                )}
+                
+                {/* Student Image for first slide - Right aligned, above background */}
+                {index === 0 && (
+                  <div className="absolute right-0 bottom-0 z-[5] pointer-events-none">
+                    <img 
+                      src={studImage} 
+                      alt="Student" 
+                      className="h-[500px] md:h-[600px] lg:h-[650px] xl:h-[700px] w-auto"
+                      style={{
+                        objectFit: 'contain',
+                        objectPosition: 'right bottom',
+                        display: 'block',
+                        maxHeight: '100vh'
+                      }}
+                    />
+                  </div>
                 )}
                 
                 {/* Content */}
