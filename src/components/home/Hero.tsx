@@ -22,14 +22,6 @@ const institutionsSlides = [
     ctaText: "Get Counselling",
     ctaLink: "https://wa.me/919605894644",
   },
-  {
-    image: heroImage,
-    tagline: "CONFIDENCE GROUP OF INSTITUTIONS",
-    heading: "Choose the Right Course with Confidence",
-    description: "Expert counselling. Recognized programs. Placement assistance.",
-    ctaText: "Get Counselling",
-    ctaLink: "https://wa.me/919605894644",
-  },
 ];
 
 // Carousel slides for Educational Consultancy
@@ -127,8 +119,8 @@ const Hero = () => {
                   </div>
                 )}
                 
-                {/* Silk Background for third carousel slide (red) */}
-                {index === 2 && (
+                {/* Silk Background for second carousel slide (red) */}
+                {index === 1 && (
                   <div className="absolute inset-0 z-0 w-full h-full">
                     <Silk
                       speed={1}
@@ -140,8 +132,8 @@ const Hero = () => {
                   </div>
                 )}
                 
-                {/* Background Image - No borders, full coverage - Hidden for first and third slides */}
-                {index !== 0 && index !== 2 && (
+                {/* Background Image - No borders, full coverage - Hidden for first and second slides */}
+                {index !== 0 && index !== 1 && (
                   <div
                     className="absolute inset-0"
                     style={{ 
@@ -160,8 +152,8 @@ const Hero = () => {
                   />
                 )}
                 
-                {/* Overlay - Hidden for first and third slides */}
-                {index !== 0 && index !== 2 && (
+                {/* Overlay - Hidden for first and second slides */}
+                {index !== 0 && index !== 1 && (
                   <div 
                     className="absolute inset-0 z-[1]"
                     style={{
@@ -187,8 +179,8 @@ const Hero = () => {
                   </div>
                 )}
                 
-                {/* Doctor Image for third slide - Left aligned, above background */}
-                {index === 2 && (
+                {/* Doctor Image for second slide - Left aligned, above background */}
+                {index === 1 && (
                   <div className="absolute left-0 bottom-0 z-[5] pointer-events-none">
                     <img 
                       src={doctorImage} 
@@ -207,17 +199,17 @@ const Hero = () => {
                 {/* Content */}
                 <div className="relative z-10 h-full flex items-center">
                   <div className="container mx-auto px-4 max-w-[1220px] w-full">
-                    <div className={`space-y-6 ${index === 2 ? 'ml-auto text-right max-w-2xl' : 'max-w-2xl'}`}>
+                    <div className={`space-y-6 ${index === 1 ? 'ml-auto text-right max-w-2xl' : 'max-w-2xl'}`}>
                       <p className="text-sm md:text-base uppercase tracking-wider text-white drop-shadow-lg font-zonapro">
                         {slide.tagline}
                       </p>
                       <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-zonapro font-hairline text-white drop-shadow-lg leading-tight">
                         {slide.heading}
                       </h1>
-                      <p className={`text-lg md:text-xl text-white drop-shadow-lg font-zonapro ${index === 2 ? 'ml-auto max-w-xl' : 'max-w-xl'}`}>
+                      <p className={`text-lg md:text-xl text-white drop-shadow-lg font-zonapro ${index === 1 ? 'ml-auto max-w-xl' : 'max-w-xl'}`}>
                         {slide.description}
                       </p>
-                      <div className={index === 2 ? 'flex justify-end' : ''}>
+                      <div className={index === 1 ? 'flex justify-end' : ''}>
                         {slide.ctaLink.startsWith('http') ? (
                           <a href={slide.ctaLink} target="_blank" rel="noopener noreferrer">
                             <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg font-zonapro">
