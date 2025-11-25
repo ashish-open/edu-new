@@ -9,6 +9,7 @@ import heroImage from "@/assets/Assets-01.png";
 import consultancyImage from "@/assets/red-consultancy.png";
 import assets02Image from "@/assets/Assets-02.png";
 import studImage from "@/assets/stud.png";
+import doctorImage from "@/assets/doctor.png";
 import Silk from "@/components/Silk";
 
 // Carousel slides for Confidence Group of Institutions
@@ -179,6 +180,23 @@ const Hero = () => {
                       style={{
                         objectFit: 'contain',
                         objectPosition: 'right bottom',
+                        display: 'block',
+                        maxHeight: '100vh'
+                      }}
+                    />
+                  </div>
+                )}
+                
+                {/* Doctor Image for third slide - Left aligned, above background */}
+                {index === 2 && (
+                  <div className="absolute left-0 bottom-0 z-[5] pointer-events-none">
+                    <img 
+                      src={doctorImage} 
+                      alt="Doctor" 
+                      className="h-[500px] md:h-[600px] lg:h-[650px] xl:h-[700px] w-auto"
+                      style={{
+                        objectFit: 'contain',
+                        objectPosition: 'left bottom',
                         display: 'block',
                         maxHeight: '100vh'
                       }}
