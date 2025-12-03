@@ -4,7 +4,13 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { CheckCircle, Globe, Users, Award, TrendingUp, Lightbulb, ArrowRight, Phone, MessageCircle } from "lucide-react";
+import { CheckCircle, Users, Award, TrendingUp, Lightbulb, ArrowRight, Phone, MessageCircle, GraduationCap, Wrench, BookOpen, FileText } from "lucide-react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import heroImage from "@/assets/Assets-02.png";
 import "./Consultancy.css";
 
@@ -13,11 +19,6 @@ const services = [
     icon: Lightbulb,
     title: "Career Counselling",
     description: "One-on-one guidance to identify your strengths and choose the perfect career path in medical or non-medical fields."
-  },
-  {
-    icon: Globe,
-    title: "Study Abroad Guidance",
-    description: "Expert advice for pursuing MBBS, BDS, and other programs in top international universities with affordable fees."
   },
   {
     icon: Award,
@@ -41,67 +42,62 @@ const services = [
   }
 ];
 
-// Comprehensive course list from consultancy
-const consultancyCourses = [
-  // Medical Courses
-  { id: 1, name: "MBBS", category: "Medical", subtext: "" },
-  { id: 2, name: "BDS", category: "Medical", subtext: "" },
-  { id: 3, name: "BAMS", category: "Medical", subtext: "" },
-  { id: 4, name: "BHMS", category: "Medical", subtext: "" },
-  
-  // Engineering
-  { id: 5, name: "ENGINEERING", category: "Engineering", subtext: "ALL BRANCHES" },
-  
-  // Nursing
-  { id: 6, name: "NURSING", category: "Nursing", subtext: "GNM, BSC, PC.BSC, MSC" },
-  
-  // Pharmacy
-  { id: 7, name: "PHARMACY", category: "Pharmacy", subtext: "PHARM D, B PHARM, D PHARM" },
-  
-  // Allied Health
-  { id: 8, name: "BPT", category: "Allied Health", subtext: "PHYSIOTHERAPY" },
-  { id: 9, name: "BOT", category: "Allied Health", subtext: "OCCUPATIONAL THERAPY" },
-  { id: 10, name: "BASLP", category: "Allied Health", subtext: "" },
-  { id: 11, name: "BSC RADIOLOGY", category: "Allied Health", subtext: "" },
-  { id: 12, name: "BSC ANESTHESIA", category: "Allied Health", subtext: "" },
-  { id: 13, name: "BSC MLT", category: "Allied Health", subtext: "" },
-  { id: 14, name: "BSC OPTOMETRY", category: "Allied Health", subtext: "" },
-  
-  // Management & Business
-  { id: 15, name: "BHM", category: "Management", subtext: "HOTEL MANAGEMENT" },
-  { id: 16, name: "BBA, MBA", category: "Management", subtext: "" },
-  { id: 17, name: "BBA, MBA", category: "Management", subtext: "" },
-  
-  // Computer Science
-  { id: 18, name: "BCA, MCA", category: "Computer Science", subtext: "" },
-  
-  // Social Work
-  { id: 19, name: "BSW, MSW", category: "Social Work", subtext: "" },
-  
-  // Agriculture
-  { id: 20, name: "BSC AGRICULTURE", category: "Agriculture", subtext: "" },
-  
-  // Coaching
-  { id: 21, name: "IAS & IPS", category: "Coaching", subtext: "COACHING" },
-  
-  // Education
-  { id: 22, name: "BEd", category: "Education", subtext: "" },
-  
-  // Fashion & Design
-  { id: 23, name: "FASHION DESIGNING", category: "Design", subtext: "& FASHION PHOTOGRAPHY" },
-  { id: 24, name: "BA MULTIMEDIA", category: "Design", subtext: "& GRAPHIC DESIGNING" },
-  
-  // Aviation & Logistics
-  { id: 25, name: "AVIATION LOGISTICS", category: "Aviation", subtext: "& SUPPLY CHAIN MANAGEMENT" },
-  
-  // Finance & Accounting
-  { id: 26, name: "CA, CMA, ACCA", category: "Finance", subtext: "" },
-  
-  // Law
-  { id: 27, name: "LLB, LLM", category: "Law", subtext: "" },
-  
-  // Forensic Science
-  { id: 28, name: "FORENSIC SCIENCE", category: "Science", subtext: "" },
+// Comprehensive course list organized by streams
+const courseCategories = [
+  {
+    stream: "Medical",
+    icon: GraduationCap,
+    courses: [
+      { id: 1, name: "MBBS", subtext: "" },
+      { id: 2, name: "BDS", subtext: "" },
+      { id: 3, name: "BAMS", subtext: "" },
+      { id: 4, name: "BHMS", subtext: "" },
+      { id: 5, name: "NURSING", subtext: "BSC, MSC" },
+      { id: 6, name: "PHARMACY", subtext: "PHARM D, B PHARM" },
+      { id: 7, name: "BPT", subtext: "PHYSIOTHERAPY" },
+      { id: 8, name: "BOT", subtext: "OCCUPATIONAL THERAPY" },
+      { id: 9, name: "BASLP", subtext: "" },
+      { id: 10, name: "BSC RADIOLOGY", subtext: "" },
+      { id: 11, name: "BSC ANESTHESIA", subtext: "" },
+      { id: 12, name: "BSC MLT", subtext: "" },
+      { id: 13, name: "BSC OPTOMETRY", subtext: "" },
+    ]
+  },
+  {
+    stream: "Engineering",
+    icon: Wrench,
+    courses: [
+      { id: 14, name: "ENGINEERING", subtext: "ALL BRANCHES" },
+    ]
+  },
+  {
+    stream: "Arts and Science",
+    icon: BookOpen,
+    courses: [
+      { id: 15, name: "BCA, MCA", subtext: "" },
+      { id: 16, name: "BSW, MSW", subtext: "" },
+      { id: 17, name: "BSC AGRICULTURE", subtext: "" },
+      { id: 18, name: "BEd", subtext: "" },
+      { id: 19, name: "BA MULTIMEDIA", subtext: "& GRAPHIC DESIGNING" },
+      { id: 20, name: "FASHION DESIGNING", subtext: "& FASHION PHOTOGRAPHY" },
+      { id: 21, name: "FORENSIC SCIENCE", subtext: "" },
+      { id: 22, name: "BBA, MBA", subtext: "" },
+      { id: 23, name: "BHM", subtext: "HOTEL MANAGEMENT" },
+      { id: 24, name: "AVIATION LOGISTICS", subtext: "& SUPPLY CHAIN MANAGEMENT" },
+      { id: 25, name: "CA, CMA, ACCA", subtext: "" },
+      { id: 26, name: "LLB, LLM", subtext: "" },
+      { id: 27, name: "IAS & IPS", subtext: "COACHING" },
+    ]
+  },
+  {
+    stream: "Diploma",
+    icon: FileText,
+    courses: [
+      { id: 28, name: "D PHARM", subtext: "" },
+      { id: 29, name: "GNM", subtext: "GENERAL NURSING & MIDWIFERY" },
+      { id: 30, name: "PC.BSC", subtext: "POST BASIC BSC NURSING" },
+    ]
+  }
 ];
 
 const Consultancy = () => {
@@ -164,7 +160,7 @@ const Consultancy = () => {
           </div>
         </section>
 
-        {/* Courses Grid Section */}
+        {/* Courses Accordion Section - Compact Design */}
         <section className="py-16 bg-muted">
           <div className="container mx-auto px-4 max-w-[1220px]">
             <div className="text-center mb-12">
@@ -172,62 +168,76 @@ const Consultancy = () => {
                 Available Courses
               </h2>
               <p className="text-lg text-muted-foreground font-zonapro">
-                Explore our comprehensive range of programs across multiple disciplines
+                Click on any stream to explore courses. Expand to see all available programs.
               </p>
             </div>
 
-            {/* Course Grid - Red Cards Design */}
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-              {consultancyCourses.map((course, index) => (
-                <motion.div
-                  key={course.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.3, delay: index * 0.03 }}
-                >
-                  <a
-                    href="https://wa.me/919605894644"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block"
-                  >
-                    <div className="bg-white text-secondary border-2 border-gray-200 p-4 rounded-lg hover:shadow-2xl hover:border-primary hover:-translate-y-1 transition-all duration-300 cursor-pointer h-full flex flex-col justify-center min-h-[120px] shadow-sm">
-                      <h3 className="font-zonapro font-bold text-sm md:text-base uppercase tracking-wide leading-tight mb-1">
-                        {course.name}
-                      </h3>
-                      {course.subtext && (
-                        <p className="font-zonapro font-semibold text-xs text-muted-foreground mt-1">
-                          {course.subtext}
-                        </p>
-                      )}
-                    </div>
-                  </a>
-                </motion.div>
-              ))}
+            {/* Compact Accordion Design */}
+            <div className="max-w-5xl mx-auto">
+              <Accordion type="single" collapsible className="w-full space-y-3">
+                {courseCategories.map((category, categoryIndex) => {
+                  const StreamIcon = category.icon;
+                  return (
+                    <motion.div
+                      key={category.stream}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.4, delay: categoryIndex * 0.1 }}
+                    >
+                      <AccordionItem
+                        value={`stream-${categoryIndex}`}
+                        className="bg-white rounded-xl border-2 border-gray-200 shadow-sm hover:shadow-md transition-all overflow-hidden"
+                      >
+                        <AccordionTrigger className="px-6 py-5 hover:no-underline group">
+                          <div className="flex items-center gap-4 w-full">
+                            <div className="p-3 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
+                              <StreamIcon className="h-6 w-6 text-primary" />
+                            </div>
+                            <div className="flex-1 text-left">
+                              <h3 className="text-xl md:text-2xl font-zonapro font-hairline text-secondary">
+                                {category.stream}
+                              </h3>
+                              <p className="text-sm text-muted-foreground font-zonapro mt-1">
+                                {category.courses.length} {category.courses.length === 1 ? 'course' : 'courses'} available
+                              </p>
+                            </div>
+                          </div>
+                        </AccordionTrigger>
+                        <AccordionContent className="px-6 pb-6">
+                          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 pt-2">
+                            {category.courses.map((course, index) => (
+                              <motion.a
+                                key={course.id}
+                                href="https://wa.me/919694002002"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                initial={{ opacity: 0, scale: 0.95 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.2, delay: index * 0.03 }}
+                                className="block"
+                              >
+                                <div className="bg-muted text-secondary border-2 border-gray-200 p-3 rounded-lg hover:shadow-lg hover:border-primary hover:-translate-y-0.5 transition-all duration-300 cursor-pointer h-full flex flex-col justify-center min-h-[100px] group">
+                                  <h4 className="font-zonapro font-bold text-xs md:text-sm uppercase tracking-wide leading-tight mb-1 group-hover:text-primary transition-colors">
+                                    {course.name}
+                                  </h4>
+                                  {course.subtext && (
+                                    <p className="font-zonapro font-semibold text-[10px] md:text-xs text-muted-foreground mt-1">
+                                      {course.subtext}
+                                    </p>
+                                  )}
+                                </div>
+                              </motion.a>
+                            ))}
+                          </div>
+                        </AccordionContent>
+                      </AccordionItem>
+                    </motion.div>
+                  );
+                })}
+              </Accordion>
             </div>
-
-            {/* All Other Courses Banner */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="mt-6"
-            >
-              <a
-                href="https://wa.me/919605894644"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block"
-              >
-                <div className="bg-white text-secondary border-2 border-gray-200 p-6 rounded-lg hover:shadow-2xl hover:border-primary hover:-translate-y-1 transition-all duration-300 cursor-pointer shadow-sm">
-                  <h3 className="font-zonapro font-bold text-lg md:text-xl uppercase tracking-wide text-center">
-                    ALL OTHER UG, PG, DIPLOMA COURSES
-                  </h3>
-                </div>
-              </a>
-            </motion.div>
           </div>
         </section>
 
@@ -251,7 +261,7 @@ const Consultancy = () => {
                 <div className="flex gap-3">
                   <CheckCircle className="h-5 w-5 consultancy-check-icon flex-shrink-0 mt-0.5" />
                   <div>
-                    <h3 className="font-zonapro font-hairline mb-1">Personalized Approach</h3>
+                    <h3 className="font-zonapro font-hairline mb-1">Personalised Approach</h3>
                     <p className="text-sm text-muted-foreground font-zonapro">
                       Every student receives customized guidance based on their unique goals and circumstances.
                     </p>
@@ -307,7 +317,7 @@ const Consultancy = () => {
               Popular Study Destinations
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {["India", "Russia", "Ukraine", "Kazakhstan", "China", "Philippines", "Bangladesh", "Kyrgyzstan"].map((country) => (
+              {["Banglore", "Chennai", "Mysore", "Mumbai", "Delhi"].map((country) => (
                 <Card key={country}>
                   <CardContent className="p-6 text-center">
                     <p className="font-zonapro font-semibold text-secondary">{country}</p>
@@ -328,13 +338,13 @@ const Consultancy = () => {
               Get expert guidance to choose the right course and college. Our counsellors are ready to help you make the best decision for your future.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:+919605894644">
+              <a href="tel:+919694002002">
                 <Button size="lg" className="bg-white hover:bg-gray-50 text-secondary border-2 border-white/20 w-full sm:w-auto min-w-[200px] flex items-center justify-center gap-2">
                   <Phone className="h-5 w-5" />
-                  <span>+91 9605894644</span>
+                  <span>+91 9694002002</span>
                 </Button>
               </a>
-              <a href="https://wa.me/919605894644" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/919694002002" target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="bg-green-500 hover:bg-green-600 text-white border-none w-full sm:w-auto min-w-[200px] flex items-center justify-center gap-2">
                   <MessageCircle className="h-5 w-5" />
                   <span>WhatsApp Now</span>

@@ -1,8 +1,11 @@
-import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { MapPin, Phone, Mail, MessageCircle } from "lucide-react";
+import { MapPin } from "lucide-react";
 
 const ContactBlock = () => {
+  // Google Maps URL for Nedumkandam Campus
+  // You can replace this with the actual coordinates or place ID
+  const googleMapsUrl = "https://www.google.com/maps/search/?api=1&query=Confidence+Group+of+Institutions+Nedumkandam+Idukki+District+Kerala";
+
   return (
     <section className="py-16 bg-muted">
       <div className="container mx-auto px-4 max-w-[1220px]">
@@ -15,71 +18,53 @@ const ContactBlock = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-          {/* Nedumkandam Campus */}
-          <Card>
-            <CardContent className="p-6 space-y-4">
-              <h3 className="text-xl font-zonapro font-hairline text-secondary">
-                Nedumkandam Campus
-              </h3>
-              <div className="space-y-3">
-                <div className="flex items-start gap-3">
-                  <MapPin className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                  <p className="text-sm font-zonapro text-muted-foreground">
-                    Confidence Group of Institutions<br />
-                    Nedumkandam, Idukki District<br />
-                    Kerala, India
-                  </p>
+        {/* Google Maps Section */}
+        <div className="w-full">
+          <Card className="overflow-hidden">
+            <CardContent className="p-0">
+              <a
+                href={googleMapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block relative group"
+              >
+                {/* Map Container */}
+                <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px] bg-gray-200 overflow-hidden">
+                  {/* Embedded Google Map */}
+                  {/* Note: For production, replace this with the actual embed code from Google Maps */}
+                  {/* To get embed code: Go to Google Maps > Search location > Share > Embed a map > Copy HTML */}
+                  <iframe
+                    src={`https://www.google.com/maps?q=Confidence+Group+of+Institutions+Nedumkandam+Idukki+District+Kerala&output=embed&hl=en`}
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="w-full h-full"
+                    title="Confidence Group of Institutions Location"
+                  />
+                  
+                  {/* Overlay with campus info and click indicator */}
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300 flex items-center justify-center pointer-events-none">
+                    <div className="bg-white/95 backdrop-blur-sm px-6 py-4 rounded-lg shadow-lg border-2 border-primary/20 group-hover:border-primary transition-all duration-300">
+                      <div className="flex items-center gap-3">
+                        <MapPin className="h-6 w-6 text-primary flex-shrink-0" />
+                        <div>
+                          <h3 className="text-lg font-zonapro font-hairline text-secondary mb-1">
+                            Nedumkandam Campus
+                          </h3>
+                          <p className="text-sm font-zonapro text-muted-foreground">
+                            Click map to open in Google Maps
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div className="flex items-center gap-3">
-                  <Phone className="h-5 w-5 text-primary flex-shrink-0" />
-                  <a href="tel:+919605894644" className="text-sm font-zonapro text-primary hover:underline">
-                    +91 9605894644
-                  </a>
-                </div>
-              </div>
+              </a>
             </CardContent>
           </Card>
-
-          {/* Rajakkad Campus */}
-          <Card>
-            <CardContent className="p-6 space-y-4">
-              <h3 className="text-xl font-zonapro font-hairline text-secondary">
-                Rajakkad Campus (Paramedical)
-              </h3>
-              <div className="space-y-3">
-                <div className="flex items-start gap-3">
-                  <MapPin className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                  <p className="text-sm font-zonapro text-muted-foreground">
-                    Confidence Paramedical College<br />
-                    Rajakkad, Idukki District<br />
-                    Kerala, India
-                  </p>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Phone className="h-5 w-5 text-primary flex-shrink-0" />
-                  <a href="tel:+919605894644" className="text-sm font-zonapro text-primary hover:underline">
-                    +91 9605894644
-                  </a>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="tel:+919605894644">
-            <Button size="lg" className="gap-2 bg-white hover:bg-gray-50 text-secondary border-2 border-gray-200">
-              <Phone className="h-5 w-5" />
-              Call for Enquiry
-            </Button>
-          </a>
-          <a href="https://wa.me/919605894644" target="_blank" rel="noopener noreferrer">
-            <Button size="lg" className="gap-2 bg-green-500 hover:bg-green-600 text-white border-none">
-              <MessageCircle className="h-5 w-5" />
-              WhatsApp Enquiry
-            </Button>
-          </a>
         </div>
       </div>
     </section>

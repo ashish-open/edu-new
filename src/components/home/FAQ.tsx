@@ -93,7 +93,7 @@ const defaultFAQs: FAQItem[] = [
   {
     id: 2,
     question: "Do you provide placement assistance?",
-    answer: "Yes, we have a dedicated placement cell that provides comprehensive placement assistance. We maintain strong industry connections and organize campus recruitment drives. Our placement rate is consistently above 85%.",
+    answer: "Yes, we have a dedicated placement cell that provides comprehensive placement assistance. We maintain strong industry connections and organize campus recruitment drives. Our placement rate is consistently above 95%.",
   },
   {
     id: 3,

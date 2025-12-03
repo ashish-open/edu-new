@@ -19,8 +19,8 @@ const institutionsSlides = [
     tagline: "CONFIDENCE GROUP OF INSTITUTIONS",
     heading: "Together We'll Explore New Things",
     description: "We believe everyone should have the opportunity to create progress through education.",
-    ctaText: "Get Counselling",
-    ctaLink: "https://wa.me/919605894644",
+    ctaText: "Explore Courses",
+    ctaLink: "https://wa.me/919694002002",
   },
 ];
 

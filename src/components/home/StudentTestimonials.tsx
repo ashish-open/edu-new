@@ -202,19 +202,19 @@ export const StudentTestimonialsGrid = ({
   );
 };
 
-// Default testimonials data for educational institution
+// Default testimonials data for educational institution with Indian/Kerala names
 const defaultTestimonials: StudentTestimonial[] = [
   {
     id: 1,
-    name: "Priya Sharma",
+    name: "Anjali Menon",
     courseName: "BSc Nursing",
     photo: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop&crop=face",
     rating: 5.0,
-    testimonial: "The BSc Nursing program at Confidence has been life-changing. The faculty is experienced, the infrastructure is modern, and the placement assistance helped me secure a position at a leading hospital. Highly recommend!",
+    testimonial: "The BSc Nursing program at Confidence has been life-changing. The faculty is experienced, the infrastructure is modern, and the placement assistance helped me secure a position at a leading hospital in Kochi. Highly recommend!",
   },
   {
     id: 2,
-    name: "Rahul Kumar",
+    name: "Arjun Nair",
     courseName: "BSc Medical Lab Technology",
     photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
     rating: 4.8,
@@ -222,7 +222,7 @@ const defaultTestimonials: StudentTestimonial[] = [
   },
   {
     id: 3,
-    name: "Anjali Patel",
+    name: "Divya Suresh",
     courseName: "BPT (Physiotherapy)",
     photo: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face",
     rating: 5.0,
@@ -230,15 +230,15 @@ const defaultTestimonials: StudentTestimonial[] = [
   },
   {
     id: 4,
-    name: "Vikram Singh",
+    name: "Rohit Pillai",
     courseName: "Pharmacy (B.Pharm)",
     photo: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=150&h=150&fit=crop&crop=face",
     rating: 4.9,
-    testimonial: "The Pharmacy course structure is perfect for building a strong foundation. The lab facilities are well-equipped and the industry visits provided valuable insights. I'm now working at a reputed pharmaceutical company.",
+    testimonial: "The Pharmacy course structure is perfect for building a strong foundation. The lab facilities are well-equipped and the industry visits provided valuable insights. I'm now working at a reputed pharmaceutical company in Kerala.",
   },
   {
     id: 5,
-    name: "Sneha Reddy",
+    name: "Meera Krishnan",
     courseName: "BSc Radiology",
     photo: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=150&h=150&fit=crop&crop=face",
     rating: 4.7,
@@ -246,7 +246,7 @@ const defaultTestimonials: StudentTestimonial[] = [
   },
   {
     id: 6,
-    name: "Amit Desai",
+    name: "Sreejith Varma",
     courseName: "MBBS",
     photo: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop&crop=face",
     rating: 5.0,

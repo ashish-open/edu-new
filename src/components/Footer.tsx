@@ -28,20 +28,7 @@ const Footer = () => {
               <div className="flex gap-2">
                 <MapPin className="h-4 w-4 flex-shrink-0 mt-0.5 text-white/70" />
                 <p className="text-white/80">
-                  Confidence Group of Institutions, Nedumkandam, Idukki District, Kerala
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Campus 2 - Rajakkad */}
-          <div>
-            <h4 className="text-base font-zonapro font-hairline mb-3 text-white">Rajakkad Campus</h4>
-            <div className="space-y-2 text-sm font-zonapro">
-              <div className="flex gap-2">
-                <MapPin className="h-4 w-4 flex-shrink-0 mt-0.5 text-white/70" />
-                <p className="text-white/80">
-                  Confidence Paramedical College, Rajakkad, Idukki District, Kerala
+                  Confidence Group of Institutions, Near Private Bus stand, Old Darsana Building, Nedumkandam, Idukki District, Kerala
                 </p>
               </div>
             </div>
@@ -51,9 +38,9 @@ const Footer = () => {
           <div>
             <h4 className="text-base font-zonapro font-hairline mb-3 text-white">Contact Us</h4>
             <div className="space-y-3 text-sm font-zonapro">
-              <a href="tel:+919605894644" className="flex items-center gap-2 hover:text-primary transition-colors">
+              <a href="tel:+919694002002" className="flex items-center gap-2 hover:text-primary transition-colors">
                 <Phone className="h-4 w-4" />
-                <span>+91 9605894644</span>
+                <span>+91 9694002002</span>
               </a>
               <a href="mailto:info@confidenceinstitutions.com" className="flex items-center gap-2 hover:text-primary transition-colors">
                 <Mail className="h-4 w-4" />

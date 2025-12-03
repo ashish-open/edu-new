@@ -165,7 +165,7 @@ const WhyConfidencePage = () => {
             <p className="text-lg font-zonapro mb-8 opacity-95 max-w-2xl mx-auto">
               Our students are working in leading hospitals, labs, and healthcare institutions across India and abroad.
             </p>
-            <a href="https://wa.me/919605894644" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/919694002002" target="_blank" rel="noopener noreferrer">
               <Button size="lg" variant="secondary">
                 Start Your Journey Today
               </Button>

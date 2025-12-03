@@ -25,7 +25,7 @@ const Contact = () => {
         {/* Contact Info & Quick Contact */}
         <section className="py-16 bg-background">
           <div className="container mx-auto px-4 max-w-[1220px]">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-1 gap-8 max-w-2xl mx-auto">
               {/* Campus 1 - Nedumkandam */}
               <Card>
                 <CardContent className="p-8">
@@ -46,8 +46,8 @@ const Contact = () => {
                     </div>
                     <div className="flex items-center gap-3">
                       <Phone className="h-5 w-5 text-primary flex-shrink-0" />
-                      <a href="tel:+919605894644" className="font-zonapro text-primary hover:underline">
-                        +91 9605894644
+                      <a href="tel:+919694002002" className="font-zonapro text-primary hover:underline">
+                        +91 9694002002
                       </a>
                     </div>
                     <div className="flex items-center gap-3">
@@ -68,47 +68,6 @@ const Contact = () => {
                 </CardContent>
               </Card>
 
-              {/* Campus 2 - Rajakkad */}
-              <Card>
-                <CardContent className="p-8">
-                  <h2 className="text-2xl font-zonapro font-hairline text-secondary mb-6">
-                    Rajakkad Campus (Paramedical College)
-                  </h2>
-                  <div className="space-y-4">
-                    <div className="flex items-start gap-3">
-                      <MapPin className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                      <div>
-                        <p className="font-zonapro text-muted-foreground">
-                          Confidence Paramedical College<br />
-                          Rajakkad<br />
-                          Idukki District<br />
-                          Kerala, India
-                        </p>
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <Phone className="h-5 w-5 text-primary flex-shrink-0" />
-                      <a href="tel:+919605894644" className="font-zonapro text-primary hover:underline">
-                        +91 9605894644
-                      </a>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <Mail className="h-5 w-5 text-primary flex-shrink-0" />
-                      <a href="mailto:info@confidenceinstitutions.com" className="font-zonapro text-primary hover:underline">
-                        info@confidenceinstitutions.com
-                      </a>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <Clock className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                      <div className="font-zonapro text-muted-foreground">
-                        <p className="font-semibold">Office Hours:</p>
-                        <p>Monday - Saturday: 9:00 AM - 5:00 PM</p>
-                        <p>Sunday: Closed</p>
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
             </div>
           </div>
         </section>
@@ -129,9 +88,9 @@ const Contact = () => {
                   <p className="text-sm text-muted-foreground font-zonapro mb-4">
                     Speak directly with our team
                   </p>
-                  <a href="tel:+919605894644">
+                  <a href="tel:+919694002002">
                     <Button size="sm" className="bg-white hover:bg-gray-50 text-secondary border-2 border-gray-200">
-                      +91 9605894644
+                      +91 9694002002
                     </Button>
                   </a>
                 </CardContent>
@@ -146,7 +105,7 @@ const Contact = () => {
                   <p className="text-sm text-muted-foreground font-zonapro mb-4">
                     Quick enquiry via WhatsApp
                   </p>
-                  <a href="https://wa.me/919605894644" target="_blank" rel="noopener noreferrer">
+                  <a href="https://wa.me/919694002002" target="_blank" rel="noopener noreferrer">
                     <Button size="sm" className="bg-green-500 hover:bg-green-600 text-white border-none">
                       Message Us
                     </Button>
@@ -184,12 +143,12 @@ const Contact = () => {
               We welcome you to visit our campuses, meet our faculty, and experience our world-class facilities firsthand.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:+919605894644">
+              <a href="tel:+919694002002">
                 <Button size="lg" className="bg-white hover:bg-gray-50 text-secondary border-2 border-gray-200">
                   Schedule a Visit
                 </Button>
               </a>
-              <a href="https://wa.me/919605894644" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/919694002002" target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="bg-green-500 hover:bg-green-600 text-white border-none">
                   Book Campus Tour
                 </Button>

@@ -66,35 +66,35 @@ const courses = [
         description: "Bachelor of Science in Medical Laboratory Technology",
         eligibility: "12th with PCB",
         duration: "3 Years",
-        campus: "Rajakkad Campus"
+        campus: "Nedumkandam Campus"
       },
       {
         name: "Diploma in MLT",
         description: "Diploma in Medical Laboratory Technology",
         eligibility: "10th Pass",
         duration: "2 Years",
-        campus: "Rajakkad Campus"
+        campus: "Nedumkandam Campus"
       },
       {
         name: "BSc Radiology",
         description: "Bachelor of Science in Radiology & Imaging Technology",
         eligibility: "12th with PCB",
         duration: "3 Years",
-        campus: "Rajakkad Campus"
+        campus: "Nedumkandam Campus"
       },
       {
         name: "BSc Optometry",
         description: "Bachelor of Science in Optometry",
         eligibility: "12th with PCB",
         duration: "3 Years",
-        campus: "Rajakkad Campus"
+        campus: "Nedumkandam Campus"
       },
       {
         name: "Diploma Nursing Assistant",
         description: "Diploma in Nursing Assistant",
         eligibility: "10th Pass",
         duration: "1 Year",
-        campus: "Rajakkad Campus"
+        campus: "Nedumkandam Campus"
       }
     ]
   },
@@ -194,7 +194,7 @@ const Courses = () => {
                       </div>
                     </CardContent>
                     <CardFooter>
-                      <a href="https://wa.me/919605894644" target="_blank" rel="noopener noreferrer" className="w-full">
+                      <a href="https://wa.me/919694002002" target="_blank" rel="noopener noreferrer" className="w-full">
                         <Button className="w-full">Enquire Now</Button>
                       </a>
                     </CardFooter>
@@ -380,12 +380,12 @@ const Courses = () => {
               Contact us today for personalized guidance
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:+919605894644">
+              <a href="tel:+919694002002">
                 <Button size="lg" className="bg-white hover:bg-gray-50 text-secondary border-2 border-white/20">
-                  Call +91 9605894644
+                  Call +91 9694002002
                 </Button>
               </a>
-              <a href="https://wa.me/919605894644" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/919694002002" target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="bg-green-500 hover:bg-green-600 text-white border-none">
                   WhatsApp Enquiry
                 </Button>
