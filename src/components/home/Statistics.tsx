@@ -150,7 +150,7 @@ const defaultStatistics: Statistic[] = [
   {
     id: 4,
     icon: Award,
-    value: 18,
+    value: 17,
     label: "Years of Excellence",
     suffix: "+",
   },

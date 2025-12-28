@@ -48,13 +48,15 @@ const infoCards = [
     icon: Hospital,
     title: "Confidence Group of Institutions",
     description: "Confidence offers recognized paramedical programs with placement assistance and modern infrastructure.",
-    link: "/consultancy",
+    link: "#why-us",
+    isScroll: true,
   },
   {
     icon: Lightbulb,
     title: "Confidence Educational Consultancy",
     description: "Expert career counselling, study abroad guidance, and admission assistance for your educational journey.",
     link: "/consultancy",
+    isScroll: false,
   },
 ];
 
@@ -278,13 +280,28 @@ const Hero = () => {
                     <p className="text-muted-foreground font-zonapro flex-1">
                       {card.description}
                     </p>
-                    <Link
-                      to={card.link}
-                      className="text-primary font-zonapro font-medium hover:underline inline-flex items-center gap-2 group mt-auto"
-                    >
-                      Learn More
-                      <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                    </Link>
+                    {card.isScroll ? (
+                      <button
+                        onClick={() => {
+                          const element = document.getElementById('why-us');
+                          if (element) {
+                            element.scrollIntoView({ behavior: 'smooth' });
+                          }
+                        }}
+                        className="text-primary font-zonapro font-medium hover:underline inline-flex items-center gap-2 group mt-auto"
+                      >
+                        Learn More
+                        <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                      </button>
+                    ) : (
+                      <Link
+                        to={card.link}
+                        className="text-primary font-zonapro font-medium hover:underline inline-flex items-center gap-2 group mt-auto"
+                      >
+                        Learn More
+                        <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                      </Link>
+                    )}
                   </div>
                 </motion.div>
               );

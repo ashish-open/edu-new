@@ -245,7 +245,7 @@ const Consultancy = () => {
         <section className="py-16 bg-background">
           <div className="container mx-auto px-4 max-w-[1220px]">
             <h2 className="text-3xl md:text-4xl font-zonapro font-hairline text-secondary mb-8 text-center">
-              Why Choose Confidence Consultancy?
+              Why Choose Confidence Educational Consultancy?
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               <div className="space-y-4">
@@ -317,7 +317,7 @@ const Consultancy = () => {
               Popular Study Destinations
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {["Banglore", "Chennai", "Mysore", "Mumbai", "Delhi"].map((country) => (
+              {["Kerala", "Karnataka", "Tamilnadu", "Andrapradesh", "Mysore", "Coimbatore", "Banglore", "Chennai", "Mumbai", "Delhi"].map((country) => (
                 <Card key={country}>
                   <CardContent className="p-6 text-center">
                     <p className="font-zonapro font-semibold text-secondary">{country}</p>

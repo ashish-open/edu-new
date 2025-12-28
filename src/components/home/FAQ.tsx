@@ -88,7 +88,7 @@ const defaultFAQs: FAQItem[] = [
   {
     id: 1,
     question: "What are the eligibility criteria for admission?",
-    answer: "Eligibility criteria vary by course. Generally, for undergraduate programs, you need to have completed 10+2 with relevant subjects (Physics, Chemistry, Biology for medical courses). Please check the specific course page for detailed eligibility requirements.",
+    answer: "Eligibility criteria vary by course. Generally, for undergraduate programs, you need to have completed 10 or +2 with relevant subjects (Physics, Chemistry, Biology for medical courses). Please check the specific course page for detailed eligibility requirements.",
   },
   {
     id: 2,
