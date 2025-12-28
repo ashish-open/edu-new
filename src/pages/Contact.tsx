@@ -38,7 +38,8 @@ const Contact = () => {
                       <div>
                         <p className="font-zonapro text-muted-foreground">
                           Confidence Group of Institutions<br />
-                          Nedumkandam<br />
+                          Old Darsana Theatre Building,<br />
+                          Near Private Bus stand, Nedumkandam,<br />
                           Idukki District<br />
                           Kerala, India
                         </p>

@@ -45,57 +45,142 @@ const services = [
 // Comprehensive course list organized by streams
 const courseCategories = [
   {
-    stream: "Medical",
+    stream: "🩺 Medical",
     icon: GraduationCap,
     courses: [
-      { id: 1, name: "MBBS", subtext: "" },
-      { id: 2, name: "BDS", subtext: "" },
-      { id: 3, name: "BAMS", subtext: "" },
-      { id: 4, name: "BHMS", subtext: "" },
-      { id: 5, name: "NURSING", subtext: "BSC, MSC" },
-      { id: 6, name: "PHARMACY", subtext: "PHARM D, B PHARM" },
-      { id: 7, name: "BPT", subtext: "PHYSIOTHERAPY" },
-      { id: 8, name: "BOT", subtext: "OCCUPATIONAL THERAPY" },
-      { id: 9, name: "BASLP", subtext: "" },
-      { id: 10, name: "BSC RADIOLOGY", subtext: "" },
-      { id: 11, name: "BSC ANESTHESIA", subtext: "" },
-      { id: 12, name: "BSC MLT", subtext: "" },
-      { id: 13, name: "BSC OPTOMETRY", subtext: "" },
+      { id: 1, name: "MD", subtext: "Doctor of Medicine" },
+      { id: 2, name: "MS", subtext: "Master of Surgery" },
+      { id: 3, name: "MBBS", subtext: "Bachelor of Medicine & Surgery" },
     ]
   },
   {
-    stream: "Engineering",
-    icon: Wrench,
+    stream: "👩‍⚕️ Nursing",
+    icon: GraduationCap,
     courses: [
-      { id: 14, name: "ENGINEERING", subtext: "ALL BRANCHES" },
+      { id: 4, name: "B.Sc Nursing", subtext: "Bachelor of Science in Nursing" },
     ]
   },
   {
-    stream: "Arts and Science",
-    icon: BookOpen,
+    stream: "🦵 Physiotherapy",
+    icon: GraduationCap,
     courses: [
-      { id: 15, name: "BCA, MCA", subtext: "" },
-      { id: 16, name: "BSW, MSW", subtext: "" },
-      { id: 17, name: "BSC AGRICULTURE", subtext: "" },
-      { id: 18, name: "BEd", subtext: "" },
-      { id: 19, name: "BA MULTIMEDIA", subtext: "& GRAPHIC DESIGNING" },
-      { id: 20, name: "FASHION DESIGNING", subtext: "& FASHION PHOTOGRAPHY" },
-      { id: 21, name: "FORENSIC SCIENCE", subtext: "" },
-      { id: 22, name: "BBA, MBA", subtext: "" },
-      { id: 23, name: "BHM", subtext: "HOTEL MANAGEMENT" },
-      { id: 24, name: "AVIATION LOGISTICS", subtext: "& SUPPLY CHAIN MANAGEMENT" },
-      { id: 25, name: "CA, CMA, ACCA", subtext: "" },
-      { id: 26, name: "LLB, LLM", subtext: "" },
-      { id: 27, name: "IAS & IPS", subtext: "COACHING" },
+      { id: 5, name: "BPT", subtext: "Bachelor of Physiotherapy" },
+      { id: 6, name: "MPT", subtext: "Master of Physiotherapy" },
     ]
   },
   {
-    stream: "Diploma",
+    stream: "🧬 Allied Health Science",
+    icon: GraduationCap,
+    courses: [
+      { id: 7, name: "B.Sc Perfusion Technology", subtext: "" },
+      { id: 8, name: "B.Sc Anaesthesia & OTT", subtext: "Operation Theatre Technology" },
+      { id: 9, name: "B.Sc Medical Imaging Technology", subtext: "" },
+      { id: 10, name: "B.Sc Medical Laboratory Technology", subtext: "" },
+      { id: 11, name: "B.Sc Renal Dialysis Technology", subtext: "" },
+      { id: 12, name: "B.Sc Optometry", subtext: "" },
+      { id: 13, name: "B.Sc Emergency Medicine", subtext: "" },
+      { id: 14, name: "B.Sc Neuroscience", subtext: "" },
+      { id: 15, name: "B.Sc Radiotherapy", subtext: "" },
+      { id: 16, name: "B.Sc Respiratory Care", subtext: "" },
+      { id: 17, name: "B.Sc Cardiac Care", subtext: "" },
+    ]
+  },
+  {
+    stream: "🧪 Paramedical (Diploma)",
     icon: FileText,
     courses: [
-      { id: 28, name: "D PHARM", subtext: "" },
-      { id: 29, name: "GNM", subtext: "GENERAL NURSING & MIDWIFERY" },
-      { id: 30, name: "PC.BSC", subtext: "POST BASIC BSC NURSING" },
+      { id: 18, name: "Diploma in MLT", subtext: "Medical Laboratory Technology" },
+      { id: 19, name: "Diploma in AT & OTT", subtext: "Anaesthesia & Operation Theatre" },
+      { id: 20, name: "Diploma in Health Inspector", subtext: "" },
+      { id: 21, name: "Diploma in Dialysis Technology", subtext: "" },
+      { id: 22, name: "Diploma in Medical Record Technology", subtext: "" },
+      { id: 23, name: "Diploma in Imaging Technology", subtext: "" },
+      { id: 24, name: "Diploma in Ophthalmic Technology", subtext: "" },
+    ]
+  },
+  {
+    stream: "💊 Pharmacy",
+    icon: GraduationCap,
+    courses: [
+      { id: 25, name: "B.Pharm", subtext: "Bachelor of Pharmacy" },
+    ]
+  },
+  {
+    stream: "🎓 Arts & Science",
+    icon: BookOpen,
+    courses: [
+      { id: 26, name: "BA Psychology", subtext: "" },
+      { id: 27, name: "BA Journalism", subtext: "" },
+      { id: 28, name: "BA English", subtext: "" },
+      { id: 29, name: "B.Sc Physics", subtext: "" },
+      { id: 30, name: "B.Sc Chemistry", subtext: "" },
+      { id: 31, name: "B.Sc Mathematics", subtext: "" },
+      { id: 32, name: "B.Sc Biotechnology", subtext: "" },
+      { id: 33, name: "B.Sc Microbiology", subtext: "" },
+      { id: 34, name: "B.Sc Biochemistry", subtext: "" },
+    ]
+  },
+  {
+    stream: "💻 Computer Application",
+    icon: BookOpen,
+    courses: [
+      { id: 35, name: "MCA", subtext: "Master of Computer Applications" },
+      { id: 36, name: "MCA with Data Science", subtext: "" },
+      { id: 37, name: "MCA with AI & ML", subtext: "Artificial Intelligence & Machine Learning" },
+      { id: 38, name: "MCA with Cyber Security", subtext: "Cyber Security & Ethical Hacking" },
+      { id: 39, name: "BCA", subtext: "Bachelor of Computer Applications" },
+      { id: 40, name: "BCA with Cyber Security", subtext: "Cyber Security & Ethical Hacking" },
+      { id: 41, name: "BCA with Data Science", subtext: "" },
+      { id: 42, name: "BCA with Digital Marketing", subtext: "" },
+      { id: 43, name: "BCA with Cloud Computing", subtext: "" },
+      { id: 44, name: "BCA with AI & ML", subtext: "Artificial Intelligence & Machine Learning" },
+      { id: 45, name: "B.Sc Computer Science", subtext: "" },
+      { id: 46, name: "B.Sc CS with Data Science", subtext: "" },
+      { id: 47, name: "B.Sc CS with Cyber Security", subtext: "" },
+      { id: 48, name: "B.Sc CS with AI & ML", subtext: "" },
+      { id: 49, name: "B.Sc CS with Cloud Computing", subtext: "" },
+    ]
+  },
+  {
+    stream: "🧑‍💼 Management",
+    icon: BookOpen,
+    courses: [
+      { id: 50, name: "MBA", subtext: "Master of Business Administration" },
+      { id: 51, name: "MBA Advanced", subtext: "" },
+      { id: 52, name: "MBA Global", subtext: "" },
+      { id: 53, name: "BBA", subtext: "Bachelor of Business Administration" },
+      { id: 54, name: "BBA with Logistics & SCM", subtext: "Supply Chain Management" },
+      { id: 55, name: "BBA with Business Analytics", subtext: "" },
+      { id: 56, name: "BBA with Entrepreneurship", subtext: "" },
+      { id: 57, name: "BBA with Digital Marketing", subtext: "" },
+      { id: 58, name: "BBA with Hospitality Management", subtext: "" },
+      { id: 59, name: "BBA Aviation Management", subtext: "" },
+    ]
+  },
+  {
+    stream: "📊 Commerce",
+    icon: BookOpen,
+    courses: [
+      { id: 60, name: "M.Com", subtext: "Master of Commerce" },
+      { id: 61, name: "B.Com", subtext: "Bachelor of Commerce" },
+      { id: 62, name: "B.Com ACCA", subtext: "" },
+      { id: 63, name: "B.Com CMA", subtext: "" },
+      { id: 64, name: "B.Com Logistics & SCM", subtext: "Supply Chain Management" },
+      { id: 65, name: "B.Com Business Analytics", subtext: "" },
+    ]
+  },
+  {
+    stream: "🛠️ Engineering",
+    icon: Wrench,
+    courses: [
+      { id: 66, name: "Computer Science and Engineering", subtext: "" },
+      { id: 67, name: "Information Science and Engineering", subtext: "" },
+      { id: 68, name: "AI and Machine Learning", subtext: "" },
+      { id: 69, name: "AI and Data Science", subtext: "" },
+      { id: 70, name: "CSE (Cyber Security)", subtext: "" },
+      { id: 71, name: "CSE (Data Science)", subtext: "" },
+      { id: 72, name: "Electronics and Communication Engineering", subtext: "" },
+      { id: 73, name: "Mechanical Engineering", subtext: "" },
     ]
   }
 ];
