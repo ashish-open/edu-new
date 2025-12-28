@@ -28,7 +28,7 @@ const Footer = () => {
               <div className="flex gap-2">
                 <MapPin className="h-4 w-4 flex-shrink-0 mt-0.5 text-white/70" />
                 <p className="text-white/80">
-                  Confidence Group of Institutions, Near Private Bus stand, Old Darsana Theatre Building, Nedumkandam, Idukki District, Kerala
+                  Confidence Group of Institutions, Near Private Bus stand, Old Darsana Theatre Building, Nedumkandam, Idukki District, Kerala,
                   Pincode: 685583
                 </p>
               </div>
