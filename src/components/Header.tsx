@@ -11,9 +11,9 @@ const Header = () => {
     <header className="sticky top-0 z-50 w-full bg-background border-b shadow-sm">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between max-w-[1220px]">
         <Link to="/" className="flex items-center">
-          <img 
-            src={logo} 
-            alt="Confidence Group of Institutions" 
+          <img
+            src={logo}
+            alt="Confidence Group of Institutions"
             className="h-10 md:h-12 w-auto"
           />
         </Link>
@@ -22,6 +22,9 @@ const Header = () => {
         <nav className="hidden lg:flex items-center gap-6">
           <Link to="/" className="text-sm font-zonapro hover:text-primary transition-colors">
             Home
+          </Link>
+          <Link to="/institution" className="text-sm font-zonapro hover:text-primary transition-colors">
+            Institution
           </Link>
           <Link to="/consultancy" className="text-sm font-zonapro hover:text-primary transition-colors">
             Consultancy
@@ -57,6 +60,9 @@ const Header = () => {
           <nav className="container mx-auto px-4 py-4 flex flex-col gap-3">
             <Link to="/" className="text-sm font-zonapro py-2 hover:text-primary">
               Home
+            </Link>
+            <Link to="/institution" className="text-sm font-zonapro py-2 hover:text-primary">
+              Institution
             </Link>
             <Link to="/consultancy" className="text-sm font-zonapro py-2 hover:text-primary">
               Consultancy

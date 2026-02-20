@@ -4,7 +4,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { CheckCircle, Users, Award, TrendingUp, Lightbulb, ArrowRight, Phone, MessageCircle, GraduationCap, Wrench, BookOpen, FileText } from "lucide-react";
+import { CheckCircle, Users, Award, TrendingUp, Lightbulb, Phone, MessageCircle, GraduationCap, BookOpen, FileText } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -45,144 +45,53 @@ const services = [
 // Comprehensive course list organized by streams
 const courseCategories = [
   {
-    stream: "🩺 Medical",
-    icon: GraduationCap,
-    courses: [
-      { id: 1, name: "MD", subtext: "Doctor of Medicine" },
-      { id: 2, name: "MS", subtext: "Master of Surgery" },
-      { id: 3, name: "MBBS", subtext: "Bachelor of Medicine & Surgery" },
-    ]
-  },
-  {
     stream: "👩‍⚕️ Nursing",
     icon: GraduationCap,
     courses: [
-      { id: 4, name: "B.Sc Nursing", subtext: "Bachelor of Science in Nursing" },
+      { id: 1, name: "BSc Nursing", subtext: "Bachelor of Science in Nursing" },
+      { id: 2, name: "MSc Nursing", subtext: "Master of Science in Nursing" },
+      { id: 3, name: "GNM Nursing", subtext: "General Nursing and Midwifery" },
+      { id: 4, name: "PCBSc Nursing", subtext: "Post Certificate B.Sc Nursing" },
     ]
   },
   {
-    stream: "🦵 Physiotherapy",
-    icon: GraduationCap,
-    courses: [
-      { id: 5, name: "BPT", subtext: "Bachelor of Physiotherapy" },
-      { id: 6, name: "MPT", subtext: "Master of Physiotherapy" },
-    ]
-  },
-  {
-    stream: "🧬 Allied Health Science",
-    icon: GraduationCap,
-    courses: [
-      { id: 7, name: "B.Sc Perfusion Technology", subtext: "" },
-      { id: 8, name: "B.Sc Anaesthesia & OTT", subtext: "Operation Theatre Technology" },
-      { id: 9, name: "B.Sc Medical Imaging Technology", subtext: "" },
-      { id: 10, name: "B.Sc Medical Laboratory Technology", subtext: "" },
-      { id: 11, name: "B.Sc Renal Dialysis Technology", subtext: "" },
-      { id: 12, name: "B.Sc Optometry", subtext: "" },
-      { id: 13, name: "B.Sc Emergency Medicine", subtext: "" },
-      { id: 14, name: "B.Sc Neuroscience", subtext: "" },
-      { id: 15, name: "B.Sc Radiotherapy", subtext: "" },
-      { id: 16, name: "B.Sc Respiratory Care", subtext: "" },
-      { id: 17, name: "B.Sc Cardiac Care", subtext: "" },
-    ]
-  },
-  {
-    stream: "🧪 Paramedical (Diploma)",
+    stream: "🧪 Paramedical Diploma",
     icon: FileText,
     courses: [
-      { id: 18, name: "Diploma in MLT", subtext: "Medical Laboratory Technology" },
-      { id: 19, name: "Diploma in AT & OTT", subtext: "Anaesthesia & Operation Theatre" },
-      { id: 20, name: "Diploma in Health Inspector", subtext: "" },
-      { id: 21, name: "Diploma in Dialysis Technology", subtext: "" },
-      { id: 22, name: "Diploma in Medical Record Technology", subtext: "" },
-      { id: 23, name: "Diploma in Imaging Technology", subtext: "" },
-      { id: 24, name: "Diploma in Ophthalmic Technology", subtext: "" },
+      { id: 5, name: "Diploma in Nursing Care Assistant", subtext: "Nursing Care Assistant" },
+      { id: 6, name: "Diploma in Physiotherapy", subtext: "Physiotherapy" },
     ]
   },
   {
     stream: "💊 Pharmacy",
     icon: GraduationCap,
     courses: [
-      { id: 25, name: "B.Pharm", subtext: "Bachelor of Pharmacy" },
+      { id: 7, name: "B.Pharm", subtext: "Bachelor of Pharmacy" },
+      { id: 8, name: "M.Pharm", subtext: "Master of Pharmacy" },
+      { id: 9, name: "D.Pharm", subtext: "Diploma in Pharmacy" },
+      { id: 10, name: "Pharm.D", subtext: "Doctor of Pharmacy" },
     ]
   },
   {
     stream: "🎓 Arts & Science",
     icon: BookOpen,
     courses: [
-      { id: 26, name: "BA Psychology", subtext: "" },
-      { id: 27, name: "BA Journalism", subtext: "" },
-      { id: 28, name: "BA English", subtext: "" },
-      { id: 29, name: "B.Sc Physics", subtext: "" },
-      { id: 30, name: "B.Sc Chemistry", subtext: "" },
-      { id: 31, name: "B.Sc Mathematics", subtext: "" },
-      { id: 32, name: "B.Sc Biotechnology", subtext: "" },
-      { id: 33, name: "B.Sc Microbiology", subtext: "" },
-      { id: 34, name: "B.Sc Biochemistry", subtext: "" },
+      { id: 11, name: "BA", subtext: "English Literature, History, Political Science, Sociology, Economics, Psychology" },
+      { id: 12, name: "BBA", subtext: "Business, Management, Marketing" },
+      { id: 13, name: "B.Com", subtext: "Accounting, Finance, Banking" },
+      { id: 14, name: "BJMC", subtext: "Media, News, Digital Marketing" },
     ]
   },
   {
-    stream: "💻 Computer Application",
-    icon: BookOpen,
+    stream: "🔬 Science Courses",
+    icon: GraduationCap,
     courses: [
-      { id: 35, name: "MCA", subtext: "Master of Computer Applications" },
-      { id: 36, name: "MCA with Data Science", subtext: "" },
-      { id: 37, name: "MCA with AI & ML", subtext: "Artificial Intelligence & Machine Learning" },
-      { id: 38, name: "MCA with Cyber Security", subtext: "Cyber Security & Ethical Hacking" },
-      { id: 39, name: "BCA", subtext: "Bachelor of Computer Applications" },
-      { id: 40, name: "BCA with Cyber Security", subtext: "Cyber Security & Ethical Hacking" },
-      { id: 41, name: "BCA with Data Science", subtext: "" },
-      { id: 42, name: "BCA with Digital Marketing", subtext: "" },
-      { id: 43, name: "BCA with Cloud Computing", subtext: "" },
-      { id: 44, name: "BCA with AI & ML", subtext: "Artificial Intelligence & Machine Learning" },
-      { id: 45, name: "B.Sc Computer Science", subtext: "" },
-      { id: 46, name: "B.Sc CS with Data Science", subtext: "" },
-      { id: 47, name: "B.Sc CS with Cyber Security", subtext: "" },
-      { id: 48, name: "B.Sc CS with AI & ML", subtext: "" },
-      { id: 49, name: "B.Sc CS with Cloud Computing", subtext: "" },
+      { id: 15, name: "B.Sc", subtext: "Mathematics, Physics, Chemistry, Computer Science, Biotechnology, Microbiology" },
+      { id: 16, name: "BCA", subtext: "Software, IT Field" },
+      { id: 17, name: "B.Sc Nursing", subtext: "Hospital & Healthcare Jobs" },
+      { id: 18, name: "B.Sc IT", subtext: "Information Technology" },
     ]
   },
-  {
-    stream: "🧑‍💼 Management",
-    icon: BookOpen,
-    courses: [
-      { id: 50, name: "MBA", subtext: "Master of Business Administration" },
-      { id: 51, name: "MBA Advanced", subtext: "" },
-      { id: 52, name: "MBA Global", subtext: "" },
-      { id: 53, name: "BBA", subtext: "Bachelor of Business Administration" },
-      { id: 54, name: "BBA with Logistics & SCM", subtext: "Supply Chain Management" },
-      { id: 55, name: "BBA with Business Analytics", subtext: "" },
-      { id: 56, name: "BBA with Entrepreneurship", subtext: "" },
-      { id: 57, name: "BBA with Digital Marketing", subtext: "" },
-      { id: 58, name: "BBA with Hospitality Management", subtext: "" },
-      { id: 59, name: "BBA Aviation Management", subtext: "" },
-    ]
-  },
-  {
-    stream: "📊 Commerce",
-    icon: BookOpen,
-    courses: [
-      { id: 60, name: "M.Com", subtext: "Master of Commerce" },
-      { id: 61, name: "B.Com", subtext: "Bachelor of Commerce" },
-      { id: 62, name: "B.Com ACCA", subtext: "" },
-      { id: 63, name: "B.Com CMA", subtext: "" },
-      { id: 64, name: "B.Com Logistics & SCM", subtext: "Supply Chain Management" },
-      { id: 65, name: "B.Com Business Analytics", subtext: "" },
-    ]
-  },
-  {
-    stream: "🛠️ Engineering",
-    icon: Wrench,
-    courses: [
-      { id: 66, name: "Computer Science and Engineering", subtext: "" },
-      { id: 67, name: "Information Science and Engineering", subtext: "" },
-      { id: 68, name: "AI and Machine Learning", subtext: "" },
-      { id: 69, name: "AI and Data Science", subtext: "" },
-      { id: 70, name: "CSE (Cyber Security)", subtext: "" },
-      { id: 71, name: "CSE (Data Science)", subtext: "" },
-      { id: 72, name: "Electronics and Communication Engineering", subtext: "" },
-      { id: 73, name: "Mechanical Engineering", subtext: "" },
-    ]
-  }
 ];
 
 const Consultancy = () => {
@@ -191,7 +100,7 @@ const Consultancy = () => {
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
-        <section 
+        <section
           className="consultancy-hero text-white py-16 md:py-24"
           style={{ backgroundImage: `url(${heroImage})` }}
         >

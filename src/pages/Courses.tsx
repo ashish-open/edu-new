@@ -7,193 +7,52 @@ import { Clock, GraduationCap, MapPin, CheckCircle, Building2, Microscope, BookO
 
 const courses = [
   {
-    category: "🩺 Medical",
-    programs: [
-      {
-        name: "MD",
-        description: "Doctor of Medicine",
-        eligibility: "MBBS with qualifying entrance exam",
-        duration: "3 Years",
-        campus: "India & Abroad"
-      },
-      {
-        name: "MS",
-        description: "Master of Surgery",
-        eligibility: "MBBS with qualifying entrance exam",
-        duration: "3 Years",
-        campus: "India & Abroad"
-      },
-      {
-        name: "MBBS",
-        description: "Bachelor of Medicine and Bachelor of Surgery",
-        eligibility: "12th with Physics, Chemistry, Biology (PCB) with minimum 50%",
-        duration: "5.5 Years",
-        campus: "India & Abroad"
-      }
-    ]
-  },
-  {
     category: "👩‍⚕️ Nursing",
     programs: [
       {
-        name: "B.Sc Nursing",
+        name: "BSc Nursing",
         description: "Bachelor of Science in Nursing",
         eligibility: "12th with PCB or 10+2 equivalent",
         duration: "4 Years",
-        campus: "Both Campuses"
-      }
-    ]
-  },
-  {
-    category: "🦵 Physiotherapy",
-    programs: [
-      {
-        name: "BPT",
-        description: "Bachelor of Physiotherapy",
-        eligibility: "12th with PCB",
-        duration: "4.5 Years",
         campus: "India"
       },
       {
-        name: "MPT",
-        description: "Master of Physiotherapy",
-        eligibility: "BPT with qualifying entrance exam",
+        name: "MSc Nursing",
+        description: "Master of Science in Nursing",
+        eligibility: "BSc Nursing with qualifying entrance exam",
+        duration: "2 Years",
+        campus: "India"
+      },
+      {
+        name: "GNM Nursing",
+        description: "General Nursing and Midwifery",
+        eligibility: "12th with PCB or 10+2 equivalent",
+        duration: "3.5 Years",
+        campus: "India"
+      },
+      {
+        name: "PCBSc Nursing",
+        description: "Post Certificate B.Sc Nursing",
+        eligibility: "GNM with 2 years of experience",
         duration: "2 Years",
         campus: "India"
       }
     ]
   },
   {
-    category: "🧬 Allied Health Science",
+    category: "🧪 Paramedical Diploma",
     programs: [
       {
-        name: "B.Sc Perfusion Technology",
-        description: "Bachelor of Science in Perfusion Technology",
-        eligibility: "12th with PCB",
-        duration: "4 Years",
-        campus: "India"
-      },
-      {
-        name: "B.Sc Anaesthesia & OTT",
-        description: "Bachelor of Science in Anaesthesia & Operation Theatre Technology",
-        eligibility: "12th with PCB",
-        duration: "3 Years",
-        campus: "India"
-      },
-      {
-        name: "B.Sc Medical Imaging Technology",
-        description: "Bachelor of Science in Medical Imaging Technology",
-        eligibility: "12th with PCB",
-        duration: "3 Years",
-        campus: "India"
-      },
-      {
-        name: "B.Sc Medical Laboratory Technology",
-        description: "Bachelor of Science in Medical Laboratory Technology",
-        eligibility: "12th with PCB",
-        duration: "3 Years",
-        campus: "India"
-      },
-      {
-        name: "B.Sc Renal Dialysis Technology",
-        description: "Bachelor of Science in Renal Dialysis Technology",
-        eligibility: "12th with PCB",
-        duration: "3 Years",
-        campus: "India"
-      },
-      {
-        name: "B.Sc Optometry",
-        description: "Bachelor of Science in Optometry",
-        eligibility: "12th with PCB",
-        duration: "4 Years",
-        campus: "India"
-      },
-      {
-        name: "B.Sc Emergency Medicine",
-        description: "Bachelor of Science in Emergency Medicine",
-        eligibility: "12th with PCB",
-        duration: "3 Years",
-        campus: "India"
-      },
-      {
-        name: "B.Sc Neuroscience",
-        description: "Bachelor of Science in Neuroscience",
-        eligibility: "12th with PCB",
-        duration: "3 Years",
-        campus: "India"
-      },
-      {
-        name: "B.Sc Radiotherapy",
-        description: "Bachelor of Science in Radiotherapy",
-        eligibility: "12th with PCB",
-        duration: "3 Years",
-        campus: "India"
-      },
-      {
-        name: "B.Sc Respiratory Care",
-        description: "Bachelor of Science in Respiratory Care",
-        eligibility: "12th with PCB",
-        duration: "3 Years",
-        campus: "India"
-      },
-      {
-        name: "B.Sc Cardiac Care",
-        description: "Bachelor of Science in Cardiac Care",
-        eligibility: "12th with PCB",
-        duration: "3 Years",
-        campus: "India"
-      }
-    ]
-  },
-  {
-    category: "🧪 Paramedical (Diploma)",
-    programs: [
-      {
-        name: "Diploma in MLT",
-        description: "Diploma in Medical Laboratory Technology",
+        name: "Diploma in Nursing Care Assistant",
+        description: "Diploma in Nursing Care Assistant",
         eligibility: "10th Pass",
-        duration: "2 Years",
+        duration: "1-2 Years",
         campus: "India"
       },
       {
-        name: "Diploma in AT & OTT",
-        description: "Diploma in Anaesthesia Technology & Operation Theatre Technology",
-        eligibility: "10th Pass",
-        duration: "2 Years",
-        campus: "India"
-      },
-      {
-        name: "Diploma in Health Inspector",
-        description: "Diploma in Health Inspector",
-        eligibility: "10th Pass",
-        duration: "2 Years",
-        campus: "India"
-      },
-      {
-        name: "Diploma in Dialysis Technology",
-        description: "Diploma in Dialysis Technology",
-        eligibility: "10th Pass",
-        duration: "2 Years",
-        campus: "India"
-      },
-      {
-        name: "Diploma in Medical Record Technology",
-        description: "Diploma in Medical Record Technology",
-        eligibility: "10th Pass",
-        duration: "2 Years",
-        campus: "India"
-      },
-      {
-        name: "Diploma in Imaging Technology",
-        description: "Diploma in Medical Imaging Technology",
-        eligibility: "10th Pass",
-        duration: "2 Years",
-        campus: "India"
-      },
-      {
-        name: "Diploma in Ophthalmic Technology",
-        description: "Diploma in Ophthalmic Technology",
-        eligibility: "10th Pass",
+        name: "Diploma in Physiotherapy",
+        description: "Diploma in Physiotherapy",
+        eligibility: "10th/12th Pass",
         duration: "2 Years",
         campus: "India"
       }
@@ -208,6 +67,27 @@ const courses = [
         eligibility: "12th with PCB/PCM",
         duration: "4 Years",
         campus: "India"
+      },
+      {
+        name: "M.Pharm",
+        description: "Master of Pharmacy",
+        eligibility: "B.Pharm with qualifying entrance exam",
+        duration: "2 Years",
+        campus: "India"
+      },
+      {
+        name: "D.Pharm",
+        description: "Diploma in Pharmacy",
+        eligibility: "12th with PCB/PCM",
+        duration: "2 Years",
+        campus: "India"
+      },
+      {
+        name: "Pharm.D",
+        description: "Doctor of Pharmacy",
+        eligibility: "12th with PCB/PCM",
+        duration: "6 Years",
+        campus: "India"
       }
     ]
   },
@@ -215,249 +95,29 @@ const courses = [
     category: "🎓 Arts & Science",
     programs: [
       {
-        name: "BA Psychology",
-        description: "Bachelor of Arts in Psychology",
+        name: "BA (Bachelor of Arts)",
+        description: "English Literature, History, Political Science, Sociology, Economics, Psychology",
         eligibility: "12th in any stream",
         duration: "3 Years",
         campus: "India"
       },
       {
-        name: "BA Journalism",
-        description: "Bachelor of Arts in Journalism",
+        name: "BBA (Bachelor of Business Administration)",
+        description: "Business, Management, Marketing",
         eligibility: "12th in any stream",
         duration: "3 Years",
         campus: "India"
       },
       {
-        name: "BA English",
-        description: "Bachelor of Arts in English",
+        name: "B.Com (Bachelor of Commerce)",
+        description: "Accounting, Finance, Banking",
         eligibility: "12th in any stream",
         duration: "3 Years",
         campus: "India"
       },
       {
-        name: "B.Sc Physics",
-        description: "Bachelor of Science in Physics",
-        eligibility: "12th with PCM",
-        duration: "3 Years",
-        campus: "India"
-      },
-      {
-        name: "B.Sc Chemistry",
-        description: "Bachelor of Science in Chemistry",
-        eligibility: "12th with PCM",
-        duration: "3 Years",
-        campus: "India"
-      },
-      {
-        name: "B.Sc Mathematics",
-        description: "Bachelor of Science in Mathematics",
-        eligibility: "12th with PCM",
-        duration: "3 Years",
-        campus: "India"
-      },
-      {
-        name: "B.Sc Biotechnology",
-        description: "Bachelor of Science in Biotechnology",
-        eligibility: "12th with PCB",
-        duration: "3 Years",
-        campus: "India"
-      },
-      {
-        name: "B.Sc Microbiology",
-        description: "Bachelor of Science in Microbiology",
-        eligibility: "12th with PCB",
-        duration: "3 Years",
-        campus: "India"
-      },
-      {
-        name: "B.Sc Biochemistry",
-        description: "Bachelor of Science in Biochemistry",
-        eligibility: "12th with PCB",
-        duration: "3 Years",
-        campus: "India"
-      }
-    ]
-  },
-  {
-    category: "💻 Computer Application",
-    programs: [
-      {
-        name: "MCA",
-        description: "Master of Computer Applications",
-        eligibility: "Graduation in any discipline with Mathematics",
-        duration: "2 Years",
-        campus: "India"
-      },
-      {
-        name: "MCA with Data Science",
-        description: "Master of Computer Applications with Data Science",
-        eligibility: "Graduation in any discipline with Mathematics",
-        duration: "2 Years",
-        campus: "India"
-      },
-      {
-        name: "MCA with AI & ML",
-        description: "Master of Computer Applications with Artificial Intelligence & Machine Learning",
-        eligibility: "Graduation in any discipline with Mathematics",
-        duration: "2 Years",
-        campus: "India"
-      },
-      {
-        name: "MCA with Cyber Security",
-        description: "Master of Computer Applications with Cyber Security & Ethical Hacking",
-        eligibility: "Graduation in any discipline with Mathematics",
-        duration: "2 Years",
-        campus: "India"
-      },
-      {
-        name: "BCA",
-        description: "Bachelor of Computer Applications",
-        eligibility: "12th in any stream",
-        duration: "3 Years",
-        campus: "India"
-      },
-      {
-        name: "BCA with Cyber Security",
-        description: "Bachelor of Computer Applications with Cyber Security & Ethical Hacking",
-        eligibility: "12th in any stream",
-        duration: "3 Years",
-        campus: "India"
-      },
-      {
-        name: "BCA with Data Science",
-        description: "Bachelor of Computer Applications with Data Science",
-        eligibility: "12th in any stream",
-        duration: "3 Years",
-        campus: "India"
-      },
-      {
-        name: "BCA with Digital Marketing",
-        description: "Bachelor of Computer Applications with Digital Marketing",
-        eligibility: "12th in any stream",
-        duration: "3 Years",
-        campus: "India"
-      },
-      {
-        name: "BCA with Cloud Computing",
-        description: "Bachelor of Computer Applications with Cloud Computing",
-        eligibility: "12th in any stream",
-        duration: "3 Years",
-        campus: "India"
-      },
-      {
-        name: "BCA with AI & ML",
-        description: "Bachelor of Computer Applications with Artificial Intelligence & Machine Learning",
-        eligibility: "12th in any stream",
-        duration: "3 Years",
-        campus: "India"
-      },
-      {
-        name: "B.Sc Computer Science",
-        description: "Bachelor of Science in Computer Science",
-        eligibility: "12th with PCM",
-        duration: "3 Years",
-        campus: "India"
-      },
-      {
-        name: "B.Sc CS with Data Science",
-        description: "Bachelor of Science in Computer Science with Data Science",
-        eligibility: "12th with PCM",
-        duration: "3 Years",
-        campus: "India"
-      },
-      {
-        name: "B.Sc CS with Cyber Security",
-        description: "Bachelor of Science in Computer Science with Cyber Security & Ethical Hacking",
-        eligibility: "12th with PCM",
-        duration: "3 Years",
-        campus: "India"
-      },
-      {
-        name: "B.Sc CS with AI & ML",
-        description: "Bachelor of Science in Computer Science with Artificial Intelligence & Machine Learning",
-        eligibility: "12th with PCM",
-        duration: "3 Years",
-        campus: "India"
-      },
-      {
-        name: "B.Sc CS with Cloud Computing",
-        description: "Bachelor of Science in Computer Science with Cloud Computing",
-        eligibility: "12th with PCM",
-        duration: "3 Years",
-        campus: "India"
-      }
-    ]
-  },
-  {
-    category: "🧑‍💼 Management",
-    programs: [
-      {
-        name: "MBA",
-        description: "Master of Business Administration",
-        eligibility: "Graduation in any discipline",
-        duration: "2 Years",
-        campus: "India"
-      },
-      {
-        name: "MBA Advanced",
-        description: "Master of Business Administration Advanced",
-        eligibility: "Graduation in any discipline with work experience",
-        duration: "2 Years",
-        campus: "India"
-      },
-      {
-        name: "MBA Global",
-        description: "Master of Business Administration Global",
-        eligibility: "Graduation in any discipline",
-        duration: "2 Years",
-        campus: "India & Abroad"
-      },
-      {
-        name: "BBA",
-        description: "Bachelor of Business Administration",
-        eligibility: "12th in any stream",
-        duration: "3 Years",
-        campus: "India"
-      },
-      {
-        name: "BBA with Logistics & SCM",
-        description: "Bachelor of Business Administration with Logistics & Supply Chain Management",
-        eligibility: "12th in any stream",
-        duration: "3 Years",
-        campus: "India"
-      },
-      {
-        name: "BBA with Business Analytics",
-        description: "Bachelor of Business Administration with Business Analytics",
-        eligibility: "12th in any stream",
-        duration: "3 Years",
-        campus: "India"
-      },
-      {
-        name: "BBA with Entrepreneurship",
-        description: "Bachelor of Business Administration with Entrepreneurship",
-        eligibility: "12th in any stream",
-        duration: "3 Years",
-        campus: "India"
-      },
-      {
-        name: "BBA with Digital Marketing",
-        description: "Bachelor of Business Administration with Digital Marketing",
-        eligibility: "12th in any stream",
-        duration: "3 Years",
-        campus: "India"
-      },
-      {
-        name: "BBA with Hospitality Management",
-        description: "Bachelor of Business Administration with Hospitality Management",
-        eligibility: "12th in any stream",
-        duration: "3 Years",
-        campus: "India"
-      },
-      {
-        name: "BBA Aviation Management",
-        description: "Bachelor of Business Administration in Aviation Management",
+        name: "BJMC (Journalism & Mass Communication)",
+        description: "Media, News, Digital Marketing",
         eligibility: "12th in any stream",
         duration: "3 Years",
         campus: "India"
@@ -465,109 +125,34 @@ const courses = [
     ]
   },
   {
-    category: "📊 Commerce",
+    category: "🔬 Science Courses (After 12th – Science Stream)",
     programs: [
       {
-        name: "M.Com",
-        description: "Master of Commerce",
-        eligibility: "B.Com or equivalent",
-        duration: "2 Years",
+        name: "B.Sc (Bachelor of Science)",
+        description: "Mathematics, Physics, Chemistry, Computer Science, Biotechnology, Microbiology",
+        eligibility: "12th with Science stream",
+        duration: "3 Years",
         campus: "India"
       },
       {
-        name: "B.Com",
-        description: "Bachelor of Commerce",
+        name: "BCA (Bachelor of Computer Applications)",
+        description: "Software, IT Field",
         eligibility: "12th in any stream",
         duration: "3 Years",
         campus: "India"
       },
       {
-        name: "B.Com ACCA",
-        description: "Bachelor of Commerce with ACCA",
-        eligibility: "12th in any stream",
+        name: "B.Sc Nursing",
+        description: "Hospital & Healthcare Jobs",
+        eligibility: "12th with PCB or 10+2 equivalent",
+        duration: "4 Years",
+        campus: "India"
+      },
+      {
+        name: "B.Sc IT",
+        description: "Information Technology",
+        eligibility: "12th with Science/Mathematics",
         duration: "3 Years",
-        campus: "India"
-      },
-      {
-        name: "B.Com CMA",
-        description: "Bachelor of Commerce with CMA",
-        eligibility: "12th in any stream",
-        duration: "3 Years",
-        campus: "India"
-      },
-      {
-        name: "B.Com Logistics & SCM",
-        description: "Bachelor of Commerce with Logistics & Supply Chain Management",
-        eligibility: "12th in any stream",
-        duration: "3 Years",
-        campus: "India"
-      },
-      {
-        name: "B.Com Business Analytics",
-        description: "Bachelor of Commerce with Business Analytics",
-        eligibility: "12th in any stream",
-        duration: "3 Years",
-        campus: "India"
-      }
-    ]
-  },
-  {
-    category: "🛠️ Engineering",
-    programs: [
-      {
-        name: "Computer Science and Engineering",
-        description: "Bachelor of Technology in Computer Science and Engineering",
-        eligibility: "12th with PCM and qualifying entrance exam",
-        duration: "4 Years",
-        campus: "India"
-      },
-      {
-        name: "Information Science and Engineering",
-        description: "Bachelor of Technology in Information Science and Engineering",
-        eligibility: "12th with PCM and qualifying entrance exam",
-        duration: "4 Years",
-        campus: "India"
-      },
-      {
-        name: "AI and Machine Learning",
-        description: "Bachelor of Technology in Artificial Intelligence and Machine Learning",
-        eligibility: "12th with PCM and qualifying entrance exam",
-        duration: "4 Years",
-        campus: "India"
-      },
-      {
-        name: "AI and Data Science",
-        description: "Bachelor of Technology in Artificial Intelligence and Data Science",
-        eligibility: "12th with PCM and qualifying entrance exam",
-        duration: "4 Years",
-        campus: "India"
-      },
-      {
-        name: "CSE (Cyber Security)",
-        description: "Bachelor of Technology in Computer Science Engineering (Cyber Security)",
-        eligibility: "12th with PCM and qualifying entrance exam",
-        duration: "4 Years",
-        campus: "India"
-      },
-      {
-        name: "CSE (Data Science)",
-        description: "Bachelor of Technology in Computer Science Engineering (Data Science)",
-        eligibility: "12th with PCM and qualifying entrance exam",
-        duration: "4 Years",
-        campus: "India"
-      },
-      {
-        name: "Electronics and Communication Engineering",
-        description: "Bachelor of Technology in Electronics and Communication Engineering",
-        eligibility: "12th with PCM and qualifying entrance exam",
-        duration: "4 Years",
-        campus: "India"
-      },
-      {
-        name: "Mechanical Engineering",
-        description: "Bachelor of Technology in Mechanical Engineering",
-        eligibility: "12th with PCM and qualifying entrance exam",
-        duration: "4 Years",
         campus: "India"
       }
     ]

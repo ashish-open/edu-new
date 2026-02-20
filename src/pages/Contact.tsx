@@ -41,7 +41,8 @@ const Contact = () => {
                           Old Darsana Theatre Building,<br />
                           Near Private Bus stand, Nedumkandam,<br />
                           Idukki District<br />
-                          Kerala, India
+                          Kerala, India<br />
+                          Pincode: 685553
                         </p>
                       </div>
                     </div>

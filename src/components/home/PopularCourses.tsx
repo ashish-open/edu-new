@@ -5,40 +5,40 @@ import { Clock, GraduationCap } from "lucide-react";
 
 const popularCourses = [
   {
-    name: "MBBS",
-    eligibility: "12th with Physics, Chemistry, Biology",
-    duration: "5.5 Years",
-    description: "Bachelor of Medicine and Bachelor of Surgery"
-  },
-  {
     name: "BSc Nursing",
     eligibility: "12th with PCB or 10+2 equivalent",
     duration: "4 Years",
     description: "Bachelor of Science in Nursing"
   },
   {
-    name: "BSc Medical Lab Technology",
-    eligibility: "12th with PCB",
-    duration: "3 Years",
-    description: "Bachelor of Science in Medical Laboratory Technology"
+    name: "GNM Nursing",
+    eligibility: "12th with PCB or 10+2 equivalent",
+    duration: "3.5 Years",
+    description: "General Nursing and Midwifery"
   },
   {
-    name: "Pharmacy (B.Pharm)",
+    name: "B.Pharm",
     eligibility: "12th with PCB/PCM",
     duration: "4 Years",
     description: "Bachelor of Pharmacy"
   },
   {
-    name: "BPT (Physiotherapy)",
-    eligibility: "12th with PCB",
-    duration: "4.5 Years",
-    description: "Bachelor of Physiotherapy"
+    name: "D.Pharm",
+    eligibility: "12th with PCB/PCM",
+    duration: "2 Years",
+    description: "Diploma in Pharmacy"
   },
   {
-    name: "BSc Radiology",
-    eligibility: "12th with PCB",
+    name: "BA (Bachelor of Arts)",
+    eligibility: "12th in any stream",
     duration: "3 Years",
-    description: "Bachelor of Science in Radiology"
+    description: "English Literature, History, Political Science, Sociology, Economics, Psychology"
+  },
+  {
+    name: "BCA",
+    eligibility: "12th in any stream",
+    duration: "3 Years",
+    description: "Bachelor of Computer Applications — Software, IT Field"
   }
 ];
 

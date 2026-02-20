@@ -10,9 +10,9 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <Link to="/" className="inline-block mb-4">
-              <img 
-                src={logo} 
-                alt="Confidence Group of Institutions" 
+              <img
+                src={logo}
+                alt="Confidence Group of Institutions"
                 className="h-12 md:h-14 w-auto"
               />
             </Link>
@@ -29,7 +29,7 @@ const Footer = () => {
                 <MapPin className="h-4 w-4 flex-shrink-0 mt-0.5 text-white/70" />
                 <p className="text-white/80">
                   Confidence Group of Institutions, Near Private Bus stand, Old Darsana Theatre Building, Nedumkandam, Idukki District, Kerala,
-                  Pincode: 685583
+                  Pincode: 685553
                 </p>
               </div>
             </div>
@@ -55,6 +55,7 @@ const Footer = () => {
         <div className="mt-8 pt-8 border-t border-white/20">
           <div className="flex flex-wrap gap-4 justify-center text-sm font-zonapro mb-6">
             <Link to="/" className="text-white/80 hover:text-primary transition-colors">Home</Link>
+            <Link to="/institution" className="text-white/80 hover:text-primary transition-colors">Institution</Link>
             <Link to="/consultancy" className="text-white/80 hover:text-primary transition-colors">Consultancy</Link>
             <Link to="/contact" className="text-white/80 hover:text-primary transition-colors">Contact</Link>
           </div>
@@ -63,9 +64,9 @@ const Footer = () => {
           </p>
           <p className="text-center text-xs text-white/60 font-zonapro">
             Design by{" "}
-            <a 
-              href="https://octopusmedia.com" 
-              target="_blank" 
+            <a
+              href="https://octopusmedia.com"
+              target="_blank"
               rel="noopener noreferrer"
               className="hover:text-primary transition-colors underline"
             >

@@ -10,7 +10,7 @@ const diplomaCourses = [
     bgColor: "bg-primary",
     textColor: "text-primary-foreground",
     description: "Learn essential lab techniques and diagnostic procedures",
-    link: "/consultancy",
+    link: "/institution?course=medical-laboratory-technology",
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ const diplomaCourses = [
     bgColor: "bg-orange",
     textColor: "text-orange-foreground",
     description: "Master hotel operations and guest service excellence",
-    link: "/consultancy",
+    link: "/institution?course=hospitality-management",
   },
   {
     id: 3,
@@ -28,20 +28,20 @@ const diplomaCourses = [
     bgColor: "bg-magenta",
     textColor: "text-magenta-foreground",
     description: "Develop skills in healthcare administration and management",
-    link: "/consultancy",
+    link: "/institution?course=hospital-administration",
   },
 ];
 
 const ParamedicalSpotlight = () => {
   return (
-    <section 
+    <section
       className="py-16 md:py-24 relative overflow-hidden"
       style={{
         background: 'linear-gradient(135deg, #173060 0%, #0C3E79 50%, #025B8E 100%)',
       }}
     >
       {/* Subtle pattern overlay for texture */}
-      <div className="absolute inset-0 opacity-10 z-0" 
+      <div className="absolute inset-0 opacity-10 z-0"
         style={{
           backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(255,255,255,0.15) 1px, transparent 0)',
           backgroundSize: '40px 40px'

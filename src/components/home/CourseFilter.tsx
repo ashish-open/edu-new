@@ -2,9 +2,11 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 const courses = [
-  "MBBS", "BDS", "BSc Nursing", "BSc MLT", "Pharmacy", "BPT", 
-  "BBA", "MBA", "BSc Radiology", "Diploma MLT", "Diploma Nursing Assistant",
-  "BSc Optometry", "BAMS", "BHMS"
+  "BSc Nursing", "MSc Nursing", "GNM Nursing", "PCBSc Nursing",
+  "Diploma Nursing Care Assistant", "Diploma Physiotherapy",
+  "B.Pharm", "M.Pharm", "D.Pharm", "Pharm.D",
+  "BA", "BBA", "B.Com", "BJMC",
+  "B.Sc", "BCA", "B.Sc IT"
 ];
 
 const CourseFilter = () => {
@@ -23,8 +25,8 @@ const CourseFilter = () => {
         <div className="flex flex-wrap gap-3 justify-center">
           {courses.map((course) => (
             <Link key={course} to="/consultancy">
-              <Button 
-                variant="outline" 
+              <Button
+                variant="outline"
                 className="font-zonapro hover:bg-primary hover:text-primary-foreground transition-all"
               >
                 {course}

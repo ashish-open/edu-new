@@ -20,7 +20,7 @@ const institutionsSlides = [
     heading: "Together We'll Explore New Things",
     description: "We believe everyone should have the opportunity to create progress through education.",
     ctaText: "Explore Courses",
-    ctaLink: "https://wa.me/919694002002",
+    ctaLink: "/institution",
   },
 ];
 
@@ -48,8 +48,8 @@ const infoCards = [
     icon: Hospital,
     title: "Confidence Group of Institutions",
     description: "Confidence offers recognized paramedical programs with placement assistance and modern infrastructure.",
-    link: "#why-us",
-    isScroll: true,
+    link: "/institution",
+    isScroll: false,
   },
   {
     icon: Lightbulb,
@@ -86,11 +86,11 @@ const Hero = () => {
 
   useEffect(() => {
     if (!emblaApi) return;
-    
+
     onSelect();
     emblaApi.on("select", onSelect);
     emblaApi.on("reInit", onSelect);
-    
+
     return () => {
       emblaApi.off("select", onSelect);
       emblaApi.off("reInit", onSelect);
@@ -120,7 +120,7 @@ const Hero = () => {
                     />
                   </div>
                 )}
-                
+
                 {/* Silk Background for second carousel slide (red) */}
                 {index === 1 && (
                   <div className="absolute inset-0 z-0 w-full h-full">
@@ -133,12 +133,12 @@ const Hero = () => {
                     />
                   </div>
                 )}
-                
+
                 {/* Background Image - No borders, full coverage - Hidden for first and second slides */}
                 {index !== 0 && index !== 1 && (
                   <div
                     className="absolute inset-0"
-                    style={{ 
+                    style={{
                       backgroundImage: `url(${slide.image})`,
                       backgroundSize: 'cover',
                       backgroundPosition: 'center',
@@ -153,23 +153,23 @@ const Hero = () => {
                     }}
                   />
                 )}
-                
+
                 {/* Overlay - Hidden for first and second slides */}
                 {index !== 0 && index !== 1 && (
-                  <div 
+                  <div
                     className="absolute inset-0 z-[1]"
                     style={{
                       backgroundColor: 'rgba(0, 0, 0, 0.2)'
                     }}
                   />
                 )}
-                
+
                 {/* Student Image for first slide - Right aligned, above background */}
                 {index === 0 && (
                   <div className="absolute right-0 bottom-0 z-[5] pointer-events-none">
-                    <img 
-                      src={studImage} 
-                      alt="Student" 
+                    <img
+                      src={studImage}
+                      alt="Student"
                       className="h-[500px] md:h-[600px] lg:h-[650px] xl:h-[700px] w-auto"
                       style={{
                         objectFit: 'contain',
@@ -180,13 +180,13 @@ const Hero = () => {
                     />
                   </div>
                 )}
-                
+
                 {/* Doctor Image for second slide - Left aligned, above background */}
                 {index === 1 && (
                   <div className="absolute left-0 bottom-0 z-[5] pointer-events-none">
-                    <img 
-                      src={doctorImage} 
-                      alt="Doctor" 
+                    <img
+                      src={doctorImage}
+                      alt="Doctor"
                       className="h-[500px] md:h-[600px] lg:h-[650px] xl:h-[700px] w-auto"
                       style={{
                         objectFit: 'contain',
@@ -197,7 +197,7 @@ const Hero = () => {
                     />
                   </div>
                 )}
-                
+
                 {/* Content */}
                 <div className="relative z-10 h-full flex items-center">
                   <div className="container mx-auto px-4 max-w-[1220px] w-full">
