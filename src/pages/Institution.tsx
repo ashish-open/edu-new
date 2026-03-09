@@ -64,7 +64,7 @@ const courses = [
         name: "Hospitality Management",
         shortName: "HM",
         badge: "DIPLOMA IN",
-        duration: "1 Year",
+        duration: "2 Year",
         eligibility: "10th Pass",
         color: "orange",
         bgColor: "bg-orange",
@@ -95,7 +95,7 @@ const courses = [
         name: "Hospital Administration",
         shortName: "HA",
         badge: "DIPLOMA IN",
-        duration: "1 Year",
+        duration: "2 Year",
         eligibility: "10th Pass",
         color: "magenta",
         bgColor: "bg-magenta",
@@ -491,7 +491,7 @@ const Institution = () => {
                                     <div className="flex items-center gap-3 text-sm font-zonapro text-secondary/80">
                                         <MapPin className="h-4 w-4 text-primary flex-shrink-0" />
                                         Near Private Bus Stand, Old Darsana Theatre Building,
-                                        Nedumkandam, Idukki, Kerala — 685583
+                                        Nedumkandam, Idukki, Kerala — 685553
                                     </div>
                                     <div className="flex items-center gap-3 text-sm font-zonapro text-secondary/80">
                                         <Phone className="h-4 w-4 text-primary flex-shrink-0" />
@@ -680,7 +680,7 @@ const Institution = () => {
                                             <br />
                                             Nedumkandam, Idukki District,
                                             <br />
-                                            Kerala — 685583
+                                            Kerala — 685553
                                         </p>
                                         <div className="flex flex-col gap-3">
                                             <a
